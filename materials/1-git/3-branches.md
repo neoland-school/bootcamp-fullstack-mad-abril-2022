@@ -26,3 +26,5 @@ Para no bloquear las líneas principales del desarrollo, git propone la posibili
     2. Cambiarme a la rama destino (main)
     3. Ejecutar el siguiente comando
         > git merge _nombre-rama_
+
+[Docu Comando git branch](https://git-scm.com/docs/git-branch)
