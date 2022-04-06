@@ -12,4 +12,8 @@ Cuando el repositorio original tenga nuevos cambios y queramos actualizar nuestr
 
 Para github, un tutorial que te enseña como realizar estas operaciones es [Este](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
+Para crear una Pull Request en Github podemos usar [este tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+
+Para descargar los cambios del repositorio original a vuestro fork en github podemos usar [este tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-from-the-web-ui)
+
 ![Diagram](https://miro.medium.com/max/624/1*IelAxduwS_YtpsrlRe1d0Q.png)
