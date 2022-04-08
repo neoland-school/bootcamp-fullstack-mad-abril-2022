@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera web</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//ADeFmXMEte7+H7Lh/x+y4f8Ete7+N4WacgD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcEg/ABGs3elKsdL///z7////////////+fPx/0ivzv8RrN3pcUg9AAAAAAAAAAAAAAAAAAAAAAAAAAAATXJ0ABqkzdTk2NL////////6+P8hrNX/m5yY/4E2E/9/ORf/kVo//xqkzdRNcXQAAAAAAAAAAAAAAAAAAAAAAFRkZy0gs+L/D63f///8+v8DtO7/B7fw/ziDl/8CvPj/gTcT/we27v8gs+L/WmNnLQAAAAAAAAAAAAAAAAAAAAAUqNbeeqCo//308P8Srd3/x6OT/x6fxf9UZ2T/gDgW/7KHc//w6ub/eaCo/xSo1d0AAAAAAAAAAAAAAAAAAAAAB7Ho+FWiuP/78u7/BbTt/383FP8olbT/PX+P/384Ff////////z6/1Slvf8Hsen0AAAAAAAAAAAAAAAAAAAAAA+s3ehxoaz/yqGO/wK79v9/ORf/d0In/6R8Z////////v7+//Tt6f9zoaz/D6zd6AAAAAAAAAAAAAAAAAAAAAAqk7GXeaSv/2JXS/9SaWn/bE05/wO79v8Dt/H/1MvG/4apsf+CsLz/eqWv/yqSsZYAAAAAAAAAAAAAAAAAAAAAANT/AAux5fMhrdn/T2tu/zemyP8qq9P/IazY/yip0f9jp7r/Ia3Y/wyx5fMA0P8AAAAAAAAAAAAAAAAAAAAAAAAAAABqWEwgSazK/zanyf///v3//////////////Pv/N6jK/0mtyv9qWE4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHRJOQ4bosvNK7Hc/3m7zv95u87/K7Hc/xuiy811SzkNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxf4wAQJKv21VlY7w8iZ22P4ibuFJnaME3k7PaMIKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUPwgASqLK/jFVz/8xcMH/J3/I/yh9xv8wb8L/MVXO/0mjzP6AHAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmiscyMitH/OibX/zcq2P83Ktf/OSXY/4SAz/9qoKzNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuSjMAXHN0Il2sxPebz97/ms/e/16qwfdbdXcibEkzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAABY3Z4P2N2dz81AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAA4AcAAMADAADAAwAAwAMAAMADAADgBwAA8A8AAPgfAAD4HwAA8A8AAPAPAAD8PwAA//8AAA==" rel="icon" type="image/x-icon" />
 </head>
 <body>
     <nav>
@@ -110,6 +111,42 @@
 
 <section id = "Contact"><h1>Contact us</h1></section>
 
+    <form>
+      <label>Nombre</label><br>
+      <input placeholder="Pepe" required><br>
+      <label>Apellido</label><br>
+      <input placeholder="García" required><br>
+      <label>Telefono</label><br>
+      <input placeholder="666777999" required><br>
+      <label>Email</label><br>
+      <input placeholder="youremail@gmail.com" required><br>
+      <input type="submit">
+    </form>
+
+    <form>
+      <p>Califica nuestros servicios:</p>
+      <input type="radio" id="services_bad">
+      <label for="services_bad">Malo</label><br>
+      <input type="radio" id="services_average">
+      <label for="services_average">Aceptable</label><br>
+      <input type="radio" id="services_supreme">
+      <label for="services_supreme">La hostia</label>
+      
+      <br>  
+    </form>
+
+    <form>
+      <label>¿En quñe horario quieres contactarnos?</label>
+      <select>
+        <option value="Mañana">Mañana</option>
+        <option value="Mediodía">Mediodía</option>
+        <option value="Tarde">Tarde</option>
+        <option value="Noche(Upsi)">Noche(Upsi)</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Enviar">
+    </form>
+
     <article>
             <span><h1>Cómo llegar</h1></span>
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -126,6 +163,15 @@
             <p>In <b>nulla</b> ex, auctor ut purus sit amet, efficitur facilisis ante. Quisque hendrerit facilisis viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce auctor aliquet nulla sed cursus. Nullam vestibulum hendrerit volutpat. Ut est arcu, elementum ut nisl at, aliquam dignissim purus. Nunc lobortis orci in orci gravida, id fringilla lorem aliquet. Praesent aliquam sapien sit amet porttitor aliquam. Curabitur pretium elit egestas, sollicitudin mauris ut, semper risus. Suspendisse placerat nibh quis lacus imperdiet, eu congue nisl tincidunt. Etiam.
             </p><br>
     </article>
+
+    <form>
+      <label>Desahógate con nosotros</label>
+      <textarea >
+        Escribe aquí
+      </textarea>
+      <br>
+        <input type="submit" value="Enviar">
+      </form>
 
     <article>
             <span><h1>Llámanos. Es 2022, así que no lo cogeremos.</h1></span>
