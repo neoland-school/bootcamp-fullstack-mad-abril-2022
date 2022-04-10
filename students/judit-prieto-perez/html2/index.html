@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Vuelos</title>
+</head>
+<body>
+    <h1>Formulario de contacto</h1>
+    <p>Rellena los campos de tu vuelo</p>
+    <form>
+        <label for="name"><strong>Nombre</strong></label>
+        <input id="name" maxlength="30" type="text" name="name"
+         placeholder="Introduce aquí tu nombre">
+        </br>
+
+         <label for="name"><strong>Numero</strong></label>
+         <input id="name" type="number" name="name" placeholder="Escribe tu numero"></br>
+
+         <label for="name"><strong>E-mail</strong></label>
+         <input id="name" type="email" name="name" placeholder="Esccribe tu email"></br>
+         <p><strong>Sube una imagen</strong></p>
+
+         <input type="file" value="Seleccionar archivo" accept="img/*"></br>
+
+         <label for="flight-select"><strong>Vuelos</strong></label>
+         <select name="flight-select" size="3" id="flight-select">
+            <option value="ida">ida</option>
+            <option value="vuelta">vuelta</option>
+            <option value="otro">otro</option></select></br>
+            <p><strong>Elige tu destino:</strong></p><input type="checkbox" id="Grecia" name="country">
+            <label for="Grecia">Grecia</label><input type="checkbox" id="country" name="country"><label for="Italia">Italia</label>
+            <input type="checkbox" id="country" name="Francia"><label for="Francia">Francia</label></br>
+            <strong>Deja tu mensaje:</strong>
+            <label for="textarea"></label>
+            <textarea id="texarea" name="textarea" rows="5" cols="33">
+            </textarea>
+            <p><input type="checkbox" id="privacidad" name="privacidad"> <label for="privacidad" ></label> 
+            He leido la politica<a href="https://www.aepd.es/es/politica-de-privacidad-y-aviso-legal" target="_blank"> He leido la politica de privacidad</a>
+        
+    </form>
+    
+
+</body>
+</html>
