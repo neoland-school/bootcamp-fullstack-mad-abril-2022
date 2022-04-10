@@ -1,0 +1,52 @@
+
+
+
+* {
+    color: rgb(255, 43, 43);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.div, p {
+
+    color: #484848;
+}
+/*Mediante pseudo selector cambiar el cursor al pasar por un div. */
+div :hover {
+    color: aqua;
+
+}
+
+label {
+  /*  display: inline; */
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    
+}
+ 
+form {
+    margin:0 auto;
+    width:400px;
+}
+ 
+.name, textarea {
+    height: 27px; 
+    width: 380px;
+    height: 150px;
+}
+
+textarea {
+    height: 150px;
+}
+ 
+#submit {
+    width: 85px;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
