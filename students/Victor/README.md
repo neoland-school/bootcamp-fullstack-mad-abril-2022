@@ -1,2 +1,0 @@
-# Hola equipo !
-## Hola ña
