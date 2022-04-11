@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+
+    <form action="">
+
+        <b><label for="nombre"> Nombre:</label><br></b>
+        <input id="nombre"type="text" max="30" placeholder="Introduce nombre"><br><br>
+
+        <b><label for="numero"> Número:</label><br></b>
+        <input id="numero" type="tel" placeholder="Introduce numero" required><br><br>
+
+        <b><label for="email"> Email:</label><br></b>
+        <input id="email" type="text" placeholder="Introduce email" required><br><br>
+
+        <b><label for="archivo">Sube una imagen</label></b><br><br>
+        <input id="archivo" type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple ><br><br>
+
+        <b><label for="vuelos">Vuelos</label></b><br><br>
+        <select size="3" id="vuelos"  multiple>
+        <option value="ida">Ida</option>
+        <option value="ida y vuelta">Ida y vuelta</option>
+        <option value="otros">Otros</option>
+        <option value="n.a.">N.A</option></select><br><br>
+
+        <p><b>¿Lugar de destino?</b></p>
+
+        <label for="grecia">Grecia</label>
+        <input id="grecia"type="checkbox" checked>
+        
+        <label for="italia">Italia</label>
+        <input id="italia" type="checkbox">
+
+        <label for="francia">Francia</label>
+        <input id="francia"type="checkbox"checked> <br><br>
+        
+        
+        <b><label for="textarea">Deja tu mensaje</label> <br><br></b>
+        <textarea id="textarea" rows="10" cols="50" maxlength="400"></textarea><br><br>
+
+        <input id="avisolegal"type="checkbox"checked>
+        <label for="avisolegal">He leido y acepto el </label>
+        <a href="https://github.com/bryanpf93" target="blank">aviso legal y la politica de privacidad</a>
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
