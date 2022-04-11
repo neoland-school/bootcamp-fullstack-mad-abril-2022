@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="conviasa.ico">
+    <title>CONVIASA - El placer de volar</title>
+</head>
+<body style="background:peachpuff">
+    <a href="index.html" style="margin:20px">Inicio</a>
+    <a href="contacto.html"style="margin:20px">Contacto</a>
+    <a href="probando-css.html"style="margin:20px">Probando-css</a>
+    <h1 style="color:orange">CONVIASA</h1>
+    <h3 style="color:blue">El Placer de Volar</h3><br><br>
+<form action="">
+    <fieldset style="width:400px">
+        <label for="nomb">Nombre: </label>
+        <input id="nomb" type="text" maxlength="30" style="width:230px" autofocus>
+        <br><br>
+
+        <label for="tel">Telefono: </label>
+        <input id="tel" type="tel" placeholder="+(34)665031271" style="color:silver" required> *
+        <br><br>
+
+        <label for="mail">Email</label>
+        <input id="mail" type="email" pattern=".+@globex\.com" style="color:silver" placeholder="juanjo@gmail.com" required> *
+        <br><br>
+
+        <label for="origen">Origen: </label>
+<select id="origen" name="origen" id="origen" style="margin-right:30px">
+    <option value="valor1" Selected>Madrid</option>
+    <option value="valor2">Barcelona</option>
+    <option value="valor3">Zaragoza</option>
+    <option value="valor4" >Caracas</option>
+    <option value="valor5">Puerto Ordaz</option>
+</select> 
+
+    <label for="destino">Destino: </label>
+    <select id="destino" name="destino" id="destino">
+        <option value="valora">Madrid</option>
+        <option value="valorb">Barcelona</option>
+        <option value="valorc" Selected>Zaragoza</option>
+        <option value="valord">Caracas</option>
+        <option value="valore">Puerto Ordaz</option>
+    </select>
+    <br><br>
+<fieldset>
+<label>Tipo de Viaje</label><br><br>
+    
+<label for="fecha">Fecha: </label>
+<input id="fecha" type="date">
+
+    <br><br>
+    <input type="radio" id="laboral" name="tipo" value="laboral">Laboral
+
+
+    <input type="radio" id="ocio" name="tipo" value="ocio">Ocio
+</fieldset>
+
+<br><br>
+<label for="area">Comentarios:</label>
+<textarea name="area" id="area" cols="47" rows="10" maxlength="400">
+    
+</textarea>
+
+<input type="submit" value="Enviar" style="margin:20px">
+<input type="reset" value="Limpiar">
+
+    </fieldset><br><br><br>
+
+</form>
+</body>
+</html>

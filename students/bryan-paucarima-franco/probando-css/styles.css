@@ -1,0 +1,27 @@
+*{
+    color:rgb(255,43,43)
+}
+
+h1 ~ p {
+    color:black
+}
+
+section>div>p {
+    color:rgb(80,80,250)
+}
+
+div:hover{
+    cursor:pointer
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+  src: url('./OpenSans-Regular.ttf');
+}
+
+body { font-family: "Open Sans"; }
+
+#primer-apellido {
+    display: block
+}
