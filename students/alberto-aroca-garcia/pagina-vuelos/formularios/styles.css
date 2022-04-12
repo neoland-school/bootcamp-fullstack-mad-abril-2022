@@ -1,0 +1,26 @@
+* { /* selector universal */
+    color: rgb(255, 43, 43);
+    font-family: 'Open Sans', sans-serif;
+}
+
+div > p { /* selector tipo id > p */
+    color: green;
+}
+
+#pdentrosect { /* selector id */
+    color: rgb(80, 80, 250);
+}
+
+div { /* propiedades a todos los divs*/
+    background-color: powderblue;
+    transition: background-color .5s;
+}
+  
+div:hover { 
+    background-color: aquamarine;
+}
+
+#name {
+    display: flex;
+}
+
