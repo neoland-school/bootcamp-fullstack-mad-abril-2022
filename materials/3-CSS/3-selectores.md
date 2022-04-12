@@ -12,6 +12,7 @@ _selectores_ {
 }
 
 /* Indico dentro del bloque las propiedades/valores del CSS que quiero que apliquen a los elementos HTML que cumplan con el selector */
+
 ```
 
 ## ¿Que tipos de selectores hay?
