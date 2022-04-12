@@ -15,5 +15,112 @@
     <div style="width: 100px; height: 100px; background-color: chocolate;">
 
     </div>
+    <input type="number" name="" min="1" max="3" required id="NUM">
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <a href="#demo">Ir a demo</a>
+    <div data-age="18" class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <section class="box">5</section>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+    
+    <p id="demo">Esto es un parrafo al que vamos</p>
+
+    <input type="radio" name="" id="">
+
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+
+    <div class="sibling__container">
+        <label for="DEMO">Haz click</label>
+        <input class="check__demo" type="checkbox" name="" id="DEMO">
+        <div>
+            <p>hola</p>
+        </div>
+    </div>
+    <div class="sibling__container">
+        <label for="DEMO">Haz click</label>
+        <input class="check__demo" type="checkbox" name="" id="DEMO">
+        <div class="box">
+            <p>hola</p>
+        </div>
+    </div>
+    <style>
+
+        .check__demo:checked + :not(.box) {
+            background-color: crimson;
+        }
+
+        .check__demo:checked + :not(.box) > * {
+            color: white;
+        }
+        
+
+        #NUM:valid {
+            background-color: green;
+        }
+        #NUM:invalid{
+            background-color: red;
+        }
+
+        .sibling__container{
+            border: 2px solid black;
+        }
+
+        .container {
+            display: flex;
+            gap: 2px;
+        }
+
+        section.box {
+            background-color: chocolate;
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            background-color: aquamarine;
+            box-shadow: 19px 5px 15px 5px #9d11b6;
+        }
+
+        #demo {
+            color: black;
+        }
+
+        #demo:target {
+            background: red;
+        }
+
+
+
+        input[type='radio']:checked {
+            -webkit-box-shadow: 2px 2px 2px 2px #FFA029; 
+            box-shadow: 2px 2px 2px 2px #FFA029;
+        }
+
+        input[type='checkbox']:checked {
+            -webkit-box-shadow: 19px 5px 15px 5px #2378c8; 
+            box-shadow: 19px 5px 15px 5px #2378c8;
+        }
+    </style>
 </body>
 </html>
