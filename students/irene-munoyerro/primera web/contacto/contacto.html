@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="/favicon1.png">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home/home.html">Home</a></li>
+            <li><a href="/cv/cv.html">CV</a></li>
+            <li><a href="/students/irene-munoyerro/primera web/contacto/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>CONTACTO</h1>
+
+    <h2>Formulario de Contacto</h2>
+    <form action="/my-handling-form-page" method="post">
+
+        <label for="NAME">Nombre:</label>
+        <input id="NAME" type="text" name="user_name" required><br>
+
+        <label for="SURNAME">Apellido:</label>
+        <input id="SURNAME" type="text" name="user_surname" required><br>
+
+        <label for="EMAIL">Email:</label>
+        <input id="EMAIL" type="email" name="user_email" required><br>
+
+        <label for="PHONE">Teléfono:</label>
+        <input id="PHONE" type="number" name="user_phone" required><br>
+
+        <p>Seleccione:</p>
+        <input type="radio" name="yes" value="YES">
+        <label for="yes">SI</label><br>
+
+        <input type="radio" name="no" value="NO">
+        <label for="no">NO</label><br><br>
+
+        <label for="selection">Elija:</label>
+        <select name="selection">
+            <option value="yes">SI</option>
+            <option value="no">NO</option>
+        </select><br><br>
+
+        <label for="comment">Comentario:</label><br>
+        <textarea name="comment"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
