@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Contacto</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+
+        <h1>HOLA MUNDO</h1>
+        <p>Don Pepito </p>
+        <span>Grillo</span>
+        <p>pepito@grillo.com</p>
+        <span>666 66 66 66</span>
+    </div>
+<section>
+    <div>
+<p style= "color: rgb(80, 80, 250);" >Ponte en contacto con Don Pepito</p>
+
+    </div>
+</section>
+<p></p>
+
+
+
+    <form action="" method="post" autocomplete="off">
+        <label for="name">Nombre</label>
+        <input 
+        id="name" 
+        size="37"
+        type="text"
+        required maxlength="30"
+        required placeholder="Introduzca su nombre" />
+    <br>
+
+        <label for="email">Tu Email</label>
+        <input id="email" 
+        size="37"
+        type="text" 
+        required placeholder="Introduzca su email" />
+    <br>
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" 
+        size="37"
+        type="text" 
+        required placeholder="Introduzca su numero" />
+
+
+        <label for="img">Sube una imagen</label>
+        <input type="file" id="img" name="img" accept="image/*">
+
+       <br>
+       <br>
+
+
+<label for="selection">VUELOS</label>
+<select size="3" name="selection">
+    <option value="idayvuelta">Ida y vuelta</option>
+    <option value="ida">Ida</option>
+    <option value="otros">Otros</option>
+</select>
+
+
+
+<p>LUGAR DE DESTINO</p>
+
+<input name="Lugar de destino?" type="checkbox" value="India" />India
+        
+<input name="Lugar de destino?" type="checkbox" value="Barcelona" />Barcelona
+
+<input name="Lugar de destino?" type="checkbox" value="Madrid" checked="checked" />Madrid
+
+<label for="birthdate"></label>
+<input id="birthdate" required min="2022-06-04" max="2040-06-04" type="date" />
+<br>
+<br>
+<p>Deja tu mensaje</p>
+<textarea name="message" rows="7" maxlength="400"></textarea><br>
+<input type="submit" value="Send email"/>
+
+
+<p class="aviso">He leído y acepto el aviso legal y la política de privacidad</p>
+<input type="checkbox"  >
+
+   
+    </form>  
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,24 @@
+*{
+    color:rgb(255,43,43);
+    text-decoration:none;    
+    font-family: 'Amita', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+#primer p{
+    color:olive;
+}
+#primer span:last-child{
+    background-color: aquamarine;
+    display:block;
+}
+
+#primer {
+    cursor: move;
+}
+
+#segundo p{
+    color: rgb(80,80,250);
+}

@@ -1,0 +1,29 @@
+p{
+    color: rgb(255, 43, 43);
+}
+
+div>p{
+    color: rgb(62, 193, 62);
+}
+
+section p{
+    color: rgb(80, 80, 250);
+}
+
+div:hover{
+    cursor: pointer;
+}
+
+body{
+    font-family: marco;
+    
+}
+
+@font-face {
+    font-family: marco;
+    src: url("OpenSans-Regular.ttf");
+}
+
+#apellido{
+    display: block;
+}
