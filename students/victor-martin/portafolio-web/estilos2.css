@@ -1,0 +1,46 @@
+.flex-container{
+    display:flex;
+}
+
+.flex-container div{
+    width: 30px;
+    height: 30px;
+    background-color: coral;
+    margin:5px;
+}
+
+div {
+    width: 350px;
+    height: 350px;
+}
+
+#uno{
+color:rgb (43,222,255);
+}
+#dos{
+    color:#030303;
+}
+#tres{
+    color:#0000FF;
+}
+#cuatro{
+    color:#9417E2;
+}
+#cinco{
+    color:#7FFFD4;
+}
+#seis{
+    color:#A52A2A;
+}
+#siete{
+    color: aqua;
+}
+#ocho{
+    color: chocolate;
+}
+#nueve{
+    color: burlywood;
+}
+#diez{
+    color: beige;
+}

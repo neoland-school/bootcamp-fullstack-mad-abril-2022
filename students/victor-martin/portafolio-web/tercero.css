@@ -1,0 +1,40 @@
+form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding:50px;
+
+}
+
+form:focus-within{
+    background-color: aquamarine;
+
+}
+
+/*input[type="radio"]{
+    background-color:green;
+}
+*/
+input[type="radio"]:checked{
+    box-shadow: 10px 5px 5px green ; 
+    }
+
+    input:out-of-range {
+        background-color: red;
+      }
+        }
+
+input[type="text"]:active{
+            background-color: black; 
+                }
+
+input[type="email"]:active{
+    background-color: black; 
+            }
+
+
+label:hover{
+    background-color:green;
+}
+
+

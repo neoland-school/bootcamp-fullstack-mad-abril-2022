@@ -1,0 +1,40 @@
+.container{
+    width:500px;
+    height: 300px;
+    background: linear-gradient(to left,white, blue);
+    border-radius: 10px;
+}
+
+
+.visa{
+    display:flex;
+    color: yellow;
+    font-size: 2em;
+    text-align: right;
+    font-weight: bold;
+} 
+
+
+.datos{
+    color: white;
+    font-size: 20px;
+    margin: 22px;
+    
+} 
+
+
+.credit{
+    display: flex;
+    justify-content: space-around;
+    color:white;
+    font-size: 2rem;
+    padding: 26px;
+    
+}
+
+p:first-child{
+    text-transform: capitalize;
+}
+
+
+

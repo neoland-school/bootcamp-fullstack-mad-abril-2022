@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box ;
+}
+
+.container{
+    display: flex;
+    width: 400px;
+    height: 300px;
+}
+.logo{
+    width: 100px;
+    height: 70px;
+    font-weight: bold;
+}
+.menu{
+    font-weight: bold;
+    word-spacing: 10%;
+}
+
+.precio{
+    display: flex;
+    justify-content: space-between;
+
+}
+header {
+    display: flex;
+    background-color: white;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+     /* 100% de su contenedor superior (header)*/
+}
+
+
+main {
+
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    background: ;
+}
+
+P {
+    color: black;
+    font-size: 1rem;
+
+}
+.zapatilla{
+background-image:"https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Zapatilla_Forum_Mid_Blanco_FY4976_01_standard.jpg" ;
+
+}
+
+.grisaceo{
+    color: gainsboro;
+
+}
+
