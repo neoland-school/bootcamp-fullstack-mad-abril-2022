@@ -8,6 +8,7 @@
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px 20px 20px;
@@ -53,7 +54,6 @@ nav > p {
     flex-direction: column;
     justify-content: space-evenly;
     gap:25px;
-    width: 24%;
     border: 1px solid rgba(115, 98, 122, 0.103);
     border-radius: 5px;
     background-color: #f5f5f9;
@@ -267,5 +267,5 @@ footer > p {
 .card:hover {
     transform: rotate(-1.1deg) scale(1.1);
     transition-delay: 0.2s;
-    transition: 1.5s;
+    transition: 0.8s;
 }
