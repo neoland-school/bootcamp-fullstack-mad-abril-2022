@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: lavenderblush;
+    position: sticky;
+    top: 0;
+}
+
+.img1 {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links > a {
+    padding: 16px 12px;
+    color: black;
+    text-decoration: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    border: solid;
+    box-shadow: 10px 10px ;
+    margin: 20px 20px 20px 20px;
+}
+
+.div2 {
+    width: 300px;
+    height: 100px;
+    border: dotted;
+    box-shadow: 20px 20px 30px;
+    margin: 20px 20px 20px 20px;
+    background: linear-gradient(to bottom, darkviolet, deeppink)
+    
+    
+}
+
+.div3 {
+    width: 450px;
+    height: 450px;
+    margin: 20px 20px 20px 20px;
+    background-image: url(https://media.admagazine.com/photos/618a60be72049e253173e74b/master/w_1600,c_limit/86267.jpg);
+    text-align: center;
+    color: aliceblue;
+    font-size: xx-large;
+
+}
+
+footer {
+    background-color: yellow;
+    margin-top: auto;
+}
+
+.img2 {
+    width: 150px;
+    height: 150px;
+  border-radius: 75px;
+}
+

@@ -1,0 +1,218 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    background-color: white;
+}
+.logo {
+    width: 100px;
+    height: 60px;
+}
+.hmn > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;  
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    /*min-height: 100vw;*/
+    background-color: black;
+
+}
+
+main > div {
+    display: flex;
+    width: 300px;
+    height: 500px;
+    flex-direction: column; 
+    background-color: white;
+    margin: 0.15rem;
+    flex-grow: 0;
+}
+
+.z1 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Zapatilla_Forum_Mid_Blanco_FY4976_01_standard.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.view {
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #000000;
+}
+
+.letras {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.adidas > div {
+    margin: 0.5rem;
+}
+p {
+    color:grey;
+}
+
+.treseis {
+    padding: 0.5rem ;
+    font-size: 2rem;
+    color: rgb(41, 126, 244);
+}
+
+.circ {
+    display: flex;
+}
+
+.blue {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.25rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.red {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.25rem;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.green {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.25rem;
+    background-color: rgb(52, 236, 52);
+    border-radius: 50%;
+}
+
+.z2 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://st4.depositphotos.com/3123063/31057/i/450/depositphotos_310577288-stock-photo-varna-bulgaria-august-13-2019.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z3 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://st2.depositphotos.com/3123063/5988/i/950/depositphotos_59885421-stock-photo-varna-bulgaria-october-16-2014.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z4 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://i.pinimg.com/736x/ab/cb/72/abcb7222b1543e72cb90799cea86a96c--sneakers-shoes-adidas-shoes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z5 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://media.istockphoto.com/photos/shoe-isolated-on-white-product-shots-picture-id511033006?k=20&m=511033006&s=612x612&w=0&h=UW-pDR4g6tu-4UmBpjWGgkqGeGhyB8q5iCFOrPuVnzs=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z6 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://5.imimg.com/data5/EN/WH/MY-52269820/adidas-sports-shoes-500x500.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z7 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://5.imimg.com/data5/QM/OT/MY-28862418/adidas-mens-shoes-250x250.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.z8 {
+    display: flex;
+    min-height: 250px;
+    background-image: url("https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWRpZGFzJTIwc2hvZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div:hover{
+    transform: scale(1.1) rotate(-1.1deg); 
+    transition-delay: 0.2s;
+}
+
+@keyframes anim {
+    0% {
+    opacity:0;
+    }
+    33%{
+    opacity:0.3;
+    }
+    66% {
+      opacity:0.8;
+    }
+    100%{
+     opacity:1;
+    }
+  }
+
+main {
+    animation-name: anim;
+    animation-duration: 3s;
+}
+
+/* otra forma
+main {
+    animation: anim 3s 1 linear;
+} */
