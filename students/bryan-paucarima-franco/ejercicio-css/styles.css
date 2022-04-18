@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+
+}
+header {
+    position: sticky;
+    top: 0;
+}
+
+main{
+    height: 100%;
+}
+
+footer{
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 23px;
+    display: flex;
+    align-items: center;
+  
+}
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #666;
+    align-items: center;
+}
+
+.logo {
+    content: url(https://blog.hubspot.es/hs-fs/hubfs/ES%20Blog%20images/Los%2015%20logos%20m%C3%A1s%20creativos%20e%20inspiradores%20del%20mundo/logo_famoso_starbucks.jpg?width=1300&name=logo_famoso_starbucks.jpg);
+    width: 130px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    display: inline;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.item-1 {
+    width: 150px;
+    margin: 50px;
+    height: 150px;
+    background-color: orange;
+    box-shadow: 5px 5px;
+    border: red 5px solid
+}
+
+.item-2 {
+    width: 300px;
+    margin: 50px;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    box-shadow: 5px 5px 2px;
+    border: black 5px dotted;
+}
+
+
+.imagen-texto{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+}
+
+.imagen{
+    content: url(https://www.recetasderechupete.com/wp-content/uploads/2021/04/cafe-expresso.jpg);
+    width: 400px;
+}
+
+.texto-centrado {
+    color: yellow;
+    position: absolute;
+    
+}
+
+.circulo{
+    width: 25px;
+    height: 25px; 
+    border-radius: 50%;
+    border:2px solid #666;
+}
+
+div.circulo {
+    background-image: url(https://www.tuexpertoapps.com/wp-content/uploads/2018/07/facebook-historias-archivo-01.jpg);
+    background-position: center;
+    background-size: 135%;
+    background-repeat: no-repeat;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.block__imagen {
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.block__imagen--1 {
+    background-color: #FF4533;
+}
+
+.block__imagen--2{  
+    background-color: #FF9F33;
+}
+
+.block__imagen--3{  
+    background-color: #FFF533 ;
+}
+
+.block__imagen--4{  
+    background-color: #A9FF33;
+}
+
+.block__imagen--5{  
+    background-color: rgb(51, 255, 133);
+}
+
+.block__imagen--6{ 
+    background-color: rgb(151, 14, 255); 
+}
+
+.block__imagen--7{  
+    background-color: rgb(51, 161, 255);
+}
+
+.block__imagen--8{  
+    background-color: rgb(206, 51, 255);
+}
+
+.block__imagen--9{  
+    background-color: rgb(255, 51, 217);
+}
+
+.block__imagen--10{ 
+    background-color: rgb(51, 255, 253); 
+}
