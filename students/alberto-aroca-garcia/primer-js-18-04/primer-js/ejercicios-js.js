@@ -28,7 +28,9 @@ document.write(`<h2>Mi nombre es ${namee} ${apellido} </h2>`);
 
 // 4.Imprimir por pantalla la longitud del string resultante del ejercicio anterior.
 
-console.log('<p>La longitud del ejercicio anterior es: '+ namee.length +' '+apellido.length+' </p>');
+let nombrecompleto = namee.length + apellido.length;
+
+document.write('<p>La longitud del string es: '+nombrecompleto+' </p>');
 
 
 // 5.Mediante prompt guarda una variable de tipo string que sea un color, pinta un div de 150 x 150 que contenga el color indicado en el prompt.
