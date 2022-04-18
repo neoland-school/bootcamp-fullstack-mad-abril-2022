@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ejercicio1-css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./form.css">
+    <title>Buying From Iphone 13</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <img src="../ejercicio1-css/mg-logo.jpg" alt="" class="logo" />
+          <a href="" class="menu">MENU</a>
+          <a href="../ejercicio1-css/index.html" class="link-second-exercise">Primer Ejercicio</a>
+          <a href="../ejercicio2-css/divs-flex.html">Segundo ejercicio - Div Flex</a>
+        </nav>
+      </header>
+      <h1>Formulario de compra iphone 13</h1>
+      <form action="">
+          <label for="NAME">Nombre</label>
+          <input id="NAME" class="text" type="text" required>
+
+          <label for="EMAIL">Email</label>
+          <input id="EMAIL" class="text" type="email" required>
+
+          <label for="">Elige tu modelo</label>
+          <div class="form__div">
+            <input id="NORMAL" class="radio"  type="radio" name="iphone-model">
+            <label for="NORMAL" class="model">Iphone 13</label>
+          </div>
+          <div class="form__div">
+            <input id="MINI" class="radio"  type="radio" name="iphone-model">
+            <label for="MINI" class="model">Iphone 13 mini</label>
+          </div>
+
+          <label for="QUANTITY">Cantidad</label>
+          <input id="QUANTITY" class="quantity-units" type="number" min="1" max="3">
+
+          <button disabled type="submit">Siguiente</button>
+      </form>
+      
+      <footer>
+        <div class="footer-circle">
+          <i class="fa fa-github-square github" id="github"></i>
+        </div>
+      </footer>
+</body>
+</html>
