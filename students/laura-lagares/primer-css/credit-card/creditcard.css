@@ -1,0 +1,27 @@
+.fondo {
+    display:flex
+    background-color: white;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 500px; 
+    height: 250px;
+    border-radius: 15px;
+    background: linear-gradient(to top right, #3333cc 0%, #66ffff 100%);
+    color: white;
+    padding: 55px;
+}
+
+.credit:first-child {
+    text-transform: capitalize;
+}
+
+.credit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
