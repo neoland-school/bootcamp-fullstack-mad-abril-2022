@@ -97,3 +97,5 @@ let nullValue = null; // es un tipo de datos que representa la dirección 0x0 de
 typeof _nombreVar_; // me devuelve un string con el típo de datos de la variable que hemos puesto
 
 ```
+
+[Referencia Tipos de datos](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
