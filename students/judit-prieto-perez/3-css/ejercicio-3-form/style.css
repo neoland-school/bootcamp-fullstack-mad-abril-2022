@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+  background-color: coral;
+  padding: 24px;
+  border: black;
+}
+
+.navbar{
+  background-color: rgb(10, 153, 175);
+  display: flex;
+  width: 100%;
+
+}
+
+.form {
+  border-color: black;
+  display: flexbox;
+}
+
+.secciones {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.item {
+  color: solid black;
+  box-shadow: #999999;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width:  6rem;
+  font-size: 1.2rem;
+  padding:4px;
+
+}
+
+form:focus-within {
+    background: #ff8;
+    color: black;
+}  
+
+
+input[type="email"]:focus {
+        background-color: blue;
+}
+
+input[type="name"]:focus {
+  background-color: blue;
+
+}
+input[type="radio"]:checked {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 2px solid red;
+  }
+
+button:disabled,
+    button[disabled]{
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+  
+  }
+
+  

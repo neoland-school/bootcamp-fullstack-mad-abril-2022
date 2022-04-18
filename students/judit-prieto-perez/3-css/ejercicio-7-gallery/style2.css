@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    min-height: 100vh;
+}
+
+.navbar{
+    background-color: white;
+    display: flex;
+    width: 100%;
+
+}
+.navbar img{
+    width: 100%;
+}
+.secciones {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.item {
+    color: black;
+    width:  6rem;
+    height: 55px;
+    font-size:1.2rem;
+    text-align: center;
+    padding: 8px;
+
+}
+
+.card h4 {
+    display: flex;
+    justify-content: center;
+    color:black;
+    border-color: black;
+    background-color: white;
+    margin-top: 10px;
+    padding: 7px;
+    box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.85);
+    margin-top: -107px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.adidas {
+    background-image: url("https://logodix.com/logo/930454.jpg");
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    animation-duration: 3s;
+
+}
+
+.card h2{
+    color: black;
+    padding: 12px;
+}
+
+.card h3 {
+    color: #2196F3;
+    display: flex;
+    padding: 14px;
+}
+
+.card .price{
+ display: flex;
+justify-content: space-around;
+padding-top: 77px;
+border: 76px;
+}
+
+
+.card .verde {
+    border-radius: 50%;
+    background: green;
+    color: green;
+    margin-left:5px;
+}
+.card .rojo {
+    border-radius: 50%;
+    background: #f50303;
+    color: #f50303;
+}
+
+.card .azul {
+        border-radius: 50%;
+        background: #0536ea;
+        color:#0536ea;
+
+}
+
+.card p{
+    color: gray;
+    padding-top: -15px;
+    padding-left: 15px;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px white;
+    transform: scale (1.1%);
+    transform: rotate(-1deg);
+    animation-delay: 0.2s;
+}
+
+.adidas1{
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Zapatilla_Forum_Mid_Blanco_FY4976_01_standard.jpg");
+}
+.adidas2 {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://st4.depositphotos.com/3123063/31057/i/450/depositphotos_310577288-stock-photo-varna-bulgaria-august-13-2019.jpg")
+}
+.adidas3 {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://st2.depositphotos.com/3123063/5988/i/950/depositphotos_59885421-stock-photo-varna-bulgaria-october-16-2014.jpg");
+
+}
+
+.adidas4 {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/736x/ab/cb/72/abcb7222b1543e72cb90799cea86a96c--sneakers-shoes-adidas-shoes.jpg");
+}
+.adidas5{
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://media.istockphoto.com/photos/shoe-isolated-on-white-product-shots-picture-id511033006?");
+}
+
+.adidas6{
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://5.imimg.com/data5/EN/WH/MY-52269820/adidas-sports-shoes-500x500.jpg");
+}
+
+.adidas7{
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://5.imimg.com/data5/QM/OT/MY-28862418/adidas-mens-shoes-250x250.jpg");
+}
+
+.adidas8 {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWRpZGFzJTIwc2hvZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+}
+
+.animation1 {
+    animation-name: animation1;
+    animation-duration: 3s;
+} 
+
+@keyframes animation1  {
+    0%    { opacity: 0; }
+    20%   { opacity: 0.3; }
+    80%   { opacity: 0.8; }
+    100%  { opacity: 1; }
+  }
