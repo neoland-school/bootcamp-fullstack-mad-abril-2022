@@ -140,6 +140,4 @@ document.write(`<div style="border:50px solid greenyellow; width:600px;">
 <button style="cursor: pointer; background:rgb(116, 116, 236); height:25px; color:#fff; width:200px;">COMPRAR</button>
 </div>
 
-
-
 </div>`)
