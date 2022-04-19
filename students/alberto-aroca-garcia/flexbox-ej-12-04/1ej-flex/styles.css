@@ -1,0 +1,26 @@
+
+div{
+    background-color: rgb(142, 42, 235);
+    height: 100px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item1{
+    order:14;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 100vh;
+
+}
