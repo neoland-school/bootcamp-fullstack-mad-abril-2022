@@ -31,7 +31,7 @@
 
 // document.write(`<div style="width:150px; height:150px; color:#fff; background-color:${colo}";></div>`)
 
-
+/*
 document.write("===========================================");
 
 //Crear dos variables numéricas y realiza su suma, resta multiplicación y división, imprime  por pantalla los dos números con la operación, el igual y el resultado.
@@ -99,3 +99,47 @@ let ispar =parseInt(prompt(`Ingresa un numero entero: `));
 let calculo = ispar % 2===0;
 document.write(`<p>¿El ${ispar} es par? ${calculo}.</p>`);
 document.write("===========================================");
+
+//Mediante prompt crear una variable que represente el numero de hijos e imprime por pantalla si es familia numerosa o no (revisar que se considera familia numerosa) 
+let hijos = parseInt(prompt(`¿Cuantos hijos tiene la familia?`));
+let familia = hijos>=3 ? document.write(`Con ${hijos} hijos, Si es familia numerosa</p>`) : document.write(`<p>Con ${hijos} hijos, No es familia numerosa</p>`);
+document.write("===========================================");*/
+
+//(HARD) Mediante prompt crear una variable que represente el saldo de tu cuenta, luego crea  3 variables numéricas que cada una represente un item de tu cesta (ej: tomates, pescado, etc) de la compra y dales un precio. Imprimir por pantalla  la siguiente imagen usando solo document write y css, si el numero ingresado es mayor o igual que el total de la compra debera aparecer el boton de comprar de lo contrario no se mostrara.
+let saldo = parseFloat(prompt(`¿Cuanto saldo te queda en tu cuenta?`));
+
+let pan = 4.90;
+let leche = 3.16;
+let queso = 5.74;
+let total =pan+leche+queso;
+
+document.write(`<div style="border:50px solid greenyellow; width:600px;">
+<h1 style="padding:0 0 20px 20px; border-bottom: 2px solid #ccc;">Shoping Car</h1>
+
+<div style="display:flex; justify-content:space-around; border-bottom: 2px solid #ccc;">
+<p>Pan</p>
+<p>Price</p>
+<p>${pan} €</p>
+</div>
+
+<div style="display:flex; justify-content:space-around; border-bottom: 2px solid #ccc;">
+<p>Leche</p>
+<p>Price</p>
+<p>${leche} €</p>
+</div>
+
+<div style="display:flex; justify-content:space-around; border-bottom: 2px solid #ccc;">
+<p>Queso</p>
+<p>Price</p>
+<p>${queso} €</p>
+</div>
+
+<div style="display:flex; height:120px; flex-direction:column; align-items:center; flex-wrap:wrap; margin-bottom:20px;">
+<p style="margin:10px; ">Car Totals</p>
+<p  style="margin:10px; border-bottom:2px solid #ccc; padding-bottom:15px;">Total: ${total} €</p>
+<button style="cursor: pointer; background:rgb(116, 116, 236); height:25px; color:#fff; width:200px;">COMPRAR</button>
+</div>
+
+
+
+</div>`)
