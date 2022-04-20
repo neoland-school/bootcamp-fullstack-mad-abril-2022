@@ -112,6 +112,7 @@ let pan = 4.90;
 let leche = 3.16;
 let queso = 5.74;
 let total =pan+leche+queso;
+let diferencia = saldo-total;
 
 document.write(`<div style="border:50px solid greenyellow; width:600px;">
 <h1 style="padding:0 0 20px 20px; border-bottom: 2px solid #ccc;">Shoping Car</h1>
@@ -137,7 +138,7 @@ document.write(`<div style="border:50px solid greenyellow; width:600px;">
 <div style="display:flex; height:120px; flex-direction:column; align-items:center; flex-wrap:wrap; margin-bottom:20px;">
 <p style="margin:10px; ">Car Totals</p>
 <p  style="margin:10px; border-bottom:2px solid #ccc; padding-bottom:15px;">Total: ${total} €</p>
-<button style="cursor: pointer; background:rgb(116, 116, 236); height:25px; color:#fff; width:200px;">COMPRAR</button>
+<button style="${diferencia>=0 ? 'display:block;' : 'display:none;'}; cursor: pointer; background:rgb(116, 116, 236); height:25px; color:#fff; width:200px;">COMPRAR</button>
 </div>
 
 </div>`)
