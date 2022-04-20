@@ -76,7 +76,7 @@ if (userPhrase.includes(badWordOne)|| userPhrase.includes(badWordTwo) || userPhr
 
 const age = prompt('Escribe tu edad');
 
-document.write(`${age >= 18 ? 'Tienes la edad, pasa anda' : 'No tienes edad para entrar mostri, a tu casa'}`);
+document.write(`<p>${age >= 18 ? 'Tienes la edad, pasa anda' : 'No tienes edad para entrar mostri, a tu casa'}</p>`);
 
 
 // 6- Crea un algoritmo para determinar si un año es bisiesto o no, para esto el año que se pase por prompt 
@@ -94,7 +94,10 @@ document.write(`<p>El año ${year} ${(year%4===0 && year%100!==0) || (year%400==
 // Crea un algoritmo que dado la luz de tráfico actual por prompt, pinte por pantalla  
 // un semaforo  con la luz indicada y que indique si el coche puede pasar o debe parlet
 
-    const light = prompt('Indica la luz del semáforo');
+    const light = prompt(`Indica la luz del semáforo:
+                            -'red'
+                            -'orange'
+                            -'green'`);
 
     document.write(`<section class="background">
                         <div class="trafic-light-container">
