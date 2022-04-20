@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav */
+header{
+    display: flex;
+    flex-direction: row;
+    
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    margin-right: 10px;
+}
+#logo-adidas{
+    display: inline-block;
+    vertical-align: middle;
+}
+#logo{
+    width: 105px;
+    height: 80px;
+}
+
+/* contenedor main */
+.main{
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: black;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* card 1 */
+.card1{
+    display: flex;
+    height: 400px;
+    width: 350px;
+    background-color: white;
+    margin: 20px;
+}
+
+.imagen-card1{
+    display: flex;
+    background-image: url(/imagenes/card1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.view-details1 p{
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 6px 6px 7px 4px rgba(0,0,0,0.73);
+    
+}
+
+
