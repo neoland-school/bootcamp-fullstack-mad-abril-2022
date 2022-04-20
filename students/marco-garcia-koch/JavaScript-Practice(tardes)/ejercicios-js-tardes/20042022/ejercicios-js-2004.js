@@ -96,8 +96,6 @@ document.write(`<p>El año ${year} ${(year%4===0 && year%100!==0) || (year%400==
 
     const light = prompt('Indica la luz del semáforo');
 
-    const classlight = 
-
     document.write(`<section class="background">
                         <div class="trafic-light-container">
                             <div class="trafic-light-color ${light === 'red' ? 'red' : ''}"></div>
