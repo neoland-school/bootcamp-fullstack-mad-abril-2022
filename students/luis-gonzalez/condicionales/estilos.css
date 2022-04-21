@@ -1,0 +1,32 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#wrap{
+    width:100px;
+    height:230px;
+    background-color: #fad201;
+    margin:30px 0 0 30px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding:20px;
+    box-shadow: 0 0 3px #000,3px 3px 3px #444;
+}
+
+.circulo{
+    width:55px;
+    height:55px;
+    background-color: #ccc;
+    border:1px solid #000;
+    border-radius:50%;
+    margin:0 auto;
+    box-shadow: 3px 3px 3px #444;
+}
+
+#amarillo{
+    background-color: amarillo;
+}
