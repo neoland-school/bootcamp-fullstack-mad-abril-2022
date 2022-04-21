@@ -167,6 +167,7 @@ switch (operador) {
 
 document.write(`<br>============================<br>`);*/
 //Creemos un algoritmo para saber si un estudiante puede optar o no a una beca, para eso debera pasar  mediante prompt un total de 7 calificaciones, y se deberá imprimir por pantalla la cantidad de asignaturas aprobadas, la nota media y si puede optar o no a la beca, para saber si un estudiante puede optar a la beca deberá tener el mínimo de asignaturas aprobadas( solo puede tener dos reprobadas,  usar operador de asignación para esta operación), y una nota media superior a 6, PD:" la nota mínima para aprobar una asignatura  es de 5".
+/*
 let alumno = prompt(`Ingresa el nombre del alumno`);
 let adicion=0;
 
@@ -241,5 +242,97 @@ if(adicion>4 && promedio>=6){
 }else{
    document.write(`<br>El alumno no es candidato a optar a la beca.`);
 }
-
+document.write(`<br>============================<br>`);
 //Fin.
+*/
+
+// 1. Crea un programa que dado un numero mediante promt y usando el bucle for, te impirma por pantalla su tabla de multiplicar de la siguiente forma:
+// Tabla de multiplicar de 5
+//  5 x 1 = 5
+//  5 x 2 = 10
+//  5 x 3 = 15
+//  5 x 4 = 20
+//  5 x 5 = 25
+//  5 x 6 = 30
+//  5 x 7 = 35
+//  5 x 8 = 40
+//  5 x 9 = 45
+//  5 x 10 = 50
+/*
+let numer = parseInt(prompt(`Ingresa un número`));
+
+for(i=0; i<10; i++){
+   let resu=numer*i;
+document.write(`${numer} x ${i} = ${resu}<br>`);
+}
+document.write(`<br>============================<br>`);
+*/
+
+/*
+//2. Crear una página web que pinte por pantalla separado por comas las primeras 100 potencias de dos. Ejemplo: 1,2,4,8,16,32,64,...
+document.write(`<br>============================<br>`);
+for(i=0; i<=100;i++){
+let pote = 2**i;
+document.write(` ${pote}, `);
+}
+*/
+
+/*
+// 3.Crea un programa que recorra los números del 1-100 e imprima por pantalla :
+// Fizz, si es multiplo de 3.
+// Buzz, si es múltiplo de 5.
+// FizzBuzz, si es múltiplo de 3 y 5 a la vez.
+document.write(`<br>============================<br>`);
+
+for(i=1; i<=100; i++){
+   let opc1 = i%3;
+   let opc2 = i%5;
+   if (opc1 == 0 && opc2 !==0){
+      document.write(` fizz `);
+   }else if(opc1!==0 && opc2==0){
+      document.write(` Buzz `);
+   }else{
+      document.write(` fizzBuzz `);
+   }
+}
+*/
+/*
+//4. Escribir un programa que solicite al usuario el número de filas y el número de columnas. Dibujar una tabla con las filas y columnas introducidas, usar etiquetas html " th, tr, td.."
+ //document.write(`<br>============================<br>`);
+ let filas = parseInt(prompt(`Ingresa un numero de filas`));
+ let columnas = parseInt(prompt(`Ingresa un numero de filas`));
+ 
+ document.write(`<table>`)
+for(let i=1; i<=filas; i++){
+
+   document.write(`<tr>`)
+for(let e=1; e<=columnas; e++){
+   document.write(`<td></td>`)
+}
+document.write(`</tr>`)
+
+}
+document.write(`</table>`)
+*/
+
+// document.write(`<br>============================<br>`);
+//5. Crear una página web que solicite al usuario una palabra y muestre un p con el número de vocales que hay.
+
+// program to count the number of vowels in a string // defining vowels const vowels = ("a", "e", "i", "o", "u") function countVowel(str) ( // initialize count let count = 0; // loop through string to test if each character is a vowel for (let letter of str.toLowerCase()) ( if (vowels.includes(letter)) ( count++; ) ) // return number of vowels return count ) // 
+const parole = prompt('Enter a string: ');
+let count = parole.length;
+
+for(let i = 0; i <=count; i ++){
+   let letter = parole.charAt(i);
+document.write(` ${letter} `);
+}
+
+// if(letter == a /*|| letter == e || letter == i || letter == o || letter == u*/){
+//    j++;
+//    document.write(j);
+
+document.write(`<br>============================<br>`);
+/*
+//6. Imprime por pantalla el siguiente patron, el cual va a depender del numero que pases por prompt, usaremos CSS para la maquetación (una vez terminado y mediante animation usando @keyframes haz que el triangulo se desplace hasta el otro punto de la pantalla de manera infinita).
+document.write(`<br>============================<br>`);
+*/

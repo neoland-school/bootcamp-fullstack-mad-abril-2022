@@ -31,4 +31,16 @@
     background-color: amarillo;
 }
 
-/* fin. */
+th{
+    border:1px solid red;
+    width:70px;
+    height:40px;
+    text-align:center;
+}
+
+td{
+    border:1px solid #ccc;
+    width:70px;
+    height:40px;
+    text-align:center;
+}
