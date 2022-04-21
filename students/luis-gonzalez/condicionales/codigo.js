@@ -241,3 +241,5 @@ if(adicion>4 && promedio>=6){
 }else{
    document.write(`<br>El alumno no es candidato a optar a la beca.`);
 }
+
+//Fin.
