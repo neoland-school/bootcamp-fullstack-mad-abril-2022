@@ -1,0 +1,55 @@
+.box {
+    border: 1px solid rgb(70, 69, 69);
+    color: white;
+    width: 350px;
+    height: 350px;
+    line-height: 350px;
+    text-align: center;
+    margin-top: 3px;
+    float: left;
+    
+}
+
+.uno{
+    background-color: rgb(34, 82, 34);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.dos{
+    background-color: rgb(33, 33, 189); 
+}
+
+.tres{
+    background-color: rgb(189, 67, 33); 
+}
+
+.cuatro{
+    background-color: rgb(33, 189, 184); 
+}
+
+.cinco{
+    background-color: rgb(179, 33, 189); 
+}
+
+.seis{
+    background-color: #74992e; 
+}
+
+.siete{
+    background-color: #987
+}
+
+.ocho{
+    background-color: #f00
+}
+
+.nueve{
+    background-color: #ffff00
+}
+
+.diez{ 
+    background-color: #008080
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+
+    <a name="top"></a> <!--elemento top para volver arriba-->
+
+    <nav>
+        <ul>
+          <li><a href="/Home/home.html">Home</a></li>
+          <li><a href="/CV/cv.html">CV</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <form>
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="NOMBRE" name="name" maxlength="15" size="16" required placeholder="Introduzca su nombre">
+        <br><br> <!--NO me tengas en cuenta los br jeje solo los uso hoy ;)-->
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="APELLIDOS" name="apellidos" size="20" required placeholder="Intoduzca tus apellidos">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="EMAIL" name="email" size="30" pattern="+@gmail\.com" required placeholder="Introduzca un email">
+        <br><br>
+
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="PHONE" name="phone" minlength="9" maxlength="9" size="16" required placeholder="Introduzca su teléfono">
+        <br><br>
+
+        <label for="pet-select">Selecciona tu género:</label>
+
+        <select name="GENERO" id="genero">
+            <option value="masc">Masculino</option>
+            <option value="fem">Femenino</option>
+        </select>
+
+        <p>Seleccioe el método de contacto que prefieras:</p>
+        <div>
+            <input type="radio" id="CONTACTO1"
+             name="contact" value="email">
+            <label for="contactChoice1">Email</label>
+        
+            <input type="radio" id="CONTACTO2"
+             name="contact" value="phone">
+            <label for="contactChoice2">Teléfono</label>
+        
+            <input type="radio" id="CONTACTO3"
+             name="contact" value="zoom">
+            <label for="contactChoice3">Reunión por Zoom</label>
+        </div>
+        <br>
+
+        <br><br>
+        <label for="comment">Déjanos un comentario:</label>
+        <br><br>
+
+        <textarea id="COMMENTARIO" name="comment"
+                rows="5" cols="33">Escribe aquí tu comentario...
+        </textarea>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    
+    </form>
+
+  
+    <br>
+    <footer>
+        &copy; 2022 Alberto Aroca <br>
+        <p>Esto es un enlace a mi perfil de Github: <a href="https://github.com/alberaroca7" target="_blank">Github</a> </p> 
+        <p>Haz clic aquí para ir arriba <a href="#top">Volver arriba</a> </p> 
+        
+    </footer>
+    
+</body>
+</html>

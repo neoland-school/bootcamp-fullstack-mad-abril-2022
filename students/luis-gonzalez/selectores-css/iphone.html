@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Selectores</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="conviasa.jpg" alt="logo conviasa"></div>
+        <div id="link">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="iphone.html">IPHONE</a></li>
+                <li><a href="cajas.html">Cajas</a></li>
+                <li><a href="card.html">Card</a></li>
+                <li><a href="zapatos.html">Zapatos</a></li>
+                <li><a href="memoria.html">Memoria</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+       <div id="container">
+
+<form action="">
+
+    <h3>Selecciona tu IPHONE 13</h3>
+    
+    <div class="inputs">
+    <label class="identificacion" for="nombre">Nombre: </label>
+<input id="nombre" type="text" placeholder="Ingresa tu nombre" autofocus required>
+</div>
+
+<div class="inputs">
+<label class="identificacion" for="mail">E-mail: </label>
+<input id="mail" type="email" placeholder=" juanjo@gmail.com" required>
+</div>
+
+
+<fieldset id="radios"> 
+    <p>Seleccione cual IPHONE 13 desea:</p>
+    <label for="normal">IPHONE 13</label>
+    <input id="normal" type="radio" value="iphone13-normal" name="iphone">
+    
+    <label for="mini">IPHONE 13 mini</label>
+    <input id="mini" type="radio" value="iphone13-mini" name="iphone">
+    
+</fieldset>
+
+<div id="cant">
+<label for="seleccion">Cantidad: </label>
+
+<select name="seleccion" id="seleccion">
+<option selected value="uno">1</option>
+<option value="uno">2</option>
+<option value="uno">3</option>
+</select>
+</div>
+
+<div id="botones">
+<input id="comprar" type="submit" value="Comprar" disabled>
+
+<input id="cancelar" type="reset" value="Cancelar">
+</div>
+
+</form>
+
+       </div>
+    </main>
+    <footer>
+        <img src="twitter.jpg" alt="">
+        <p>@Futuroinmediato</p>
+    </footer>
+</body>
+</html>

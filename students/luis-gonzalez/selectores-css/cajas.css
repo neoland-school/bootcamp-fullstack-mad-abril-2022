@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+body {
+    padding-top: 20px;
+    min-height: 100vh;
+    max-width: 100vw;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100px;
+    background-color: #E8E9EB;
+    padding: 15px;
+}
+
+#logo {
+    width: 100px;
+    margin: 0 20px 0 0;
+}
+
+#logo img {
+    width: 100%
+}
+
+#link {
+    width: 500px;
+}
+
+#link a {
+    text-decoration: none;
+}
+
+#link ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#link ul li {
+    margin: 30px;
+}
+
+footer {
+    background-color: silver;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    padding: 6px;
+}
+
+footer img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin: 0 0 0 500px;
+}
+
+footer p {
+    margin: auto 0;
+    color: red;
+    font-size: 20px;
+}
+
+/*=======================================================*/
+
+#main {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.cajas {
+    background-color: rgb(142, 42, 235);
+    width: 120px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    line-height: 120px;
+    color: white;
+    margin: 10px;
+}
+
+.cajas:first-child {
+    order: 14;
+}
+
+/* =================================== */
+#table {
+    width: 100%;
+    height: 500px;
+    background: rgb(47, 6, 7);
+    background: linear-gradient(203deg, rgba(47, 6, 7, 0.7923902837502188) 40%, rgba(43, 61, 196, 1) 68%);
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#tdc {
+    width: 350px;
+    height: 200px;
+    background: rgb(43, 61, 196);
+    background: linear-gradient(203deg, rgba(43, 61, 196, 1) 4%, rgba(43, 61, 196, 1) 12%, rgba(43, 61, 196, 1) 16%, rgba(43, 61, 196, 1) 20%, rgba(43, 61, 196, 1) 45%, rgba(9, 226, 228, 0.9772642333300507) 84%);
+    border-radius: 2%;
+    padding: 20px;
+    box-shadow: -1px 1px 3px #fff, 3px 3px 6px #444;
+    border: 1px solid black;
+}
+
+#memb {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#memb p {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+#memb p::first-letter {
+    color: green;
+    font-size: 30px;
+    text-shadow: 0 0 5px rgb(246, 8, 8);
+}
+
+#visa {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    justify-content: end;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 5px;
+}
+
+#datos {
+    height: auto;
+}
+
+#datos p {
+    margin: 6px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* ======================================================== */
+
+#zapateria {
+    width: 100%;
+    height: 550px;
+    background: rgb(200, 197, 197);
+    background: linear-gradient(203deg, rgba(200, 197, 197, 0.7923902837502188) 40%, rgba(242, 242, 234, 1) 68%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: px;
+}
+
+#espacio {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 6px #000000, 0 0 3px white;
+}
+
+#foto_adidas {
+    width: 100%;
+    height: 40%;
+    background-image: url(adidas.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+#descripcion {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#descripcion .secciones {
+    height: 33%;
+    width: 100%;
+}
+
+#colors {
+    width: 100%;
+    height: 30%;
+    margin: 10px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+#circulos {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+#violeta {
+    background-color: purple;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 5px 10px 5px;
+}
+
+#rojo {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 5px 10px 15px;
+}
+
+#verde {
+    background-color: green;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 5px 10px 15px;
+}
+
+
+#size {
+    color: #000000;
+    font-weight: bold;
+    font-size: 19px;
+    height: 50%;
+    padding: 15px 10px 10px 25px;
+}
+
+#talla {
+    color: hsl(0, 10%, 64%);
+    font-weight: bold;
+    font-size: 19px;
+    height: 50%;
+    padding: 10px 10px 15px 25px;
+}
+
+#modelo {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    align-items: center
+}
+
+#model_desc {
+    flex: 2;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#model_precio {
+    flex: 1;
+    color: rgb(60, 155, 238);
+    font-weight: bold;
+
+}
+
+#sexo {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    align-items: center;
+    padding: 20px;
+    color: grey;
+}
+
+/* ========================Memoria========================= */
+
+#wrap{
+    width:100vw;
+}
+
+#memoria {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    /* background-color: chocolate; */
+    position:absolute; 
+}
+
+.memori {
+    width: 160px;
+    height: 160px;
+    background: rgb(244, 3, 3);
+    background: linear-gradient(45deg, rgba(244, 3, 3, 1) 0%, rgba(240, 195, 195, 1) 34%, rgba(12, 18, 207, 1) 60%);
+    color: crimson;
+    letter-spacing:7px;
+    text-shadow: 0 0 3px yellow, 0 0 8px green;
+    font-size: 20px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 0 3px white, 0 0 6px black;
+    border-radius:5px;
+    border:1px solid #000;
+}
+
+#memori1:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/1.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori2:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori3:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/3.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori4:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/4.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori5:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/5.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori6:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/6.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori7:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/7.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori8:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/7.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori9:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/6.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori10:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/5.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori11:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/4.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori12:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/3.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori13:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+#memori14:hover{
+    transform:rotateY(180deg);
+    transition-duration: 1s;
+    cursor: pointer;
+    background-image: url(imagenes/1.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    margin:0;
+    color:transparent;
+    text-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#hiden {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: aqua;  
+    position:relative;
+}
+
+.oculto {
+    width: 160px;
+    height: 160px;
+    background: peachpuff;
+    display: flex;
+    z-index: 000;
+    box-shadow: 0 0 3px white, 0 0 6px black;
+    border-radius:5px;
+    border:1px solid #000;
+}
+
+#oculto1 img, #oculto8 img,
+ #oculto2 img, #oculto9 img,
+ #oculto3 img, #oculto10 img,
+ #oculto4 img, #oculto11 img,
+ #oculto5 img, #oculto12 img,
+ #oculto6 img, #oculto13 img,
+ #oculto7 img, #oculto14 img{
+    object-fit: scale-down;
+    width:100%;
+}
+
+*/

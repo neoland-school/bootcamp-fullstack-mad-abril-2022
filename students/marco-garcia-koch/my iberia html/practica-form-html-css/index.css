@@ -1,0 +1,72 @@
+/*This is the style for the flight form
+*/
+
+body{
+    padding: 30px;
+    background-color: rgba(252, 244, 244, 0.489);
+}
+
+.container{
+    display: flex;
+    border: 1px solid rgb(168, 163, 163);
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(37, 37, 38, 0.217);
+    padding: 30px;
+    margin: auto 200px;
+    width: 450px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#NAME{
+    width: 100%;
+}
+
+#NUMBER{
+    width: 100%;
+}
+
+#EMAIL{
+    width: 100%;
+}
+
+#FLIGHT {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.country{
+    display: inline;
+}
+
+#MESSAGE{
+    width: 100%;
+    resize: none;
+}
+
+.privacy{
+    display: inline;
+}
+
+/*This is the style for the login form
+*/
+
+.login-container{
+    display: flex;
+    border: 1px solid rgb(168, 163, 163);
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(37, 37, 38, 0.217);
+    padding: 30px;
+    margin: auto 200px;
+    margin-top: 50px;
+    width: 450px;
+}

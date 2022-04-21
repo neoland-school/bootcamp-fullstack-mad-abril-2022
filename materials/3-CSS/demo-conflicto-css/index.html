@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflicto CSS</title>
+    <link rel="stylesheet" href="two.css">
+    
+</head>
+<body>
+    <style>
+        #TWO.two {
+            color: green;
+        }
+    </style>
+    
+    <div class="container">
+        <p class="one">1 texto</p>
+        <p id="TWO" class="two demo">2 texto</p>
+        <style>
+            .demo {
+                color: greenyellow;
+            }
+            .two.two{
+                color: goldenrod !important;
+            }
+        </style>
+        <p>3 texto</p>
+        <p class="last">4 texto</p>
+    </div>
+    <link rel="stylesheet" href="one.css">
+</body>
+</html>
