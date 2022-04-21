@@ -32,22 +32,22 @@ const language = prompt(`Elija el idioma en el que quieres el saludo:
 
 switch (language) {
     case 'Inglés': {
-        document.write(`<p>Hello, how are you?`);
+        document.write(`<p>Hello, how are you?</p>`);
         break;
     }
 
     case 'Español': {
-        document.write(`<p>Hola, como estás?`);
+        document.write(`<p>Hola, como estás?</p>`);
         break;
     }
 
     case 'Francés': {
-        document.write(`<p>Bonjour, comment allez-vous?`);
+        document.write(`<p>Bonjour, comment allez-vous?</p>`);
         break;
     }
 
     default: {
-        document.write(`<p>La opción elegida no es valida`)
+        document.write(`<p>Hello, how are you?</p>`)
     }
 }
 
@@ -155,32 +155,24 @@ switch (operator) {
 // usar operador de asignación para esta operación), y una nota media superior a 6, 
 // PD:" la nota mínima para aprobar una asignatura  es de 5".
 
-let scoreOne = prompt('Introduzca la nota 1');
-let scoreTwo = prompt('Introduzca la nota 2');
-let scoreThree = prompt('Introduzca la nota 3');
-let scoreFour = prompt('Introduzca la nota 4');
-let scoreFive = prompt('Introduzca la nota 5');
-let scoreSix = prompt('Introduzca la nota 6');
-let scoreSeven = prompt('Introduzca la nota 7');
-
-scoreOne = parseFloat(scoreOne);
-scoreTwo = parseFloat(scoreTwo);
-scoreThree = parseFloat(scoreThree);
-scoreFour = parseFloat(scoreFour);
-scoreFive = parseFloat(scoreFive);
-scoreSix = parseFloat(scoreSix);
-scoreSeven = parseFloat(scoreSeven);
+let scoreOne = parseFloat(prompt('Introduzca la nota 1'));
+let scoreTwo = parseFloat(prompt('Introduzca la nota 2'));
+let scoreThree = parseFloat(prompt('Introduzca la nota 3'));
+let scoreFour = parseFloat(prompt('Introduzca la nota 4'));
+let scoreFive = parseFloat(prompt('Introduzca la nota 5'));
+let scoreSix = parseFloat(prompt('Introduzca la nota 6'));
+let scoreSeven = parseFloat(prompt('Introduzca la nota 7'));
 
 const averageScore = (scoreOne+scoreTwo+scoreThree+scoreFour+scoreFive+scoreSix+scoreSeven)/7;
 
 let passedSubjects = 0;
-passedSubjects = scoreOne >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreTwo >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreThree >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreFour >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreFive >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreSix >= 5 ? ++passedSubjects : '0';
-passedSubjects = scoreSeven >= 5 ? ++passedSubjects : '0';
+passedSubjects += scoreOne >= 5 ? 1 : 0;
+passedSubjects += scoreTwo >= 5 ? 1 : 0;
+passedSubjects += scoreThree >= 5 ? 1 : 0;
+passedSubjects += scoreFour >= 5 ? 1 : 0;
+passedSubjects += scoreFive >= 5 ? 1 : 0;
+passedSubjects += scoreSix >= 5 ? 1 : 0;
+passedSubjects += scoreSeven >= 5 ? 1 : 0;
 
 const beca = (passedSubjects >= 5) && (averageScore > 6);
 
