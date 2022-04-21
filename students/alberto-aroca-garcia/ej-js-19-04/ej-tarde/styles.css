@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .principal{
+   display: flex;
+   flex-direction: column;
+}
+
+.titulo{
+
+    border-bottom: 2px solid gray;
+    padding: 10px;
+}
+
+.tomate{
+    border-bottom: 2px solid gray;
+    padding: 10px;
+
+}
+
+.pescado{
+    border-bottom: 2px solid gray;
+    padding: 10px;
+
+}
+
+.carne{
+    border-bottom: 2px solid gray;
+    padding: 10px;
+
+}
+
+
+.btcomprar{
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 20px;
+} */
+
+.shopping__cart-title{
+
+}
+
+.list__items-container{
+    list-style: none;
+}
+
+.list__items-container > li{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+    padding: 0.5rem;
+
+}
+
+.list__items-container > li:first-child{
+    border-top: 1px solid lightgrey;
+}
+
+.shopping__cart-footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 2px;
+
+}
+
+.shopping__cart-buy-button{
+    width: 270px;
+    padding: 0.4rem;
+    border: none;
+    color: white;
+    background-color: #089BEA;
+}
+
+.shopping-cart__buy-button--hidden{
+    display: none;
+}
+
+body{
+    background-color: #77DF77;
+    min-height: 100vh;
+
+}
+
+/* .shopping-cart__container{
+    
+ 
+} */
