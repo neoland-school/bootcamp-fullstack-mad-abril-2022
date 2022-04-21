@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes moveRight {
+
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+    
+}
+
+@keyframes rotateZ {
+    
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.sentence-even {
+    background-color: red;
+    animation: moveRight 1s infinite;
+}
+
+.sentence-odd{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,251,0.8830882694874825) 89%);
+    animation: rotateZ 800ms linear infinite;
+}
+
