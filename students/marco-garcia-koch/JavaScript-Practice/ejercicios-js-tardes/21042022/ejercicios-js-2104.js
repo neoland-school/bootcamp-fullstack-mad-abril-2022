@@ -69,14 +69,14 @@ document.write(`</table>`);
 const word = prompt('Escriba una palabra');
 let count = 0;
 
-for (i=0; i<word.length; i++) {
-
-    if (word.charAt(i) === 'a' || word.charAt(i) === 'e' || word.charAt(i) === 'i' || word.charAt(i) === 'o' || word.charAt(i) === 'u') {
+for (let i=0; i<word.length; i++) {
+    const c = word.charAt(i);
+    if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u') {
         count++;
     }
 }
 
-document.write(`La palabra que has puesto tiene ${count} vocales`);
+document.write(`<p>La palabra que has puesto tiene ${count} vocales</p>`);
 
 
 // 6. Imprime por pantalla el siguiente patron, el cual va a depender del numero que pases por prompt, 
@@ -86,14 +86,44 @@ document.write(`La palabra que has puesto tiene ${count} vocales`);
 const patron = parseInt(prompt('Cuantos niveles quieres que tenga el triángulo'));
 
 document.write(`<div class="background">`);
-for (let i=1; i<=patron; i++) {
-    document.write(`<div class="red" style="width:${3*i}px;"></div>`);
+
+if (patron > 1) {
+    for (let i=1; i<=patron; i++) {
+        document.write(`<div class="red" style="width:${3*i}px;"></div>`);
+    }
+    
+    for (let i=patron; i>=1; i--) {
+        document.write(`<div class="green" style="width:${3*i}px;"></div>`);
+    }
+}else {
+    document.write(`<p class="error">ERROR. El número mínimo necesario para representar el triangulo debe ser 3</p>`);
 }
 
-for (let i=patron; i>=1; i--) {
-    document.write(`<div class="green" style="width:${3*i}px;"></div>`);
-}
 document.write(`</div>`);
+
+
+// Segunda versión de mi flecha
+
+
+const patrontwo = parseInt(prompt('Cuantos niveles quieres que tenga el triángulo'));
+
+
+if (patrontwo > 1) {
+    let output = `<div class="background">`;
+    for (let i=1; i<=patrontwo; i++) {
+        output += `<div class="red" style="width:${3*i}px;"></div>`;
+    }
+    
+    for (let i=patrontwo; i>=1; i--) {
+        output += `<div class="green" style="width:${3*i}px;"></div>`;
+    }
+    output += `</div>`;
+
+    document.write(output);
+
+}else {
+    document.write(`<div class="background"><p class="error">ERROR. El número mínimo necesario para representar el triangulo debe ser 3</p></div>`);
+}
 
 
 // 7. Crear una página web que solicite al usuario 1 número (n) y cree en HTML  
@@ -118,7 +148,7 @@ for (let i=1; i<=chessCells; i++) {
             }else {
                 document.write(`<div class="whitecell" style="width:${500/chessCells}px; height:${500/chessCells}px;"></div>`);
             }
+        }
     }
-  }
 }
 document.write(`</div>`);

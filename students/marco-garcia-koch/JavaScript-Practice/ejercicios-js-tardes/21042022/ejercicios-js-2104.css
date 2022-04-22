@@ -18,24 +18,30 @@
     background-color: rgb(94, 169, 94);
     display: flex;
     flex-direction: column;
+    gap: 0.5px;
 }
 
 
 .red {
     background-color: rgb(192, 122, 122);
-    height: 8px;
-    border: 0.5px solid red;
-    animation: marco 3s infinite linear;
+    height: 12px;
+    /* border: 0.5px solid red; */
+    animation: move 3s infinite linear;
 }
 
 .green {
     background-color: rgb(92, 244, 46);
-    height: 8px;
-    border: 0.5px solid rgb(6, 123, 6);
-    animation: marco 3s infinite linear;
+    height: 12px;
+    /* border: 0.5px solid rgb(6, 123, 6); */
+    animation: move 3s infinite linear;
 }
 
-@keyframes marco {
+.error {
+    margin: auto;
+    font-size: 2rem;
+}
+
+@keyframes move {
     0% {
         transform: translateX(0vw);
     }
@@ -52,8 +58,10 @@
     height: 500px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    padding: 1px;
+    border: 10px solid black;
     box-sizing: content-box;
+    background-color: white;
 }
 
 
