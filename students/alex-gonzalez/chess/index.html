@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .board{
+            border: 1rem solid #C16936;
+            background-color: #EECBA0;
+            width: 100vw;
+            height: 100vw;
+            max-width: 800px;
+            max-height: 800px;
+            margin: auto;
+            padding: 2px;
+        }
+
+        .row{
+            display: flex;
+            /* height: 12.5%; Se lo proporciono con JS */
+        }
+
+        .cell{
+            /* width: 12.5%; 100/8. Se lo proporciono con JS */
+            height: 100%;
+        }
+
+        .row:nth-child(odd) > .cell:nth-child(even),
+        .row:nth-child(even) > .cell:nth-child(odd) {
+            background-color: #C16936;
+        }
+
+        input:checked ~ .board,
+        input:checked ~ .board .cell {
+            /* transform: rotateZ(180deg);
+            transition: transform 1s linear; */
+            opacity: 0;
+            transition: opacity 1s linear;
+        }
+
+        input:not(:checked) ~ .board,
+        input:not(:checked) ~ .board .cell {
+            transform: rotateZ(0deg);
+            transition: transform 1s linear;
+            opacity: 1;
+            transition: opacity 1s linear;
+        }
+
+        /* @media screen and (max-width:500px) {
+            .board {
+                opacity: 0;
+                transition: opacity 1s linear;
+            }
+        }
+
+        @media screen and (min-width:501px) {
+            .board {
+                opacity: 1;
+                transition: opacity 1s linear;
+            }
+        } */
+
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <script>
+        let outputHTML = '<div class="board">';
+        const size = 256; // 2^8
+        for(let i=1; i<=size; i++){ // for de las filas. sirve para recorrer las filas
+          outputHTML+=`<div style="height: ${100/size}%" class="row">` ;
+          for(let j=1; j<=size; j++){
+              outputHTML+= `<div style="width:${100/size}%" class="cell"></div>`;
+          } // pintar 8 bloques
+          outputHTML+='</div>';
+        }
+        outputHTML += '</div>';
+        document.write(outputHTML);
+    </script>
+</body>
+</html>
