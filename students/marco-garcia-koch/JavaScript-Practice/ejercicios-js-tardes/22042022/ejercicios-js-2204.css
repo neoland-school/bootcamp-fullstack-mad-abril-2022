@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 90vw;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.odd {
+    background-color: #F47732;
+    width: 9%;
+}
+
+.even {
+    background-color: #1148F3;
+    width: 9;
+}
