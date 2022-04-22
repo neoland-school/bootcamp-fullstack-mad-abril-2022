@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowels</title>
+</head>
+<body>
+    <script>
+        /**
+         * Contar el numero de vocales:
+         *   Entrada: Un String
+         *   Salida: Un number con el nº vocales de la entrada
+         * 
+         *      'hola' --> 2
+         *      'casa' --> 2
+         *      'fdk' ---> 0
+         *      'Esto es una fiesta' --> 8
+         *      'Pingüino' --> 4
+         *      'Lápiz' --> 2
+         *   
+         * 1. recorrer el string hasta el final --> bucle --> for
+         *    a. Si el carater actual es una 'a' o 'e' o 'i' o 'o' o 'u' --> if --> charAt
+         *        levantar un dedo en mi mano ==> Añado 1 a una variable que lleve la cuenta --> counter++
+         *    b. Sino no añado nada
+         * */
+        const sentence = prompt('Introduzca una frase'); // input
+        let counter = 0; // variable para contar el numero de vocales
+        // recorro el string desde su primera posición hasta su longitud de uno en uno
+        for(let i=0; i<sentence.length; i++){ // paso 1
+            const c = sentence.charAt(i).toLowerCase(); //sentence[i], obtengo el caracter actual de la vuelta
+            if(c === 'a' || c==='e' || c==='i' || c==='o' || c==='u' ||
+               c === 'ä' || c==='ë' || c==='ï' || c==='ö' || c==='ü' ||
+               c === 'á' || c==='é' || c==='í' || c==='ó' || c==='ú'){ // paso 1.a
+                counter++; // sumo 1
+            }
+        }
+
+        // salida de mi problema
+        document.write(`<p>Numero de vocales: ${counter}</p>`);
+    </script>
+</body>
+</html>
