@@ -303,7 +303,7 @@ for(i=1; i<=100; i++){
  let columnas = parseInt(prompt(`Ingresa un numero de filas`));
  
  document.write(`<table>`)
-for(let i=1; i<=filas; i++){
+for(let i=1; i<=filas; i++){                           
 
    document.write(`<tr>`)
 for(let e=1; e<=columnas; e++){
@@ -317,22 +317,29 @@ document.write(`</table>`)
 
 // document.write(`<br>============================<br>`);
 //5. Crear una página web que solicite al usuario una palabra y muestre un p con el número de vocales que hay.
-
-// program to count the number of vowels in a string // defining vowels const vowels = ("a", "e", "i", "o", "u") function countVowel(str) ( // initialize count let count = 0; // loop through string to test if each character is a vowel for (let letter of str.toLowerCase()) ( if (vowels.includes(letter)) ( count++; ) ) // return number of vowels return count ) // 
-const parole = prompt('Enter a string: ');
-let count = parole.length;
-
-for(let i = 0; i <=count; i ++){
-   let letter = parole.charAt(i);
-document.write(` ${letter} `);
-}
-
-// if(letter == a /*|| letter == e || letter == i || letter == o || letter == u*/){
-//    j++;
-//    document.write(j);
-
-document.write(`<br>============================<br>`);
 /*
-//6. Imprime por pantalla el siguiente patron, el cual va a depender del numero que pases por prompt, usaremos CSS para la maquetación (una vez terminado y mediante animation usando @keyframes haz que el triangulo se desplace hasta el otro punto de la pantalla de manera infinita).
+// program to count the number of vowels in a string // defining vowels const vowels = ("a", "e", "i", "o", "u") function countVowel(str) ( // initialize count let count = 0; // loop through string to test if each character is a vowel for (let letter of str.toLowerCase()) ( if (vowels.includes(letter)) ( count++; ) ) // return number of vowels return count ) // 
+const paroles = prompt('Enter a string: ');
+let parole = paroles.toLowerCase();
+let count = parole.length;
+let contador =0;
+for(let i = 0; i <=count; i ++){
+   let c = parole.charAt(i)
+   if(c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u' ||
+   c === 'ä' || c === 'ë' || c === 'ï' || c === 'ö' || c === 'ü'){
+contador++
+   }
+}
+document.write(`${paroles} tiene ${contador} vocales`);
+
 document.write(`<br>============================<br>`);
 */
+
+//6. Imprime por pantalla el siguiente patron, el cual va a depender del numero que pases por prompt, usaremos CSS para la maquetación (una vez terminado y mediante animation usando @keyframes haz que el triangulo se desplace hasta el otro punto de la pantalla de manera infinita).
+const n = parseInt(prompt(`numero:`));
+
+for(let i; i<=n; i++){
+console.log('-'.repeat(i));
+}
+
+//document.write(`<br>============================<br>`);
