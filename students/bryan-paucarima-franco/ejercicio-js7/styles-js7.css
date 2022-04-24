@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.square{
+    background-color: #F47732;
+    height:50px; width:50px;
+    margin: 2px;
+}
