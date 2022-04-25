@@ -33,7 +33,7 @@ document.write(`<p>${arrayComplete}</p>`);
 
 const numGiven = parseInt(prompt('Escribe un número'));
 
-const newArray = Array(numGiven).fill(1);
+const newArray = Array(numGiven).fill(11);
 
 document.write(`El nuevo array es: ${newArray}`);
 
@@ -53,17 +53,15 @@ document.write(`<p>Nombre de banda: ${banda[0]}. Subgénero: ${banda[1][0][1]}</
 // 4- Usa el ejercicio 1 para crear un  array de 10 números e imprima por pantalla true 
 // si todos son mayor de 10 o false en caso contrario.
 
-const numArray = [11,2,13,14,15,16,17,18,19,15];
-
 let counter = 0;
 
-for (let i=0; i<numArray.length; i++) {
-    if (numArray[i] > 10) {
+for (let i=0; i<newArray.length; i++) {
+    if (newArray[i] > 10) {
         counter++;
     }
 }
 
-if (counter < 10) {
+if (counter < newArray.length) {
     document.write(`<p>FALSE</p>`);
 } else {
     document.write(`<p>TRUE</p>`);
