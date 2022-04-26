@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Ejercicio de la tabla*/
+
+.table {
+    border: 1px solid black;
+}
+
+/*Ejercicio del triángulo verde y rojo que se desplaza */
+
+.background {
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(94, 169, 94);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5px;
+}
+
+
+.red {
+    background-color: rgb(192, 122, 122);
+    height: 12px;
+    /* border: 0.5px solid red; */
+    animation: move 3s infinite linear;
+}
+
+.green {
+    background-color: rgb(92, 244, 46);
+    height: 12px;
+    /* border: 0.5px solid rgb(6, 123, 6); */
+    animation: move 3s infinite linear;
+}
+
+.error {
+    margin: auto;
+    font-size: 2rem;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+/*Ejercicio del tablero de ajedrez*/
+
+.border {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+    border: 10px solid black;
+    box-sizing: content-box;
+    background-color: white;
+}
+
+
+.blackcell {
+    background-color: black;
+}
+
+.whitecell {
+    background-color: white;
+}
