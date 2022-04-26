@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    height: 300px;
+    width: 500px;
+    margin-left: 40px;
+    margin-top: 40px;
+    padding: 50px 50px 250px 30px;
+    border: 1px solid rgba(223, 179, 241, 0.103);
+    border-radius: 10px;
+    background: linear-gradient(45deg, #3F1EB9 0%, #EAF8FF 100%);
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: whitesmoke;
+}
+
+.head > p:first-child:first-letter{
+   text-transform: capitalize;
+}
+
+p{
+    font-size: 20px;
+}
+
+.visa{
+    font-size: 50px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: whitesmoke;
+}
+
+
+
+

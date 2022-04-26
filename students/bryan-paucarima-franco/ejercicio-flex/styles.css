@@ -1,0 +1,45 @@
+
+* {
+    margin : 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.container > div {
+    background-color: rgb(142, 42, 235);
+    width: 120px;
+    height: 100px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 150px 500px 0 150px;
+    
+}
+
+.item1{
+    order: 14;
+}
+
+
+div.item{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+

@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 30px;
+    padding: 50px;
+}
+
+.container > div{
+    width: 200px;
+    height: 280px;
+    background: url('reverso-carta.jpg')  center no-repeat;
+}
+
+.one {
+    z-index: 1;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.one:hover {
+    z-index: 6;
+    background-image: url('carta-one.jpg');
+}
+
+.two {
+    z-index: 2;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.two:hover {
+    z-index: 6;
+    background-image: url('carta-two.jpg');
+}
+
+.three {
+    z-index: 3;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 250px;
+}
+
+.three:hover {
+    z-index: 6;
+    background-image: url('carta-three.jpg');
+}
+
+.four {
+    z-index: 4;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 350px;
+}
+
+.four:hover {
+    z-index: 6;
+    background-image: url('carta-four.jpg');
+}
+
+.five {
+    z-index: 5;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 450px;
+}
+
+.five:hover {
+    z-index: 6;
+    background-image: url('carta-five.jpg');
+    background-size: contain;
+}

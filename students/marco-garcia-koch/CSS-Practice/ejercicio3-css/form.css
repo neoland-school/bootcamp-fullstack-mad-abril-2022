@@ -1,0 +1,83 @@
+header{
+    position: static;
+}
+
+h1{
+    margin: 50px auto 30px auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 40%;
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+}
+
+:focus-within form {
+    background-color: rgb(156, 240, 156);
+  }
+
+label{
+    margin: 10px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text{
+    margin-left: 15px;
+    width: 75%;
+}
+
+.text:focus{
+    background-color: rgb(99, 125, 96);
+}
+
+.text:active{
+    background-color: rgb(99, 125, 96);
+}
+
+.form__div{
+    display: flex;
+}
+
+.radio{
+    margin-left: 15px;
+    margin-top: 15px; 
+}
+
+.radio:checked{
+    box-shadow: 3px 3px 3px rgb(63, 192, 63);
+}
+
+.model{
+   
+}
+
+.quantity-units{
+    margin-left: 15px;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.quantity-units:invalid{
+    background-color: rgb(181, 56, 56);
+}
+
+button{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+button:disabled {
+    background-color: rgb(201, 191, 191);
+    border-color: none;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    box-shadow: none;
+}

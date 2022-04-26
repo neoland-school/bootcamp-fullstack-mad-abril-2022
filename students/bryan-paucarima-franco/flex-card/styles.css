@@ -1,0 +1,52 @@
+* {
+    margin : 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    background-image: linear-gradient(215deg, #aeb0ff 0, #486ee5 50%, #0036b3 100%);
+    width: 650px;
+    height: 400px;
+    padding: 95px 50px 0 50px;
+    margin: 20px;
+    border-radius: 22px;
+    color: white;
+    flex-direction: column;
+    font-size: 1.5rem;
+
+}
+
+.credit::first-letter {
+    font-size: 2.5rem;
+}
+
+.visa {
+    font-size: 4.5rem;
+}
+
+.credit-visa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nombre {
+    margin: 50px 0 0 0;
+}
+
+.numero-tarjeta {
+    margin: 20px 0 0 0;
+}
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 120px;
+    background-color: rgb(142, 42, 235);
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px rgb(209, 203, 203);
+    font-weight: bolder;
+}
+
+.container > div:first-child{
+    order: 2;
+}

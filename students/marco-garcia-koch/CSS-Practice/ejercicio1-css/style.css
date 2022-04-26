@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    height: 100px;
+    width: 160px;
+    margin: 20px;
+}
+
+.menu{
+    text-decoration: none;
+    color: inherit;
+}
+
+a{
+    right: 0;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.first-div{
+    height: 150px;
+    width: 150px;
+    border: 2px solid rgb(110, 33, 33);
+    background-color: rgb(154, 150, 209);
+    box-shadow: 5px 4px 3px grey;
+    margin: 30px;
+}
+
+.second-div{
+    height: 300px;
+    width: 100px;
+    border: 2px dashed rgb(151, 91, 43);
+    background-image: linear-gradient(rgb(237, 235, 150), rgb(181, 176, 31));
+    box-shadow: 6px -5px 3px rgb(156, 166, 67);
+    margin: 30px;
+}
+
+.third-div{
+    position: relative;
+    height: 450px;
+    width: 450px;
+    background-image: url("playa.jpg");
+    background-size: cover;
+    margin-bottom: 20px;
+    
+}
+
+.image-description{
+    color: rgb(249, 244, 231);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+    background-color: rgb(156, 240, 156);
+    margin-top: auto;
+    height: 150px;
+    
+}
+
+.footer-circle{
+    display: flex;
+    position: absolute;
+    background-color: whitesmoke;
+    margin: 15px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+#github{
+    font-size: 70px;
+    margin: auto;
+}
+
+
+
