@@ -336,10 +336,88 @@ document.write(`<br>============================<br>`);
 */
 
 //6. Imprime por pantalla el siguiente patron, el cual va a depender del numero que pases por prompt, usaremos CSS para la maquetación (una vez terminado y mediante animation usando @keyframes haz que el triangulo se desplace hasta el otro punto de la pantalla de manera infinita).
-const n = parseInt(prompt(`numero:`));
 
-for(let i; i<=n; i++){
-console.log('-'.repeat(i));
+/*
+//OJO TERMINAR
+let cant = 5;
+
+
+  document.write(`<div class="grant">`)
+
+for(let i=1; i<=cant; i++){
+document.write(`<div class=mini>`)
+
+for(let j = 1; j<=i; j++){
+   document.write(`<div class="micro"></div>`)
 }
 
+document.write(`</div>`)
+}
+
+for (let k =cant; k>=1; k--){
+   document.write(`<div class="alre">`);
+   
+   for(let l=k; l>=1; l--){
+   document.write(`<div class="contra"></div>`);
+   }
+   
+   document.write(`</div>`);
+   }
+
+ 
+  document.write(`</div>`);
+
+//OJO TERMINAR
+*/
+
+
 //document.write(`<br>============================<br>`);
+
+//7.  Crear una página web que solicite al usuario 1 número (n) y cree en HTML  un tablero de ajedrez de nxn, teniendo  en cuenta los colores como en el ajedrez.
+
+
+
+//document.write(`<br>============================<br>`);
+
+
+
+//Mediante el uso del bucle  while imprime 40 p's con los textos numerados de la siguiente manera:
+// let cont =1;
+// while(cont<=40){
+//    cont++;
+//    document.write(`${cont}.- Hello world <br>`);   
+// }
+// document.write(`<br>============================<br>`);
+
+//2. Mediante el uso de while crea 100 divs de color #F47732. Modificar el ejercicio para que los divs pares se sean de  color #F47732 y los impares #1148F3. Modificar para que  se muestren sobre un contenedor flex.
+
+/*
+ let contaor =0;
+
+ document.write(`<div id="grande">`);
+
+ while(contaor<10){    
+    contaor++ 
+    document.write('<div class=cuadrado></div>');
+ }
+document.write(`</div>`);
+
+document.write(`<br>============================</br>`);
+*/
+
+//3.Solicitar el número al usuario un numero por prompt, e imprime en un P  el número al revés.
+
+/*
+let pal = prompt(`Dame un numero`);
+document.write(`El númerp ingresado fue: "${pal}"<br>`);
+let ch = pal.length;
+document.write(`Tiene "${ch}" digitos<br>`);
+//document.write(pal.charAt(3))
+
+for(let i=ch; i>=0; i--){
+document.write(`${pal.charAt(i)}`);
+}
+
+document.write(`<br>============================</br>`);
+
+*/

@@ -28,7 +28,7 @@
 }
 
 #amarillo{
-    background-color: amarillo;
+    background-color: yellow;
 }
 
 th{
@@ -43,4 +43,91 @@ td{
     width:70px;
     height:40px;
     text-align:center;
+}
+
+#wrapc{
+    border:1px solid red;
+    width:100px;
+}
+
+.cuadroc{
+border:1px solid black;
+width:30px;
+height:30px;
+margin:10px;
+}
+
+.board{
+    width:30px;
+    height:30px;
+    background-color: red;
+    margin:10px;
+}
+
+
+#grande{
+    border:1px solid red;
+    display:flex;
+   flex-wrap:wrap;
+
+}
+
+.cuadrado{
+    border:1px solid chocolate;
+    width:30px;
+    height:30px;
+    margin:10px;
+    padding:0;
+}
+
+.cuadrado:nth-child(odd){
+    background-color: #1148F3;
+}
+
+.cuadrado:nth-child(even){
+    background-color: #F47732;
+}
+/* ====================================== */
+
+body{
+    box-sizing: border-box;
+    height:100wh;
+width:100vw;
+display:flex;
+flex-direction: row;
+align-content:center;
+}
+
+/* .grant{
+     background-color: coral;
+} */
+
+
+.mini{
+
+    /* background-color: lightslategray; */
+    margin:2px;
+    display:flex;
+}
+
+.micro{
+    width:40px;
+    height:15px;
+    background-color: yellowgreen;
+    border:1px solid;
+    margin:2px;
+}
+
+.alre{
+    /* background-color: lightslategray; */
+    margin:2px;
+    display:flex;
+}
+
+.contra{
+    width:40px;
+    height:15px;
+    background-color: yellowgreen;
+    border:1px solid;
+    margin:2px;
 }
