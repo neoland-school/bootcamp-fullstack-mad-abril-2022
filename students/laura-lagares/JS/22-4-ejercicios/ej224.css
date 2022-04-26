@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.divs{
+   width: 3rem;
+   height: 2rem;
+   margin: 5px;
+}
+
+.divs:nth-child(even){
+    background-color:#F47732 ;
+}
+
+.divs:nth-child(odd){
+    background-color: #1148F3;
+}
+
+.reves{
+    font-size: 5rem;
+    transform: rotate(180deg);
+}
