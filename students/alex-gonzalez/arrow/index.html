@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .row {
+        display: flex;
+        margin-bottom: 1px;
+      }
+      .block {
+        height: 5px;
+        width: 3px;
+      }
+
+      .bg-asc {
+        background-color: red;
+      }
+
+      .bg-desc {
+        background-color: green;
+      }
+
+      .arrow {
+        animation: moveArrow 3s cubic-bezier(1,-0.01, 0.34, 1.05) infinite;
+      }
+
+      @keyframes moveArrow {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100vw);
+        }
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- <div class="arrow">
+      <div class="row">
+        <div class="block bg-asc"></div>
+      </div>
+      <div class="row">
+        <div class="block bg-asc"></div>
+        <div class="block bg-asc"></div>
+      </div>
+      <div class="row">
+        <div class="block bg-desc"></div>
+        <div class="block bg-desc"></div>
+      </div>
+      <div class="row">
+        <div class="block bg-desc"></div>
+      </div>
+    </div> -->
+    <script>
+      /**
+       * Imprime por pantalla el siguiente patron,
+       * el cual va a depender del numero que pases por prompt,
+       * usaremos CSS para la maquetación
+       * (una vez terminado y mediante animation usando @keyframes haz que el triangulo se desplace hasta el otro punto de la pantalla de manera infinita).
+       *    Input: number que representa la altura del triángulo (nº de bloques horizontales)
+       *    Salida: Una estructura de divs --- Definirlo bien
+       *
+       * Ejemplo: n === 2
+       *      -
+       *      --
+       *      --
+       *      -
+       * Ejemplo: n === 3
+       *      -
+       *      --
+       *      ---
+       *      ---
+       *      --
+       *      -
+       * Ejemplo: n === 4
+       *      -
+       *      --
+       *      ---
+       *      ----
+       *      ----
+       *      ---
+       *      --
+       *      -
+       *
+       * 1. Fase creciente.
+       *      a. Recorro desde 1 hasta n, de uno en uno. pintando i bloques --> for
+       *         Pintar-bloque: crear un div con una clase especial
+       *
+       * 2. Fase decreciente
+       *      a. Recorro desde n hasta 1 (decreciento en uno), pintando i bloques --> for
+       */
+      const n = parseInt(prompt("Introduzca la altura de la flecha"));
+
+      if (n > 1) {
+        let outputHTML = '<div class="arrow">'; // contruir poco a poco el HTML final que quiero pintar
+        // fase creciente
+        for (let i = 1; i <= n; i++) {
+          // paso 1
+          outputHTML+='<div class="row">';
+          outputHTML += '<div class="block bg-asc"></div>'.repeat(i); // pintar i bloques
+          outputHTML+='</div>';
+        }
+
+        // fase decreciente
+        for (let i = n; i >= 1; i--) {
+          outputHTML+='<div class="row">';
+          outputHTML += '<div class="block bg-desc"></div>'.repeat(i); // pintar i bloques
+          outputHTML+='</div>';
+        }
+
+        outputHTML+='</div>';
+        document.write(outputHTML);
+      }
+    </script>
+  </body>
+</html>
