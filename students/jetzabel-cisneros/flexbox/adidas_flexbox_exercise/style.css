@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+p {
+    color: darkgray;
+}
+
+h4 {
+    color: blue;
+    font-size: 28px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; 
+    background-color: white;
+    align-items: center;
+}
+
+.menu a {
+    display: inline;
+    text-decoration: none;
+    margin: 19px;
+    color: black;
+}
+
+
+.logo {
+    content: url(https://logodix.com/logo/930454.jpg);
+    width: 150px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+    justify-content:center;
+   
+}
+
+.card.big-card {
+    width: 630px;
+}
+
+
+.card {
+    display: flex;
+    background-color: white;
+    width: 400px;
+    height: 580px;
+    flex-direction: column;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+    animation: mymoveCard 3s 1 linear;
+}
+
+
+.card-info {
+    margin: 9px;
+}
+
+.adidas {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img { 
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Zapatilla_Forum_Mid_Blanco_FY4976_01_standard.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+.button-details {
+    display: flex;
+    padding: 16px;
+    box-shadow: 6px 6px 6px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+
+
+
+/*COLORS DOTS*/
+
+.dots {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dots > div {
+    width: 10px;
+    height: 10px;
+    margin: 1.5px;
+    border-radius: 50%;
+    
+}
+
+.dots > div:first-child {
+    border: none;
+    background-color: blue;
+   
+}
+
+.dots > div:nth-child(2) {
+    border: none;
+    background-color: red;
+}
+
+.dots > div:last-child {
+    border: none;
+    background-color: greenyellow;
+}
+
+
+
+
+
+.card:hover {
+    transform: rotate(-1.1deg) scale(1.1);
+    transition-delay: 0.3s;
+    transition: 0.8s;
+}
+
+/*Animacion*/
+@keyframes mymoveCard {
+
+    0%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 0.3;    
+    }
+    66%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+
+
+}
+
+
+
+
+
+.imagen1 {
+    background-image: url(https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Zapatilla_Forum_Mid_Blanco_FY4976_01_standard.jpg);
+}
+
+.imagen2 {
+    background-image: url(https://st4.depositphotos.com/3123063/31057/i/450/depositphotos_310577288-stock-photo-varna-bulgaria-august-13-2019.jpg);
+}
+
+.imagen3 {
+    background-image: url(https://st2.depositphotos.com/3123063/5988/i/950/depositphotos_59885421-stock-photo-varna-bulgaria-october-16-2014.jpg);
+}
+
+.imagen4 {
+    background-image: url(https://i.pinimg.com/736x/ab/cb/72/abcb7222b1543e72cb90799cea86a96c--sneakers-shoes-adidas-shoes.jpg);
+}
+
+.imagen5 {
+    background-image: url(https://media.istockphoto.com/photos/shoe-isolated-on-white-product-shots-picture-id511033006?k=20&m=511033006&s=612x612&w=0&h=UW-pDR4g6tu-4UmBpjWGgkqGeGhyB8q5iCFOrPuVnzs=);
+}
+
+.imagen6 {
+    background-image: url(https://5.imimg.com/data5/EN/WH/MY-52269820/adidas-sports-shoes-500x500.jpg);
+}
+
+.imagen7 {
+    background-image: url(https://5.imimg.com/data5/QM/OT/MY-28862418/adidas-mens-shoes-250x250.jpg);
+}
+
+.imagen8 {
+    background-image: url(https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWRpZGFzJTIwc2hvZXxlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+
+

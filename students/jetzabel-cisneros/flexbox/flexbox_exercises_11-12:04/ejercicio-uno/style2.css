@@ -1,0 +1,67 @@
+header {
+    background: rgb(232, 181, 232);
+    height: 100px;
+
+}
+.container {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    /* gap: 2px; */
+   /* flex-wrap: wrap; */
+}
+
+div {
+    width: 350px;
+    height: 350px;
+}
+
+
+.uno {
+    background-color: rgb(232, 181, 232);
+}
+
+.dos {
+    background-color: rgb(247, 106, 247);
+}
+
+.tres {
+    background-color: rgb(248, 5, 248);
+}
+
+.cuatro {
+    background-color: rgb(24, 1, 24);
+}
+
+.cinco {
+    background-color: rgb(59, 43, 43);
+}
+
+.seis {
+    background-color: #ee142a;
+}
+
+.siete {
+    background-color: #017b01;
+}
+
+.ocho {
+    background-color: #14029b;
+}
+
+.nueve {
+    background-color: #10e9f0;
+}
+.diez {
+    background-color: #ecdd0c;
+}
+
+ @media screen and (max-width: 500px) {
+    body {
+flex-direction: column;
+
+    }
+      
+    }
