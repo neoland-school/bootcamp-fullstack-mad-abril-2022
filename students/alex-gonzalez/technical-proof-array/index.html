@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * Palíndromo: Funcion que dice si un string se lee igual de derecha a izq que de izq a derecha
+         *     Entrada: string
+         *     Salida: boolean
+         * 
+         * Ej: 
+         *  - 'radar' --> reverse --> radar --> true
+         *  - 'roedor' --> reverse --> rodeor -->false
+         *  - 'Dábale arroz a la zorra el abad' --> true
+         * 
+         * 1. Recorrer caracter a caracter generando el string dado la vuelta
+         * 2. Comparar si son iguales
+         */
+        function isPalindrome(str) {
+            const strCleaned = cleanStr(str);
+            return strCleaned.split('').reverse().join('') === strCleaned;
+        }
+
+        /**
+         * DAdo un string devuelve el string limpio.
+         * Sin espacios, en minuscula y sin vocales especiales
+         * 
+         * Entrada: un string
+         * Salida: un string transformado
+         * 
+         * 1.pasar a minuscula
+         * 2. quitar espacios de un string
+         * 3. sustituir vocales especiales por su vocal base
+         */
+        function cleanStr(str){
+            let result = str.toLowerCase(); // paso 1
+            result = result.replaceAll(' ', ''); // paso 2
+            result = result.replaceAll('á','a'); // paso 3
+            result = result.replaceAll('ä','a');
+            result = result.replaceAll('à','a');
+            result = result.replaceAll('é','e');
+            result = result.replaceAll('ë','e');
+            result = result.replaceAll('è','e');
+            result = result.replaceAll('í','i');
+            result = result.replaceAll('ï','i');
+            result = result.replaceAll('ì','i');
+            result = result.replaceAll('ó','o');
+            result = result.replaceAll('ö','o');
+            result = result.replaceAll('ò','o');
+            result = result.replaceAll('ú','u');
+            result = result.replaceAll('ü','u');
+            result = result.replaceAll('ù','u');
+            // las 3 de cada letra se podría sustituir con REGEX result.replaceAll(/[áäàâ]/g,'a');
+            return result;
+        }
+
+    </script>
+    
+    <script>
+        /**
+         * una funcion q ordene un array de menor a mayor en el que solo puede haber 0, 1 y 2 sin usar sort
+         * 
+         * Entrada: Array de numeros. Puede estar vacio o solo tener 0, 1 y 2
+         * Salida: Array de numeros, que será el array de entrada ordenado de MENOR a MAYOR
+         * 
+         * Ej:
+         * 
+         * [1,0,2] --> [0,1,2]
+         * [1,2,2,0,1,0] --> [0,0,1,1,2,2]
+         * [] --> []
+         * [0,0,0,0] --> [0,0,0,0]
+         * 
+         * 1. un array de 0
+         * 2. un array de 1
+         * 3. un array de 2
+         * 4. concat de los 3 arrays
+         */
+        const countValues = (arr,n) => arr.reduce((acc,v) => acc + (v===n?1:0) ,0);
+
+        const generateArrayValues = (arr,n) => {
+            const numberElements = countValues(arr,n);
+            return Array(numberElements).fill(n);
+        };
+
+        // versión arrow function
+        const sortList = arr => generateArrayValues(arr,0)
+                                .concat(
+                                    generateArrayValues(arr,1),
+                                    generateArrayValues(arr,2)
+                                );
+
+        function sortList(arr){
+            const zeroArray = generateArrayValues(arr,0); // paso 1
+            const oneArray = generateArrayValues(arr,1); // paso 2
+            const twoArray = generateArrayValues(arr,2); // paso 3
+            return zeroArray.concat(oneArray,twoArray); // paso 4
+        }
+
+
+    </script>
+
+    <script>
+        /* 
+        * Una función que dado un string comprobar si una expresion de parentesis, corchetes y llaves juntas es correcta 
+          (ejemplo: ‘[({[]})]’ seria true // ‘[{}’ seria false)
+
+          Entrada: string
+          Salida: boolean si la cadena es correcta
+
+          Ejemplos:
+            - [({[]})] --> true
+            - [{} --> false
+            - () --> true
+            - ([)] --> false
+            - ()() --> true
+            - [(({}))}] --> false
+            
+          1. recorro caracter a caracter.
+                a- Si el caracter de es de apertura lo apilo en un array de aperturas pendientes
+                b- Si el caracter es de cierre:
+                    a- Si no hay aprturas pendientes --> false
+                    b- Si hay aperturas pendientes:
+                        a- Si la ultima apertura coincide con el caracter de cierre
+                            Quito la ultima apertura de mi array (desapilar)
+                        b- Si la ultima apertura NO coincide --> false
+          2. Si quedan aperturas pendientes --> false
+        */ 
+
+        function areBlocksValid(str){
+            const stack = [];// creo una pila vacía
+
+            for(let i=0; i<str.length; i++){ // recorro caracter a caracter. (paso 1)
+                const nextSymbol = str.charAt(i);
+                if(nextSymbol==='[' || nextSymbol==='{' || nextSymbol==='('){ // paso 1.a
+                    stack.push(nextSymbol); // 
+                }else{
+                    // entonces es de cierre
+                    if(stack.length === 0){ // 1.b.a
+                        return false;
+                    }else{
+                        if( (nextSymbol === ']' && stack[stack.length-1] === '[')
+                         || (nextSymbol === ')' && stack[stack.length-1] === '(')
+                         || (nextSymbol === '}' && stack[stack.length-1] === '{')){
+                            stack.pop(); // vamos bien, asi que desapilamos 1.b.b.a
+                        }else{
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            return stack.length === 0; // paso 2, no hay pendientes
+        }
+    </script>
+</body>
+</html>

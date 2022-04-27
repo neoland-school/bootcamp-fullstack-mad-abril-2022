@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 1px;
+  }
+  .block {
+    height: 5px;
+    width: 3px;
+  }
+
+  .asc {
+    background-color: red;
+  }
+
+  .desc {
+    background-color: green;
+  }
+
+  .arrow {
+    animation: moveArrow 3s cubic-bezier(1,-0.01, 0.34, 1.05) infinite;
+  }
+
+  @keyframes moveArrow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
