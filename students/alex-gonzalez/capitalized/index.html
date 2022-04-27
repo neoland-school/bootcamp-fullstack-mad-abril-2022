@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Dado un string tiene que devolverlo capitalizado,
+       * Es decir, con su primera letra en mayuscula
+       * ¿Que pasa si lo que me entra no es un string (ej: null, undefined)?
+       *  --> devuelvo ''
+       */
+      function capitalized(str) {
+        // compruebo que el tipo de datos es un string
+        if (typeof str !== "string") return "";
+        const firstLetterUppercased = str.charAt(0).toUpperCase();
+        // genero un nuevo string con lo primero mas lo que había en el string
+        return firstLetterUppercased + str.substring(1);
+      }
+
+      /**
+       * Esta función pasa todos los strings de un array capitalizados
+       *  - Entrada: Array de strings
+       *  - Salida: Array de strings capitalizados
+       *
+       * EJ:  let =[jose,maca,jorge], output [Jose,Maca,Jorge]
+       *
+       * 1. recorro la lista uno a uno.
+       * 2. Para cada string lo capitalizo
+       * 3. devuelvo el array capitalizado. ¿Modifico el array actual o creo uno nuevo?
+       */
+      function arrCapitalized(arr) {
+        const result = [];
+        // version for
+        /* for (let i = 0; i < arr.length; i++) {
+        *   result[i] = capitalized(arr[i]);
+         }*/
+        // versión forEach
+        arr.forEach((v,i) => result[i] = capitalized(v));
+        return result;
+      }
+
+      function arrCapitalizedWithMap(arr){
+          return arr.map(v => capitalized(v));
+      }
+
+      const arrCapitalizedWithMapArrow = arr => arr.map(v => capitalized(v));
+
+      const newArr = arrCapitalized(["hola", "Adios", "demo", "", undefined]);
+      console.log(newArr);
+      const capitalizedArr= arrCapitalizedWithMapArrow(["hola", "Adios", "demo", "", undefined]);
+    </script>
+  </body>
+</html>
