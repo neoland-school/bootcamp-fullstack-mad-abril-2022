@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cell{
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.arrow{
+    animation: moveArrow 11s linear infinite;
+}
+
+.back{
+    background-color: bisque;
+}
+
+.row{
+    display: flex
+}
+
+.block {
+    width: 2px;
+    height: 3px;
+}
+
+.asc{
+    background-color: #cf2e91;
+
+}
+
+.desc{
+   background-color: #964fd8;
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateX(0);
+      }
+    to {
+        transform: translateX(100vw);
+      }
+}
+
+.board{
+    border: 1rem solid #000000;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vw;
+    max-width: 800px;
+    max-height: 800px;
+    margin: auto;
+    padding: 2px;
+}
+
+.fila{
+    display: flex;
+}
+
+.celda{
+    height: 100%;
+}
+
+.fila:nth-child(odd) > .celda:nth-child(even),
+.fila:nth-child(even) > .celda:nth-child(odd) {
+    background-color: #000000;
+}
+
+
