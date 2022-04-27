@@ -1,0 +1,19 @@
+.circle {
+width: 100px;
+height:100px;
+border-radius:50%; 
+background-color:green;
+border: 2px solid black;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.texto {
+    /* position: absolute;
+    text-align:center;
+    color: black; */
+}
+
+/* <div class="circulo" style="width:100px; height:100px; border-radius:50%; background-color:green;"> </div>`)
+    document.write(` ${i} <div class="texto" style="position:absolute; text-align:center;"> </div>`) */
