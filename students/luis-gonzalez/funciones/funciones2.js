@@ -52,6 +52,8 @@ document.write(numInv)
 }
 cambiar()
 */
+
+/*
 // 4.-Crear una función para ordenar un array de números desordenados de mayor a menor.(easy)
 //ENTRADA:
 //Un array
@@ -62,8 +64,17 @@ cambiar()
 //SALIDA.
 //Array ordenado de mayor a menor.
 
+let array=[1,20,2,10,4,3].sort((a,b) =>{
+    if(a<b) return 1;
+    if(a>b) return -1;
+    return 0;
+})
+document.write(array);
+*/
+
 // 5.-Crear una función que reciba un array de números y devuelva un array con los que son mayores que 10.(easy)
 
+let array
 
 // 6.-Crear una función que dado una URL (Se representa con un string) por prompt,  me diga o no si pertenece al dominio de github,  usar function declaration.
 
