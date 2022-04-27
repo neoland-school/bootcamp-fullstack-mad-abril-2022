@@ -91,9 +91,9 @@ break;
 case 'circulo':
 let rad = parseFloat(prompt(`Dame el radio`));
 function cira(){
-let areac = (rad**2)*3.1416;
+let areac = (rad**2)*Math.PI;
 document.write(`<p>El area de este circulolo es: ${areac.toFixed(2)}</p>`);
-let perimetroc = rad*2*3.1416;
+let perimetroc = rad*2*Math.PI;
 document.write(`<p>El perimetro de este rectangulo es: ${perimetroc.toFixed(2)}</p>`);
 }
 cira()
@@ -152,7 +152,7 @@ if(palind === trans){
 palindromico()
 */
 
-
+/*
 //8.-Una funcion q ordene un array de menor a mayor en el que solo puede haber 0, 1 y 2 sin usar sort
 
 let arra = [1,4,9,2,6,3,8,7,5,0,];
@@ -165,5 +165,5 @@ document.write(arra);
 orden()
 
 //lo intente,pero...
-
+*/
 //9.-Una función que dado un string comprobar si una expresion de parentesis, corchetes y llaves juntas en string es correcta (ejemplo: ‘[({[]})]’ seria true // ‘[{}’ seria false)
