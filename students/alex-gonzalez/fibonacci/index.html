@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * La sucesión de fibonacci tiene la siguiente formula recursiva:
+       *  - fib(n) = fib(n-1) + fib(n-2)
+       *  - casos base:
+       *      fib(0) = 0;
+       *      fib(1) = 1;
+       *
+       * Entrada: 1 number
+       * Salida: String con la sucesion separa por coma
+       *
+       * Ejemplos:
+       *
+       *      fib(2) = fib(1) + fib(0) = "0,1,1";
+       *      fib(3) = fib(2) + fib(1) = "0,1,1,2";
+       *      fib(5) = fib(4) + fib(3) = "0,1,1,2,3,5";
+       *
+       * Los primeros números son: '0,1,1,2,3,5,8,13,21,34,55,...'
+       *
+       * 1. crear dos variables con el fib(0) y el fib(1)
+       * 2. Crear una variable string donde iremos concatenando la salida
+       * 3. repetir hasta llegar a n
+       *      a. En cada vuelta tenemos que concatenar a la salida el valor de la sucesion
+       *      b. Actualizar las dos variables numéricas para la siguiente vuelta del bucle
+       */
+
+      function fib(n) {
+        let fib_1 = 1; // representar fib(n-1)
+        let fib_2 = 0; // representar el fib(n-2)
+        let sucession = n===0 ? "0" : "0,1"; // cadena para los dos primeros valores
+
+        for (let i = 2; i <= n; i++) {
+          const fib_i = fib_1 + fib_2;
+          sucession += `,${fib_i}`; // fib(i) = fib(i-1) + fib(i-2)
+          // preparo la siguiente vuelta
+          fib_2 = fib_1; // en la siguiente vuelta fib(i-2) es lo que en esta es fib(i-1)
+          fib_1 = fib_i; // en la siguiente vuelta fib(i-1) es lo que en esta es fib(i)
+        }
+
+        return sucession;
+      }
+
+      const n = parseInt(prompt('Introduzca el numero de fibonacci'));
+      document.write(`<p>La sucesión de fib(${n}) es: ${fib(n)}</p>`);
+
+    </script>
+  </body>
+</html>
