@@ -118,26 +118,31 @@ pertenece();
 // SALIDA:
 //.-Imprimir el MCD.  
 
-let a= 20;
+let a= 200;
 let b = 44;
 let mcdw=a%b;
-let dividendo;
-let divisor;
 let resultado;
 
 function mcd(){
     
-    if(a>b){
-        dividendo=a;
-        divisor =b;
-        resultado=dividendo/divisor;
-    }else{
-        dividendo=b;
-        divisor =a;
-        resultado = dividendo/divisor;
+  
+if(a>b){
+    let dividendoi=a;
+    let divisori=b;
+    resultado = dividendoi/divisori;
+ }else {
+let dividendoe=b;
+let divisore=a
+       resultado = dividendoe/divisore;
+ }
+document.write(resultado)
+ while(resultado !=0){
+
+ }
+
+
 }
 mcd()
-document.write(resultado);
 // if (resultado !=0){
 
 //     function resolver(){
@@ -160,7 +165,6 @@ document.write(resultado);
 
 // }
 // }
- 
 
 
 
