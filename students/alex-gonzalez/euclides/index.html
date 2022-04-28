@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Euclides MDC</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Crear una función que calcule el Maximo Comun Divisor (Hint: Utilizar el algoritmo de euclides) y lo imprima por pantalla
+       *
+       * Entrada: 2 numbers
+       * Salida: 1 number
+       *
+       * Ejemplos:
+       *
+       *      4,2 --> 2
+       *      4,3 --> 1
+       *      72,8 --> 8
+       *
+       * 1. Dividimos el mayor entre el menor
+       *     a. Si la división es exacta --> es el menor
+       *     b. Si no lo es el divisor se convierte en el dividendo y el divisor es el resto de la anterior
+       * 2. Repetir hasta que la división sea exacta
+       */
+
+      function mcd(a, b) {
+        let major = a > b ? a : b;
+        let minor = a > b ? b : a;
+
+        while (major % minor !== 0) { // paso 2
+            const aux = minor;
+            minor = major%minor;
+            major = aux;
+        }
+
+        return minor;
+      }
+
+      /**
+       * Esta es una versión utilizando recursividad, que no entra en el curso
+       */
+      function mcdRecursive(a,b){
+        let major = a > b ? a : b;
+        let minor = a > b ? b : a;
+
+        if(major%minor === 0) {
+            return minor;
+        }else{
+            return mcdRecursive(minor, major%minor);
+        }
+      }
+    </script>
+  </body>
+</html>
