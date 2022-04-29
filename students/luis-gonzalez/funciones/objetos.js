@@ -78,7 +78,8 @@ console.log(nuevo);
 
 
 
-    const countries=[
+    const countries ={
+    "countries":[
       {
         "name_en": "Afghanistan",
         "name_es": "Afganistán",
@@ -1532,14 +1533,26 @@ console.log(nuevo);
         "code": "AX"
       }
     ]
-  
+    }
 
-    const comparar = countries.map(function(){
-// if(countries.name_en===countries.name_es){
-    document.write(`<p>${name_en}</p>`);
+console.log(countries.countries);
+
+let new
+
+
+    
+//     const varios=[
+//     {alto:1.7, ancho:2},
+//     {alto:2, ancho:2},
+//     {alto:2.1, ancho:2.1},
+//     {alto:2, ancho:2},
+// ]
+
+// varios.forEach(myFunction);
+
+// function myFunction(){
+//   if (varios.alto===varios.ancho){
+//     console.log(varios);
+//   }
 // }
 
-    }
-    
-    );
-    comparar()
