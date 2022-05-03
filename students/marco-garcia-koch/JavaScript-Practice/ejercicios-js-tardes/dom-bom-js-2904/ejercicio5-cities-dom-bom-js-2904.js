@@ -169,12 +169,12 @@ addCities(arrCities);
  */
 
 
-function removeCity (city) {
-    let remove = document.getElementById(`${city.name.toLowerCase()}`);
-    remove.remove();
-}
+// function removeCity (city) {
+//     let remove = document.getElementById(`${city.name.toLowerCase()}`);
+//     remove.remove();
+// }
 
-removeCity(arrCities[1]);
+// removeCity(arrCities[1]);
 
 
 //8- Crea una función llamada removeAllCity la cual eliminará todas las ciudades de la web.
@@ -193,12 +193,12 @@ removeCity(arrCities[1]);
  */
 
 
-function removeAllCity (arr) {
-    arr.forEach(c => removeCity(c)); 
-}
+// function removeAllCity (arr) {
+//     arr.forEach(c => removeCity(c)); 
+// }
 
 
-removeAllCity(arrCities);
+// removeAllCity(arrCities);
 
 
 // OTRA VERSION QUE NO DEPENDERIA DE NINGUNA OTRA FUNCION PARA BORRAR TODAS LAS CIUDADES DEL DOM SERIA:
@@ -215,11 +215,11 @@ removeAllCity(arrCities);
  *    en cada vuelta del ciclo.
  */
 
-function removeAllCityAlternative (arr) {
-    arr.forEach(c => {
-        let remove = document.getElementById(`${c.name.toLowerCase()}`);
-        remove.remove();
-    }); 
-}
+// function removeAllCityAlternative (arr) {
+//     arr.forEach(c => {
+//         let remove = document.getElementById(`${c.name.toLowerCase()}`);
+//         remove.remove();
+//     }); 
+// }
 
-removeAllCityAlternative(arrCities);
+// removeAllCityAlternative(arrCities);
