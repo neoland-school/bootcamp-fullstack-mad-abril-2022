@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body style="min-height: 100vh">
+    <form novalidate>
+        <input name="name" required/>
+        <input name="surname" />
+        <input name="caracola" />
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ullam laudantium quo neque quod nostrum dolorum autem incidunt aliquid velit harum nam quam ducimus deleniti, a nobis veritatis sint perspiciatis!</p>
+    <script>
+    //   document.addEventListener("click", e => {
+    //     console.log("Se ha hecho click en la página");
+    //     console.log(e);
+    //   });
+
+    //   window.addEventListener("resize", () => {
+    //     console.log("Se ha hecho un resize en la página");
+    //   });
+
+      document.body.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#FF3389";
+        // for(let i=0; i<100; i++){
+        //     document.body.innerText += `,${i}`;
+        // }
+      });
+
+    //   document.addEventListener("fullscreenchange", (event) => {
+    //     console.log("cambiando a pantalla completa");
+    //   });
+
+    //   document.addEventListener("keydown", () =>
+    //     console.log("Presionando una tecla")
+    //   );
+    //   document.querySelectorAll('input').addEventListener("keyup", e =>{
+    //     console.log(e.target.value);
+    //   });
+    //   document.addEventListener("paste", (event) =>
+    //     console.log("Intentando copiar...suspendido")
+    //   );
+    //   document.addEventListener("pointerover", (event) => {
+    //     console.log("Pointer moved in");
+    //   });
+
+    //   document.addEventListener("selectionchange", () => {
+    //     console.log(document.getSelection());
+    //   });
+     document.querySelector('form').addEventListener('submit', e => {
+        // evita una recarga de página eliminando el comportamiento por defecto
+        // del navegador en el evento. En este caso el submit. 
+        e.preventDefault(); 
+        console.log('Se ha hecho submit de un formulario');
+        console.log(e.target); // objeto de tipo formulario<
+        console.log(e.target.checkValidity()); // check que toos los campos son validos
+        console.log(e.target.name.value); // obtengo el valor del input cuyo name = 'name'
+        console.log(e.target.surname.value); // obtengo el valor del input cuyo name = 'surname'
+        console.log(e.target.caracola.value); // obtengo el valor del input cuyo name = 'caracola'
+
+        let voices = window.speechSynthesis.getVoices();
+        let utterance = new SpeechSynthesisUtterance(e.target.caracola.value);
+        utterance.voice = voices[96];
+        speechSynthesis.speak(utterance);
+     });
+    </script>
+  </body>
+</html>
