@@ -1,0 +1,62 @@
+
+
+body{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-content: center;
+    background-color: coral;
+   justify-content: center;
+}
+
+
+.card{
+    margin:20px;
+    height: 370px; 
+    width: 200px;
+    border-radius: 3%;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    background-color: rgb(255, 252, 252) ;
+    border-color: black;
+}
+
+.card-body{
+grid-area: text;
+}
+.visit {
+    color: rgb(248, 10, 172);
+
+}
+.card-body p {
+    color:gray;
+    font-size: 15px;
+    font-weight: 30;
+    padding: 5px;
+
+}
+
+.thumb{
+    width:100%
+}
+
+.card-footer{
+    font-size: x-small;
+    grid-area: stats;
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: blue;
+}
+
+.card-footer .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
