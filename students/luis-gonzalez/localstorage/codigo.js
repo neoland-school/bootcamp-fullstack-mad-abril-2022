@@ -61,10 +61,6 @@ function updateValues(e){
 
 //4.- Haremos una pagina web con una pagina home, la cual tendrá un form de login que tendrá tres, input uno de nombre, uno de password y un input submit, cuando el usuario inicie sesión deberá , mandarnos a otra pagina html de tipo usuario (para esto usaremos la api Location) donde nos aparecerá nuestro nombre y un boton de cerrar sesion, cuando le demos al boton de cerrar sesion, esta nos debe vaciar nuestro localstorage y mandarnos de regreso al la pagina home( para esto usaremos la api History)
 
-
-
-
-//==================================================
 let boton = document.getElementById('send');
 let user = document.querySelector('#user');
 let password = document.querySelector('#password');
@@ -79,12 +75,7 @@ function enviar(){
     localStorage.setItem('password', password.value);
 
     let obuser = localStorage.getItem('nombre');
-    
 
-
-
-   
-  //document.write(obuser)
   console.log(obuser)
 
 
