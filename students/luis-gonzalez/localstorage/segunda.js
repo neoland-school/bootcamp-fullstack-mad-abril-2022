@@ -1,3 +1,9 @@
+let container = document.querySelector('#container');
+
+let titulo = document.createElement('h1');
+let tituloT = document.createElement()
+
+document.container.appendChild(titulo);
 
 
 
