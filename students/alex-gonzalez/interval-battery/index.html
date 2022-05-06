@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interval battery</title>
+    <style>
+      .battery__container {
+        height: 110px;
+        border: 2px solid grey;
+        width: 100px;
+        padding: 0 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .battery__cell {
+        width: 100%;
+        height: 25px;
+        background-color: grey;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="battery__container"></div>
+    <script>
+      const container = document.querySelector(".battery__container"); // contenedor de la batería
+      let cellCounter = 1; // contador del intervalo de carga
+      let batteryManager = null; // battery manager con la información de la batería
+      let chargingAnimationId; // id del intervalo de animación
+
+      /**
+       * Esta función lo que hace es borrar todas las celdas y poner el contador
+       * a 1
+       * */
+      const initializeBatteryCells = () => {
+        const cells = document.querySelectorAll(".battery__cell");
+        cells.forEach((c) => c.remove());
+        cellCounter = 1;
+      };
+
+      /**
+       * Empezar la animación de las celdas
+       */
+      const startChargingAnimation = () => {
+        chargingAnimationId = setInterval(() => {
+          if (cellCounter > 4) {
+            initializeBatteryCells();
+          }
+          const cell = document.createElement("div");
+          cell.classList.add("battery__cell");
+          container.appendChild(cell);
+          cellCounter++;
+        }, 500);
+      };
+
+      /**
+       * Para la animación de las celdas
+       */
+      const stopChargingAnimation = () => {
+        clearInterval(chargingAnimationId);
+      };
+
+      const checkChargingAnimation = () => {
+        if (batteryManager.charging) {
+          startChargingAnimation();
+        } else {
+          stopChargingAnimation();
+        }
+      }
+
+      // evento para gestionar el cambio de estado de carga de la bateria
+      const onBatteryChargingChange = () => {
+            checkChargingAnimation();
+      };
+
+      navigator.getBattery().then(
+        (battery) => {
+          batteryManager = battery;
+          // asocio al evento de carga, una función (que es la que se va a ejecutar cuando cambie el estado de la bateria)
+          batteryManager.onchargingchange = onBatteryChargingChange;
+          checkChargingAnimation();
+        },
+        () => {}
+      );
+    </script>
+  </body>
+</html>

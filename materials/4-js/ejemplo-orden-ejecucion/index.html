@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        #sleep {
+            position: absolute;
+            animation: psyco 10s linear infinite;
+        }
+
+        @keyframes psyco {
+            0%{
+                transform: translateY(0);
+                /* top: 0; Si utilizamos TOP, como lo procesa la CPU, bloquearíamos la animacion */
+            }
+            100%{
+                transform: translateY(500px);
+                /* top: 500px; */
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <script>
+
+        let a = 3; // 1
+
+        let obj = { // 2
+            demo: false
+        };
+
+        function ex(){ // 3
+            obj.a = a; // 7
+        } // 8
+
+        if(obj.demo){ // 4
+            a++; 
+        }else{
+            a--; // 5
+        }
+        
+        ex(); // 6
+        //9
+    </script> 
+
+    <script>
+        let foo;
+        console.log(foo); // undefined   
+        c();
+        const b = () => {
+            console.log('dos'); // 
+            c();
+        }
+
+        console.log('tres'); // 
+
+        function c(){
+            console.log('cuatro'); // 3, 7, 8
+        }
+
+        console.log('cinco'); // 5
+        foo=33;
+        b();
+        c();
+        console.log(foo); // 33 9
+        
+    </script> -->
+    <input type="text" />
+    <button id="sleep">Sleep</button>
+    <script>
+      let t0 = performance.now();
+      console.log("1"); // 1
+
+      function b() {
+        console.log("2"); // 6
+      }
+
+      console.log("3"); // 2
+
+      document.addEventListener("click", () => console.log("4"));
+
+      let c = [1, 2, 3];
+
+      c.every((e) => {
+        console.log("5"); // 3, 4, 5
+        return e > 0;
+      });
+      b();
+      //
+      let t1 = performance.now();
+      console.log("El script tardó " + (t1 - t0) + " milisegundos.");
+
+      function wait(ms) { // funcion de espera síncrona
+        var start = Date.now(), // 1
+          now = start; // 2
+        while (now - start < ms) { // 3, 5, 7
+          now = Date.now(); // 4, 6, 8
+        }
+      }
+      console.log('antes'); // 1
+      setTimeout(() => {
+        // este código se ejecutará despues de 10000 pero sin bloquear JS, es Asíncrono
+        console.log('dentro');//3
+      });
+      console.log('despues');//2
+    //   wait(10000);
+    //   () => {
+    //       // este código se ejecutará despues de 10000 pero bloqueando JS, es síncrono
+    //       // Bloquear JS === NO SE PUEDE EJECUTAR NINGA INSTRUCCION NI EVENTO NI NADA DE JS
+    //   }
+
+      for(let i=0; i<3; i++){
+        console.log(3)
+      }
+      console.log(4)
+
+      document.querySelector('#sleep').addEventListener('click', () => {
+        console.log('antes del wait');
+        const div = document.createElement('div');
+        div.style.width = '100px';
+        div.style.height = '200px';
+        div.style.backgroundColor = 'red';
+        document.body.appendChild(div);
+        wait(10000); // espero 10 segundos SYNC
+        console.log('despues del wait');
+      });
+    </script>
+  </body>
+</html>

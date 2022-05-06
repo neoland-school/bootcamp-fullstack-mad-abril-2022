@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video width="500" height="500" id="webcam"></video>
+    <button id="video_out">Sacar Video</button>
+    <video width="500" height="500" id="share"></video>
+    <script>
+      navigator.mediaDevices.getUserMedia({
+          video: true,
+          // audio: true
+        })
+        .then((stream) => {
+          const v = document.querySelector("#webcam");
+          v.srcObject = stream;
+          v.onloadedmetadata = e => v.play(); // Necesario si no tenemos autoplay
+        }, err => {
+             // NO PODEMOS OBTNER LA CAMARA
+          }).catch(err => {});
+
+      // try{
+      //   const stream = await navigator.mediaDevices.getUserMedia({video: true});
+      //   //metemos el stream dentro del video en HTML
+      //   const v = document.querySelector("#webcam");
+      //   v.srcObject = stream;
+      //   v.onloadedmetadata = e => v.play(); 
+      // }catch(err){
+      //   // GESTIONAMOS EL ERROR DE LA CAMARA
+      // }
+
+
+      document.querySelector("#video_out").addEventListener("click", () => {
+        if (document.pictureInPictureElement) {
+          document.exitPictureInPicture();
+        } else if (document.pictureInPictureEnabled) {
+            const v = document.querySelector("#webcam");
+            v.requestPictureInPicture();
+        }
+      });
+
+      navigator.mediaDevices.getDisplayMedia({
+          video: true
+      }).then(s => {
+        const v = document.querySelector("#share");
+          v.srcObject = s;
+          v.onloadedmetadata = e => v.play();
+      });
+    </script>
+  </body>
+</html>
