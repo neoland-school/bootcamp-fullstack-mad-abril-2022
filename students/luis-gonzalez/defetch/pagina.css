@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding:10px;
+    background-color: rgb(192, 192, 192);
+    height:100wh;
+    width:100vw;
+}
+
+.extra{
+    width:550px;
+    height:320px;
+    background-color: rgb(192, 192, 192);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:10px;
+}
+
+.card{
+    width:500px;
+    height:270px;
+    display:grid;
+    grid-template-columns:35% 65%;
+    grid-template-rows: repeat (5,1fr);
+    grid-template-areas:
+    "foto nombre"
+    "foto clasificacion"
+    "foto precio"
+    "foto descripcion"
+    "foto botonera";
+    background-color: #fff;
+    border-radius:10px;
+
+}
+
+#foto{
+    grid-area:foto;
+}
+
+#foto img{
+width:100%;
+height:100%;
+border-radius:10px;
+}
+
+#nombre{
+    grid-area:nombre;
+        margin:auto;
+        font-size:1.5rem; 
+        color:rgb(28, 28, 228);
+
+}
+
+#clasificacion{
+    grid-area:clasificacion;
+    margin:auto;
+        font-size:1.5rem;
+}
+
+#precio{
+    grid-area:precio;
+    margin:auto;
+        font-size:1.2rem;
+        color:rgb(28, 28, 228);
+}
+
+#descripcion{
+    grid-area:descripcion;
+    margin:auto;
+        font-size:1rem;
+        padding: 0 20px;
+}
+
+#botonera{
+    grid-area:botonera;
+    margin: 15px 0 0 30px;
+    
+}
+
+#boton{
+    color: rgb(80,163,239);
+    border:1px solid rgb(111,205,253);padding:15px;
+    font-size:1.5rem;
+    padding:10px 15px;
+    border-radius:10px;
+}
+
+/* ========================================== */
+
+#tarjeta{
+    width: 250px;
+    height:150px;
+    background-image: url('http://perfumesfactory.com/images/perfume_ideal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    align-items:flex-end;
+    margin:15px;
+    background-color: peachpuff;
+    box-shadow: 0 0 10px #000;
+}
+
+#titulo{
+    color:#000;
+    font-size:1.1rem;
+    text-shadow: 0 2px 3px violet,0 3px 3px blue;
+}
