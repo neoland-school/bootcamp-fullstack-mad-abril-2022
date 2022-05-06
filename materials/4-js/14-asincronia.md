@@ -108,3 +108,82 @@ navigator.getBattery().then(b => {
 });
 
 ```
+
+### Async/Await
+
+Es una forma diferente de escribir la escucha de promesas, es decir, el `then`. Sirve para la gestión de las promesas, no de los callbacks.
+
+Necesitamos que la gestión de la promesa sea dentro de una `función` a la que llamaremos función asíncrona.
+
+```js
+
+// suponemos una promesa que se llame `demoP`
+
+demoP.then(
+    data => {
+        // código cuando la promesa está fulfilled
+    }
+);
+
+async function demoAsync(){
+
+    const data = await demoP; // el await devuelve los datos del fulfilled, que podemos guardarlo en una variable
+    // Este código no se ejecuta hasta que la promesa pasa a fulfilled. Es el mismo códido que pondríamos en dicha función
+}
+
+async function showWebCam(){
+    const stream = await navigator.mediaDevices.getUserMedia({video:true});
+     const v = document.querySelector("#webcam");
+     v.srcObject = stream;
+     v.onloadedmetadata = e => v.play();
+     return 'hola';
+}
+
+
+
+showWebCam(); // ¿Que devuelve esta función? --> Promesa<String>
+
+```
+
+Vale. ¿Y que pasa con el reject?
+
+#### Excepciones
+
+Como desarrollador@s se nos permite tanto escuchar excepciones como lanzar nuestras excepciones.
+
+```js
+console.log('Antes');
+try {
+ /* EL CODIGO EL CUAL QUEREMOS ESCUCHAR LA EXCEPCION (ERROR)*/
+ console.log(a); // a is not defined
+ console.log('hola');
+}catch(err){
+    /* CODIGO QUE SE EJECUTA CUANDO SE PRODUCE UNA EXCEPCION */
+    console.log('Este se ejecuta por a no está definido', err)
+}finally{
+    console.log('Esto siempre se ejecuta haya error o no');
+}
+
+console.log('Despues');
+```
+
+¿Como lanzo mi propia excepción?
+
+```js
+throw 'Esta es mi propio error';
+```
+
+### ¿Como gestiono el reject de una promesa utilizando async/await?
+
+basicamente, el reject de una promesa va por el catch
+
+```js
+
+try{
+    const data = await myPromise; // este es el data cuando está fulfilled
+    // NO SE EJECUTA CUANDO ESTA REJECTED LA PROMESA
+}catch(rejectData){
+    // esto se ejecuta si está rejected
+}
+
+```
