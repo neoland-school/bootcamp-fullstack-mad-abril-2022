@@ -11,6 +11,13 @@ body{
     width:100vw;
 }
 
+#apartado{
+    height:250px;
+    width:100%;
+    border:1px solid;
+    background-color: #fff;
+}
+
 .extra{
     width:550px;
     height:320px;
@@ -89,6 +96,7 @@ border-radius:10px;
     padding:10px 15px;
     border-radius:10px;
 }
+
 
 /* ========================================== */
 

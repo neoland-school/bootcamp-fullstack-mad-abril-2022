@@ -1,4 +1,4 @@
-/*
+
 
 //3.-Listado de productos. Vamos a crear una página que pinte un listado de productos de telefonía movil. Lo primero que tenemos que aprender es a leer la documentación de un API (la url de acceso a la información que queremos de un servidor). La docu se encuentra en la siguiente URL (https://dummyjson.com/docs/products). Realizar lo siguiente:
 // Identificar la URL donde se encuentra la información que queremos pintar (listado de productos). (Aqui con los 30 primeros vale)
@@ -11,12 +11,43 @@
 // Mostrar la lista de nombres con los productos que tengan un rating superior a 4.5
 // Mostrar la lista de categorias de productos que existen
 
+
+
 async function printCard(){
 
-const traido =await fetch ('https://dummyjson.com/products?limit=10&skip=10&select=title,price');
+const traido =await fetch ('https://dummyjson.com/products/category/smartphones');
 const generado = await traido.json();
 console.log(generado);
 
+
+
+
+}
+printCard()
+
+//let apartado = document.createElement('div')
+//apartado.id = 'apartado';
+
+
+    
+    // let quiniento = document.createElement('p');
+
+    // apartado.appendChild(quiniento)
+
+
+
+
+//}
+
+
+
+
+
+//document.body.appendChild(apartado);
+
+
+
+/*
 generado.products.forEach((e)=>{
 
     let extra = document.createElement('div');
@@ -69,11 +100,11 @@ generado.products.forEach((e)=>{
 }
 printCard()
 
-*/
+
 
 //======================================================
 
-
+/*
 // Opcional: Si nos fijamos bien en la respuesta ahora mismo estaríamos pintando 30 productos, pero la respuesta nos dice que hay 100 disponibles. Leer el apartado Limit and skip products para entender como podríamos modificar la URL y que el servidor nos devuelva los 100 productos a pintar.
 
 async function modificar (){
@@ -111,7 +142,7 @@ document.body.appendChild(tarjeta);
 }
 
 modificar ()
-
+*/
 
 
 
