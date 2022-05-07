@@ -1,4 +1,4 @@
-// ejer 5 Crea un documento HTML con un body vacío,  ahora crea un objeto de tipo 
+    // ejer 5 Crea un documento HTML con un body vacío,  ahora crea un objeto de tipo 
     // city que contenga {imagen, nombre de la ciudad, descripción}, 
     // repite el proceso con varias ciudades de tu elección y con 
     // ello crea un array de ciudades, ahora vamos a darle vida en nuestro html:(hard)

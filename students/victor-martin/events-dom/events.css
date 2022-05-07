@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.card {
+    width: 5100vw;
+    height: 500px;
+    background-color: white;
+    border-radius: 4px solid;
+}
+
+/* #start {
+
+} */

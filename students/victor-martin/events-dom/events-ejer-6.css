@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 10vw;
+    height: 70px;
+    background-color: white;
+    border-radius: 4px solid;
+
+}
+
+h1 {
+    width: 10vw;
+    height: 70px;
+    /* background-color: blue; */
+}
+
+.recording_button {
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+}
+.stop__button {
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+
+}
+
+.morado > div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 100px;
+    background-color: rgb(142, 42, 235);
+    color: black;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.item {
+    order: 14;
+}
+
+#start {
+
+} */
