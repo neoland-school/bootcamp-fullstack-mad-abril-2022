@@ -1,5 +1,3 @@
-
-
 //3.-Listado de productos. Vamos a crear una página que pinte un listado de productos de telefonía movil. Lo primero que tenemos que aprender es a leer la documentación de un API (la url de acceso a la información que queremos de un servidor). La docu se encuentra en la siguiente URL (https://dummyjson.com/docs/products). Realizar lo siguiente:
 // Identificar la URL donde se encuentra la información que queremos pintar (listado de productos). (Aqui con los 30 primeros vale)
 // Realizar la llamada en nuestra aplicación
@@ -11,94 +9,134 @@
 // Mostrar la lista de nombres con los productos que tengan un rating superior a 4.5
 // Mostrar la lista de categorias de productos que existen
 
+async function printCard() {
+  const traido = await fetch(
+    "https://dummyjson.com/products/category/smartphones"
+  );
+  const generado = await traido.json();
+  console.log(generado);
+  console.log(generado.products);
+//===========================================
+  let apartado = document.createElement("div");
+  apartado.id = "apartado";
+//Pasan de 500€
+  let pasan = document.createElement("p");
+  let apartate = generado.products.filter(c=>c.price>=500);
 
+  //===Declaracion de variables.
+let i=0;
 
-async function printCard(){
+//===
 
-const traido =await fetch ('https://dummyjson.com/products/category/smartphones');
-const generado = await traido.json();
-console.log(generado);
+apartate.forEach(f=>{
+    i++;
+});
+pasan.textContent=`Solos ${i} de nuestros productos pasan de 500€`;
+  apartado.appendChild(pasan);
 
+  //===Promedio precios
 
+let promed = document.createElement('p');
 
+let paraProm = generado.products.map((r)=>{
+    return  r.price;
+});
 
-}
-printCard()
+    let suma = paraProm.reduce((previo, actual) => actual += previo);
 
-//let apartado = document.createElement('div')
-//apartado.id = 'apartado';
+    let promedio = (suma / paraProm.length);
+promed.textContent=`El promedio de precios de nuestros productos es: ${promedio} €`;
 
+apartado.appendChild(promed);
 
+//===ranking
+let paraRank = document.createElement('p');
+ let ranking = generado.products.filter((k=>k.rating>4.5))
+ console.log(ranking)
+
+ ranking.forEach((lo)=>{
     
-    // let quiniento = document.createElement('p');
+     paraRank.textContent = `Los mejor valorados son: ${lo.title }`
+});
+apartado.appendChild(paraRank);
 
-    // apartado.appendChild(quiniento)
+//======================================
+  document.body.appendChild(apartado);
 
+  generado.products.forEach((e) => {
+    let extra = document.createElement("div");
+    extra.className = "extra";
 
+    let card = document.createElement("div");
+    card.className = "card";
 
-
-//}
-
-
-
-
-
-//document.body.appendChild(apartado);
-
-
-
-/*
-generado.products.forEach((e)=>{
-
-    let extra = document.createElement('div');
-    extra.className='extra';
-
-    let card = document.createElement('div');
-    card.className='card';
-
-    let foto = document.createElement('div');
-    foto.id='foto';
-    let imagenes = document.createElement('img');
-    imagenes.src=e.images[0];
+    let foto = document.createElement("div");
+    foto.id = "foto";
+    let imagenes = document.createElement("img");
+    imagenes.src = e.images[0];
     foto.appendChild(imagenes);
     card.appendChild(foto);
 
-    let nombre = document.createElement('div');
-    nombre.id="nombre";
-    nombre.textContent = e.title
+    let nombre = document.createElement("div");
+    nombre.id = "nombre";
+    nombre.textContent = e.title;
     card.appendChild(nombre);
 
-    let clasificacion = document.createElement('clasificacion');
-    clasificacion.id='clasificacion';
-    clasificacion.textContent=`Valoración: ${e.rating} / 5`;
+    let clasificacion = document.createElement("clasificacion");
+    clasificacion.id = "clasificacion";
+    clasificacion.textContent = `Valoración: ${e.rating} / 5`;
     card.appendChild(clasificacion);
 
-    let precio = document.createElement('precio');
-    precio.id='precio';
-    precio.textContent=`Precio: ${e.price} €`;
+    let precio = document.createElement("precio");
+    precio.id = "precio";
+    precio.textContent = `Precio: ${e.price} €`;
     card.appendChild(precio);
 
-    let descripcion = document.createElement('descripcion');
-    descripcion.id='descripcion';
-    descripcion.textContent=e.description;    
+    let descripcion = document.createElement("descripcion");
+    descripcion.id = "descripcion";
+    descripcion.textContent = e.description;
     card.appendChild(descripcion);
 
-    let botonera = document.createElement('botonera');
-    botonera.id='botonera';
-    let boton = document.createElement('button');
-    boton.textContent='add to cart';
-    boton.id='boton'
+    let botonera = document.createElement("botonera");
+    botonera.id = "botonera";
+    let boton = document.createElement("button");
+    boton.textContent = "add to cart";
+    boton.id = "boton";
     botonera.appendChild(boton);
     card.appendChild(botonera);
-    
 
     extra.appendChild(card);
     document.body.appendChild(extra);
-
-});
-
+  });
 }
-printCard()
+printCard();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -143,8 +181,3 @@ document.body.appendChild(tarjeta);
 
 modificar ()
 */
-
-
-
-
-
