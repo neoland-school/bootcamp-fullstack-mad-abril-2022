@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+  </head>
+  <body>
+    <!-- PENDING HTML  -->
+    <script>
+      fetch("https://dummyjson.com/products?limit=100")
+        .then((res) => res.json())
+        .then(p => {
+            p.products.forEach(p => printProductToHTML(p)); // pinta TODOS los productos
+
+            // Mostrar en un p cuantos TELEFONOS cuestan más de 500€
+            console.log(p.products.filter(p => p.category === 'smartphones' && p.price > 500));
+
+            // Precio medio de todos los productos
+            const sumPrices = p.products.reduce((acc,p) => acc+p.price , 0);
+            console.log(sumPrices/p.products.length);
+
+            // Mostrar la lista de nombres con los productos que tengan un rating superior a 4.5
+            console.log(
+                p.products.filter(p => p.rating > 4.5) // filtra y genera una lista de productos reducida
+                        .reduce((acc,p) => acc+`,${p.title}`, '') // me pasa una lista a un string de titulos
+            );
+
+            // Mostrar la lista de categorias de productos que existen
+            const catWithArray = p.products.reduce((acc,p) => {
+                if(!acc.some(c => c===p.category)){
+                    // solo añado si no existe la categoría en mi array final, el acc
+                    acc.push(p.category); 
+                }
+                return acc;
+            }, []); // primera versión: array de categorias
+            console.log(catWithArray);
+
+            // Version PRO: Una nueva estructura de datos: Set (Conjuntos)
+            const catWithSet = new Set();
+            p.products.forEach(p => catWithSet.add(p.category));
+            /*
+             * Las dos lineas se pueden sustituir creando el set en un reduce
+             *
+             * p.products.reduce((acc,p) => acc.add(p.category), new Set());
+             * 
+             */
+            console.log(Array.from(catWithSet));
+        });
+
+      function printProductToHTML(product){
+          const p = document.createElement('p');
+          p.textContent = product.title;
+          document.body.appendChild(p);
+      }
+
+
+
+
+
+    </script>
+  </body>
+</html>
