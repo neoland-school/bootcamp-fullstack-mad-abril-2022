@@ -46,8 +46,6 @@
 
 
 
-
-
 async function pintarr(){
     const viejo = await fetch ('https://otrodeluis.free.beeceptor.com/otromas');
     const nuevo = await viejo.json();
