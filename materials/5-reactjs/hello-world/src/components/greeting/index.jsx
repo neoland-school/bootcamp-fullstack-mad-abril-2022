@@ -8,7 +8,7 @@
  */
 // function Greeting(props){
 function Greeting({name,nationality}){ // lo mismo pero utilizando deconstrucción de objetos
-
+   
     return (
         <>
             <h1>Hello, {name ?? 'UNKNOWN'}</h1>
