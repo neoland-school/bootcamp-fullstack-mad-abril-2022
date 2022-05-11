@@ -129,7 +129,7 @@ switch(color){
 /*Vamos a crear una calculadora que haga las operaciones básicas de suma, resta, multiplicación y
  división, en este caso usaremos el condicional SWITCH,  el usuario debe ingrear mediante prompt el
   primer numero, el operador y el segundo numero y el algoritmo pintara por pantalla los dos números 
-  el operador y  el resultado ejmp= "2 + 2 = 4".
+  el operador y  el resultado ejmp= "2 + 2 = 4".*/
 
   n1 = parseInt(prompt('Introduce el primer numero'));
   n2 = parseInt(prompt('Introduce el segundo numero'));
@@ -148,8 +148,9 @@ switch(color){
   case "*":  {
       document.write(`Tu operacion es ${n1*n2}`);
       break;
-  }*/
-  
+  }
+}
+
   /*Creemos un algoritmo para saber si un estudiante puede optar o no a una beca, para eso debera pasar
     mediante prompt un total de 7 calificaciones, y se deberá imprimir por pantalla la **cantidad de asignaturas**
      aprobadas, la nota media y si puede optar o no a la beca, para saber si un estudiante puede optar a la beca
