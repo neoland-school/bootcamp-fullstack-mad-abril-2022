@@ -6,9 +6,16 @@ import Square from './components/square';
 import Text from './components/text';
 import Greeting from './components/greeting';
 import Figure from './components/figure';
+import UserCard from './components/user-card';
+import UserList from './components/user-list';
+import EventsExample from './components/events-example';
+import StateExample from './components/state-example';
+
+import { user, users } from './data/user';
 
 function App() {
   const arr = ['Judith', 'Alberto', 'Marco', 'Laura', 'Jetza', 'Victor', 'Irene', 'Luis', 'Bryan'];
+  
   return (
     <React.Fragment>
       {/* <HelloWorld></HelloWorld>
@@ -19,8 +26,12 @@ function App() {
       <Greeting></Greeting>
 
       { arr.map((n,i) => <Greeting key={i} name={n}></Greeting>) } */}
-      <Figure isCircle={false}></Figure>
-      <Figure isCircle={true}></Figure>
+      {/* <Figure isCircle={false}></Figure>
+      <Figure isCircle={true}></Figure> */}
+      {/* <UserCard user={user}></UserCard> */}
+      {/* <UserList users={users.pepito}></UserList> */}
+      {/* <EventsExample></EventsExample> */}
+      <StateExample></StateExample>
     </React.Fragment>
   );
 }
