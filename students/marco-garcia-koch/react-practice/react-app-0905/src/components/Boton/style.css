@@ -1,0 +1,14 @@
+.card-button {
+    margin: 20px;
+    height: 70px;
+    font-size: 1.7rem;
+    color: #ffffff;
+    background-color: #008000;
+    border: none;
+    border-radius: 10px;
+}
+
+.card-button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 10px rgb(76, 76, 76);
+}
