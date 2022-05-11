@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    background-color: rgb(169,169,169);
+}
+
+#content{
+    border-radius:5px;
+    width:250px;
+    height:430px;
+    background-color: #fff;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+  border:1px solid rgb(154, 151, 151);
+  box-shadow:0 0 3px #fff ,0 0 5px #444;
+  padding-bottom:20px;
+}
+
+#divTop{
+width:100%;
+height:150px;
+
+}
+
+.foto{
+    width:100%;
+    height:100%;
+    border-radius:5px 5px 0  0;
+}
+
+.foto img{
+    width:100%;
+    object-fit:fill;
+    border-radius:150px;
+    border-radius: 5px 5px 0  0;
+    object-fit:cover;
+}
+
+
+
+.fotoT{
+    color:#fff;
+    font-size:1.2rem;
+    position:absolute;
+    top:15px;
+    left:15px;
+    font-weight:lighter;
+    text-shadow:0 0 4px red;
+} 
+
+#share{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    position:absolute;
+    top:135px;
+    left:210px;
+    background-image: url('compartir.png');
+    background-repeat: no-repeat;
+    background-size:calc(-20);
+    background-position:center;
+    transition:  1s linear;
+    box-shadow: 3px 3px 5px rgb(177, 173, 173);
+}
+
+#share:hover{
+      transform: rotate3d(360, 360, 360, 360deg);
+}
+
+#midDiv{
+    width:100%;
+    height:210px;
+    border-radius: 0  0 5px 5px;
+    box-sizing:border-box;
+    padding:10px;
+    color:rgb(183, 170, 170);
+    }
+
+#titulo{
+    color:#000;
+    margin-top:15px;
+}
+
+#parrafo{
+    font-size:.9rem;
+    text-align:center;
+    margin-top:20px;
+    border-top: 1px solid;
+    padding-top:15px;
+}
+
+#boton{
+    background-color: blue;
+    margin:auto;
+    color:#fff;
+    width:100px;
+    height:25px;
+    font-size:.8rem;
+    font-weight:100;
+    border:1px solid #fff;
+    border-radius:3px;
+    box-shadow:3px 3px 3px rgb(231, 225, 225);
+}
+
+#botonx{
+    background-color: lightsalmon;
+    margin:auto;
+    color:#fff;
+    width:100px;
+    height:25px;
+    font-size:.8rem;
+    font-weight:100;
+    border:1px solid #fff;
+    border-radius:3px;
+    box-shadow:3px 3px 3px rgb(231, 225, 225);
+}
+
+#botony{
+    background-color: lightgreen;
+    margin:auto;
+    color:#fff;
+    width:100px;
+    height:25px;
+    font-size:.8rem;
+    font-weight:100;
+    border:1px solid #fff;
+    border-radius:3px;
+    box-shadow:3px 3px 3px rgb(231, 225, 225);
+    text-shadow: 0 0 3px rgb(148, 146, 146);
+}
+
