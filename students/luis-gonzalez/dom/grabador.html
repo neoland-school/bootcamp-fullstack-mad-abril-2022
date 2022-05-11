@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabador de Voz</title>
+    <link rel="stylesheet" href="grabador.css">
+    <script src="https://kit.fontawesome.com/bdaae68ebd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div id="container">
+
+<div id="top">
+
+    <h3>Speech to Text</h3>
+
+<button id="btnRec" onclick = "cambiar()"><i class="fa-solid fa-microphone-lines"></i></button>
+<!-- <button id="btnRec" ><i class="fa-solid fa-microphone-lines"></i></button> -->
+
+
+<p id="grabar">Tap to Record</p>
+<p id="parar">Tap to Stop</p>
+</div>
+
+<div id="texto">
+
+<p id="titulo">Text:</p>
+
+<p id="parrafo">
+
+    
+
+</p>
+
+
+
+
+</div>
+
+<div id="botones">
+    <button id="copy" class="btn"><i class="fa-solid fa-copy"></i></button>
+    
+    <button id="delete" class="btn"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+
+</div>
+
+    <script src="grabador.js"></script>
+</body>
+</html>
