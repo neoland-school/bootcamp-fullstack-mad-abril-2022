@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+}
+
+
+                                /*INITIAL HEADER*/
+
+.header__container {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 10px;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid #f0915d;
+}
+
+.header__logo {
+    max-width:16%;
+    min-width: 4rem;
+}
+
+
+                                /* HEADER MENU DISPLAY */
+
+.nav {
+    border-bottom: 5px solid #e7dede;
+    padding-bottom: 15px;
+    z-index: 10;
+    visibility: hidden;
+
+}
+
+    /* STYLE AND FUNCTION BURGUER BUTTON */
+
+.nav__button__burguer {
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    border: none;
+    visibility: visible;
+}
+
+.nav__button__burguer:hover {
+    cursor: pointer;
+}
+
+.nav__button__burguer:focus {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.nav__button__container__burguer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9%;
+    padding-top: 25px;
+}
+
+.nav__button__container__burguer:focus-within {
+    visibility: hidden;
+}
+
+
+    /* STYLE AND FUNCTION 'X' BUTTON */
+
+.nav__button__x {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+.nav__button__x:hover {
+    cursor: pointer;
+}
+
+.nav__button__x:focus {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.nav__button__container__x {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9%;
+    padding-top: 25px;
+}
+
+.nav__button__container__x:focus-within {
+    visibility: hidden;
+}
+
+.nav__open__close:focus-within {
+    animation: NavDisplay 0.4s 1 linear;
+    transform-origin: top;
+    visibility: visible;
+}
+
+    /* STYLE AND FUNCTION NAV MENU */
+
+.nav__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 13px;
+    margin-bottom: 30px;
+}
+
+.nav__link {
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.nav__link:hover {
+    color: #ffffff;
+    background-color: #999999;
+    padding: 10px 5px 10px 5px;
+}
+
+.nav__social-media-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 13px;
+    gap: 10px;
+}
+
+#nav__social-media-icon {
+    font-size: 1.5rem;
+}
+
+#nav__social-media-icon:hover{
+    transform: scale(1.25);
+    transition: 0.25s ease-in;
+    cursor: pointer;
+
+}
+
+     /* ANIMATION HEADER & NAV MENU */
+
+@keyframes NavDisplay {
+    0% {
+        transform: scaleY(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scaleY(0.25);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scaleY(0.5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scaleY(0.75);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+
+                                /* FOOTER */
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #1b1c20;
+    color: #ffffff;
+    padding: 20px 0px;
+}
+
+footer > p {
+    font-size: 0.7rem;
+}

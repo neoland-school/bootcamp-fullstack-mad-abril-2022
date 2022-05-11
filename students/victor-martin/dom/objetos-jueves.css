@@ -1,0 +1,44 @@
+
+.city__container {
+display: flex;
+flex-direction: column;
+height: 300px;
+width: 250;
+background-color: white;
+}
+
+
+/* .image {
+    width: 100%;
+    
+} */
+
+.textMiddle {
+    display: flex;
+    align-content: center;
+    background-color: white;
+}
+
+h4 {
+    color: orange;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Dashing Alternate';
+}
+
+.title {
+    font-size: 2,3rem;
+    font-weight: bold;
+    color: black;
+    /* background-color: darkcyan; */
+    text-align: center;
+}
+
+
+.numbersDown {
+    font-weight: bold;
+    color: white;
+    
+}
+

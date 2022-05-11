@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.seccion__one {
+    background-image: url(https://www.baginco.com/wp-content/uploads/2015/08/cKATD1002.jpg);
+    width: 1rem;
+    height: 2rem;
+}
+.decoration {
+    border-color: aqua;
+    border: 1px solid;
+}
+
+.seccion__two {
+    width: 3rem;
+    height: 6rem;
+}
