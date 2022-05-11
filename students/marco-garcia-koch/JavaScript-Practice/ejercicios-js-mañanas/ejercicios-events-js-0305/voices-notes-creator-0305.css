@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+    background-color: #9f9b9b;
+}
+
+/*General style of the card container*/
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 430px;
+    margin-top: 50px;
+    border: 1px solid #362e62;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #525255;
+    background-color: #ffffff;
+}
+
+/*Style of the title of the card*/
+
+.title, title-text {
+    margin: 30px 0px;
+    color: #56565a;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Style of the recording buttons, recording status and waves*/
+
+i {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.fa-microphone-lines {
+    font-size: 6rem;
+}
+
+.record-button{
+    background-color: #326ac5;
+    height: 10rem;
+    width: 10rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #52525590;
+}
+
+.record__button--recording {
+    background-color: #e94545
+}
+
+.record-button:active, .clipboard-button:active, .voice-button:active, .remove-button:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.record-status, .record-listening, h2 {
+    color: #56565a;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.record-listening {
+    display: none;
+}
+
+.waves {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    visibility: hidden;
+}
+
+.boxContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    width: calc((var(--boxSize) + var(--gutter)) * 5);
+}
+
+.box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+}
+  
+.box1{
+    animation-name: quiet;
+}
+  
+.box2{
+    animation-name: normal;
+}
+  
+.box3{
+    animation-name: quiet;
+}
+  
+.box4{
+    animation-name: loud;
+}
+  
+.box5{
+    animation-name: quiet;
+}
+
+@keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+  
+@keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+}
+
+@keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+}
+
+/*Style of the text inserted by the user speech and clipboard - speak - remove buttons*/
+
+.task__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 1px 10px 5px #6161625b;
+    margin: 15px 50px;
+    padding: 20px 25px;
+}
+
+.tasks__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+.text {
+    color: #56565a;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.clip-rem-buttons__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.clipboard-button {
+    position: relative;
+    background-color: #dcc240;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #52525590;
+}
+
+.copy-alert {
+    position: absolute;
+    visibility:hidden;
+    width: 100%;
+    color: #a8a8a9;
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: copyAlert 4s 1 linear;
+}
+
+/* @keyframes copyAlert {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */
+
+.voice-button {
+    background-color: #51b358;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #52525590;
+}
+
+.remove-button {
+    background-color: #e94545;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #52525590;
+}
+
+.record-button:hover, .clipboard-button:hover, .voice-button:hover, .remove-button:hover {
+    cursor: pointer;
+}
