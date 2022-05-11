@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cities{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.city_container {
+    background-color: white;
+    border-radius: 45px;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.city_v_c_r{
+    display: flex;
+    flex-direction: row;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+.description {
+    margin: 0 50px
+}
+
+.city_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    flex: 0 0 33.3%;
+    border-right: 1px solid #fff;
+}
+
+.city_item:last-of-type {
+    border-right: none !important;
+}
+
+#madrid .city_v_c_r .city_item {
+    border-color: rgb(167, 30, 30);
+}
+
+#london .city_v_c_r .city_item {
+    border-color: rgb(36, 36, 167)
+}
+
+#lima .city_v_c_r .city_item {
+    border-color: rgb(19, 107, 19)
+}
+
+#new-york .city_v_c_r .city_item {
+    border-color: rgb(126, 25, 25)
+}

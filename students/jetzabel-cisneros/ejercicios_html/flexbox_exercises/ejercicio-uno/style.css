@@ -1,0 +1,94 @@
+* {
+margin: 0;
+padding: 0;
+}
+header {
+  background: rgb(232, 181, 232);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+
+
+
+
+link {
+  display: none;
+}
+
+a {
+ position: sticky;
+}
+
+.primero {
+  width: 150px;
+  height: 150px;
+  border-style: solid groove ;
+  border-width: 40px;
+  background-color: rgb(1, 134, 90);
+}
+.segundo {
+  width: 300px;
+  height: 100px;
+  border-style: dotted outset;
+  border-width: 7px;
+  background: linear-gradient(to left,  #10e9f0, #f0c710, #ea5bd4)
+}
+
+.img {
+size: 100px 100px;
+}
+ .tercero {  
+  background-image: url("tortuga.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 450px;
+  height: 450px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: rgb(250, 3, 250);
+  font-size: x-large; 
+}
+
+
+.p {
+  width: 450px;
+  height: 450px;
+  color: rgb(253, 252, 253);
+  font-size: larger; 
+  align-content: center; 
+/* */
+}
+
+.footer {
+ /* background-image: url("instagram.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 200px; */
+  height: 110px;
+ 
+}
+
+
+img.insta-img {
+ width:99px;
+ height:99px;
+ border-radius:150px;
+ border: 5px solid rgb(228, 111, 230);
+}
+
+  img.logo-png {
+  width: 55px;
+  height: 55px;
+  border-radius: 150px;
+} 
+  
+      
+   

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+main {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 6px #ccc;
+    background-color: #fff;
+}
+
+#user {
+    margin: 10px 0px 20px 0px;
+    color: silver;
+    text-align: center;
+
+}
+
+#password {
+    margin: 10px 0px 20px 0px;
+    color: silver;
+    text-align: center;
+
+}
+
+#send {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#container {
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: peachpuff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(143, 142, 142);
+    color: rgb(143, 142, 142);
+    position: relative;
+}
+
+#container img {
+    width: 300px;
+    border-radius:10px;
+    box-shadow: 0 0 3px blue, 0 0 3px white;
+}
+
+#exit {
+    padding: 5px;
+    box-shadow: 0 0 3px blue, 0 0 9px white;
+    background-color: #ccc;
+    color: blue;
+    border-radius: 5px;
+    text-shadow: 0 0 3px #000;
+    position:absolute;
+    top:-60px;
+    right:30px;
+}
+
+#exit:hover{
+    box-shadow: 0 0 3px green, 0 0 9px white;
+    color: green;
+}
+
+#intento{
+    width:100%;
+    height:200px;
+    background-color: red;;
+}

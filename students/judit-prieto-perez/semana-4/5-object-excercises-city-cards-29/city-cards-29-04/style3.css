@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-content: center;
+    background-color: coral;
+   justify-content: center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+input{
+    width:400px;
+
+}
+
+#limpiar{
+    background-color: red;
+    border-color: red
+}
+.card{
+    flex-wrap: wrap;
+    margin: 20px;
+    min-height: 371px;
+    width: 224px;
+    border-radius: 3%;
+    flex-direction: column;
+    background-color: rgb(255, 252, 252);
+    border-color: black;
+}
+
+h2 {
+   
+    font-size: medium;
+    display: flex;
+    align-content: stretch;
+    position: absolute;
+    padding-top: 199px;
+    padding-left: 28px;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    font-family: sans-serif;
+}
+
+h3{
+    color: white;
+    display: flex;
+    align-content: center;
+    position: absolute;
+    padding: 12px;
+    font-weight: 100;
+}
+
+p {
+    color: gray;
+    padding: 10px;
+    padding-top: 26px;
+
+}
+
+.card-body{
+grid-area: text;
+}
+.visit {
+    color: rgb(248, 10, 172);
+
+}
+
+button{
+    font-size: 0.80rem;
+    background-color: rgb(34, 155, 231);
+    font-weight: lighter;
+    color: white;
+    padding: 4px;
+    width: 129px;
+    margin-top: 28px;
+    margin-right: 90px;
+    margin-left: 48px;
+    border-color: rgb(34, 155, 231);
+    align-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 18px;
+}
+img{
+    width:100%
+}

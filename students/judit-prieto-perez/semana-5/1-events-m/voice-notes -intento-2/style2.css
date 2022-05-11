@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+button{
+    display: flex;
+    align-content: space-around;
+}
+.card{
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: 371px;
+    width: 224px;
+    border-radius: 3%;
+    flex-direction: column;
+    background-color: rgb(245, 240, 182);
+    border-color: black;
+    padding: 10px;
+}
+
+ .card h3{
+    display: flex;
+    align-items: center;
+
+}
+
+.card h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+
+}
+.card-note{
+    margin: 10px;
+    background-color: rgb(210, 222, 78);
+    height: 233px;
+    width: 200px;
+    margin-top: 60px;
+}
+
+.btton{
+    display: flex;
+    align-content: space-between;
+    
+}
+
+#start{
+    display: flex;
+    background-color: rgb(10, 87, 12);
+    border-radius:50%;
+    color:white;
+    border: none;
+    align-content: center;
+    padding:10px;
+    
+
+}
+
+#stop{
+    display: flex;
+    background-color: rgb(161, 28, 28);
+    border-radius:50%;
+    color:white;
+    border: none;
+    align-content: center;
+    padding:10px;
+    
+}
+
+#clip {
+    display: flex;
+    background-color: rgb(238 202 216);
+    border-radius:50%;
+    color:white;
+    border: none;
+    align-content: center;
+    padding:10px;
+    
+}
+
+#delete {
+    display: flex;
+    background-color: rgb(238 202 216);
+    border-radius:50%;
+    color:white;
+    border: none;
+    align-content: center;
+    padding:10px;
+    
+}
+

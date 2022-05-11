@@ -1,0 +1,40 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #a8a7a7;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #949494;
+    color: #ffffff;
+}
+
+.card-image {
+    background-image: url(../../assets/images/birra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.info-container {
+    padding: 0px 20px;
+}
+
+.card-product-title {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    border-bottom: 1px solid #dfdcdc;
+    text-align: center;
+}
+
+ul {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   list-style: none;
+   font-size: 1.5rem;
+}
+
