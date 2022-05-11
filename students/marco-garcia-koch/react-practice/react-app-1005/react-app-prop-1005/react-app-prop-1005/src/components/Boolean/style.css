@@ -1,0 +1,14 @@
+
+.circle {
+    width: 500px;
+    height: 500px;
+    background-color: #ff0000;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.triangle {
+    width: 500px;
+    height: 500px;
+    background-color: #2ba529;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

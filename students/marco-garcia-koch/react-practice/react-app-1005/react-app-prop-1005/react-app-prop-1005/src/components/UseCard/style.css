@@ -1,0 +1,71 @@
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #3f3f3f;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 35px 0px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.gender-container, .phone-container, .birth-container {
+    border-top: 1px solid #a8a6a6;
+}
+
+.user-img {
+    position: absolute;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #dddada;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pink-gender {
+    position: relative;
+    width: 250px;
+    padding: 10px 20px 10px 0px;
+    text-align: right;
+    color: #ffffff;
+    background-color: #9F2377;
+    border-radius: 20px;
+}
+
+.purple-gender {
+    position: absolute;
+    width: 130px;
+    padding: 10px;
+    top: 0;
+    background-color: #C5874C;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.phone-number{
+    color: #C5874C;
+    font-weight: 900;
+}
+
+.birth-date {
+    color: #9F2377;
+    font-weight: 900;
+}
