@@ -1,0 +1,27 @@
+.card__container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+/* .card > div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+} */
+
+.red{
+    font-weight: bold;
+    color: red;
+}
+
+.purple {
+    font-weight: bold;
+    color: purple;
+}
+
+.bold {
+    font-size: 1.5rem;
+}

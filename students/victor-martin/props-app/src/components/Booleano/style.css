@@ -1,0 +1,13 @@
+.figure__circle {
+    width: 100px;
+    height: 100px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: red;
+}
+
+.figure__triangle {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: green;
+}
