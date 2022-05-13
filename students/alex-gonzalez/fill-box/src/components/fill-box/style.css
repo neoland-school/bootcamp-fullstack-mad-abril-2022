@@ -1,0 +1,9 @@
+.fill-box{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+}
+
+.fill-box--active {
+    background-color: green;
+}
