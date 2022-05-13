@@ -1,0 +1,54 @@
+
+.user-list__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100%;
+    background-color: #e3dfdf;
+}
+
+.header__container {
+    width: 100vw;
+    height: 60px;
+    background-color: #529f52;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    margin: 10px;
+    width: 60vw;
+    height: 65px;
+    border: 2px solid #8181d1;
+    border-radius: 10px;
+}
+
+input {
+    margin: 10px;
+    width: 70vw;
+    height: 45px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+ label {
+     font-size: 1.8rem;
+     padding: 5px;
+ }
+
+ .offline-message {
+    width: 70vw;
+    height: 45px;
+    font-size: 1.5rem;
+    margin: 5px 0px 5px 15px;
+    color: #bd1e1e;
+ }
