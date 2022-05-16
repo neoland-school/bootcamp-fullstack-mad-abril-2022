@@ -1,0 +1,43 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 550px;
+    height: 250px;
+    gap: 30px;
+}
+
+.img-char {
+    width: 250px;
+    height: 250px;
+}
+
+.status-species {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.status {
+    
+    height: 10px;
+    width:  10px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.status-alive {
+    background-color: greenyellow;
+
+}
+
+.status-dead {
+    background-color: red;
+}
+
+.status-unknown {
+    background-color: gray;
+}

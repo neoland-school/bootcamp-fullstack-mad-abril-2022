@@ -1,0 +1,17 @@
+.contact {
+    border-radius: 70px;
+
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #28A845;
+    border-radius: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
