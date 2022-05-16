@@ -1,6 +1,7 @@
 import './styles.css'
 import RickAndMortyChar from '../rick-and-morty-char';
 import {useEffect,useState} from 'react'
+import RickAndMortyFilter from '../rick-and-morty-filter';
 
 
 function RickAndMortyList (){
@@ -46,12 +47,10 @@ function RickAndMortyList (){
     return (
         
             <>  
-                <input onInput={filterList} type='text' placeholder='Introduce el nombre'></input>
-                <button onClick={filterAliveChar}>Filter Alive Characters</button>
-                <button onClick={filterDeadChar}>Filter Dead Characters</button>
-                <button onClick={showAllChar}>Show All Characters</button>
-                
-
+                <RickAndMortyFilter filterList={filterList} 
+                                    filterAliveChar={filterAliveChar} 
+                                    filterDeadChar={filterDeadChar}
+                                    showAllChar={showAllChar}></RickAndMortyFilter>
                 <section className='list-chars'>
                     {rickAndMortyFiltered.map(e => <RickAndMortyChar key={e.id}  character={e} ></RickAndMortyChar> )}  
                 </section>
