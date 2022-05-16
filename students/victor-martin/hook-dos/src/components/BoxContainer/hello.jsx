@@ -30,9 +30,11 @@ useEffect(() => {
     const isFillboxActive = false;
 
     return (
-    <>
-        <EmptyBox></EmptyBox>
-        <Fillbox isActive={isFillboxActive}></Fillbox>
+    <>  
+        <React.Fragment>
+            <div></div>
+            <div></div>
+        </React.Fragment>
     </>
     );
 

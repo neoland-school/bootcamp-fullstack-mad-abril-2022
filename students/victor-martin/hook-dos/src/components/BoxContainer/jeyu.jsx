@@ -20,11 +20,18 @@ function CaractherList() {
     const handleChange = (e) => {
         const inputValue = e.target.value.toLowerCase();  // toLowerCase a name_es para que filtre bien
         const arrayFiltered = charactersOriginal.filter(data => data.name_es.toLowerCase().includes(inputValue));
-        updateCountriesFiltered(arrayFiltered);  // toLowerCase para que no haga distincion entre mayus y minus
+        updateCharactersFiltered(arrayFiltered);  // toLowerCase para que no haga distincion entre mayus y minus
     }
+
+    const filterAlive = (e) => {
+        const aliveFiltered = charactersOriginal.filter(e => e.status === 'Alive');
+        updateCharactersFiltered(aliveFiltered);
+        console.log(aliveFiltered);
+
     return (
+        /*pasar funciones comunicacion padre-hijo El padre la crea, el hijo le da el valor.*/
         <>
-            <nav handleChange={handleChange}></nav>
+            <nav handleChange={handleChange} filterActive={filterAlive} filterDead={filterDead}></nav>
             <section className="card__container"></section>
             {charactersFiltered.map((data,id) => <CharacterCard character={data} key={id}></CharacterCard>)}
         </>

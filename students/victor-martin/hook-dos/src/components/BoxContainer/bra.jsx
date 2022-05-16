@@ -9,10 +9,14 @@ function Nav ({handleChange, filterAlive, filterDead}) {
             <button onClick={filterAlive}>Filter Alive Characters</button>
             <button onClick={filterDead}>Filter Dead Characters</button>
             <button>Show all characters</button>
-
         </section>
         </header>
     </>   
     )
 }
 export default Nav;
+
+// for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+    
+// }
