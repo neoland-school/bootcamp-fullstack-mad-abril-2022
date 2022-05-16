@@ -1,0 +1,25 @@
+h3{
+    text-align:center; 
+  }
+  #cuenta{
+    background-color:#B22222;
+    color:#fff;
+    width:200px;
+    height:200px;
+    line-height:200px;
+    text-align:center;
+    margin:20px auto;
+  }
+
+
+
+  .clock {
+    padding: 30px;
+    margin: 30px;
+    background-color: #1fa23b;
+    width: 230px;
+    height: 60px;
+    color: #000000;
+    font-size: 60px;
+
+}

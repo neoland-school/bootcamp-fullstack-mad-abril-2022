@@ -1,0 +1,13 @@
+.red {
+    height: 100px;
+    width:100px;
+    background-color: #FF0000;
+    color: white;
+  }
+  
+  .green {
+    height: 100px;
+    width:100px;
+    background-color: #008000;
+    color: white;
+  }
