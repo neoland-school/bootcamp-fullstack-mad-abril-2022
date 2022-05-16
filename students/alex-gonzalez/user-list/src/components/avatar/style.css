@@ -1,0 +1,30 @@
+
+
+.avatar__container{
+    padding: 2rem;
+}
+
+
+
+
+.avatar__img{
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.avatar__status{
+    background-color: #25883c;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.avatar__container--offline .avatar__img {
+    opacity: 0.4;
+}
+
+.avatar__container--offline .avatar__status{
+    background-color: red;
+}

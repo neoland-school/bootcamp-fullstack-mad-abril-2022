@@ -1,0 +1,12 @@
+
+.side-bar {
+    height: 100vh;
+    width: 450px;
+    background-color: rgb(229, 229, 166);
+    margin-right: 30px;
+    font-size: 4rem;
+    text-orientation:upright;
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding-left: 30px;
+}

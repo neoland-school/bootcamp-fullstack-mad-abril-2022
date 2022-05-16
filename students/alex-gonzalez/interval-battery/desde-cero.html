@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battery Manager</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .battery__container {
+        min-width: 250px;
+        max-width: 480px;
+        border-radius: 10px;
+        box-shadow: 7px 6px 30px -6px rgba(0, 0, 0, 0.67);
+      }
+
+      .battery__header {
+        background-color: #00c853;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .battery__header--low {
+        background-color: #f44336;
+      }
+
+      .battery__plus {
+        height: 10px;
+        width: 25px;
+        border: 2px solid white;
+      }
+
+      .battery__body {
+        height: 90px;
+        width: 50px;
+        border: 2px solid white;
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+
+      .battery__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        bottom: -25px;
+        right: 25px;
+        background-color: #00c853;
+      }
+
+      .battery__icon--low {
+        background-color: #f44336;
+      }
+
+      .battery__cell {
+        width: 100%;
+        height: 13px;
+        background-color: white;
+        margin-bottom: 2px;
+      }
+
+      .battery__container-body {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .battery__level {
+        font-size: 3rem;
+        font-weight: 100;
+      }
+
+      .battery__status {
+        font-size: 1.5rem;
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="battery__container">
+      <div class="battery__header">
+        <div class="battery__plus"></div>
+        <div class="battery__body"></div>
+        <div class="battery__icon"></div>
+      </div>
+      <div class="battery__container-body">
+        <h2 class="battery__level">60%</h2>
+        <p class="battery__status">Battery Charging</p>
+      </div>
+    </div>
+
+    <!-- <div class="battery__container">
+      <div class="battery__header battery__header--low">
+        <div class="battery__plus"></div>
+        <div class="battery__body">
+          <div class="battery__cell"></div>
+          <div class="battery__cell"></div>
+          <div class="battery__cell"></div>
+        </div>
+        <div class="battery__icon battery__icon--low"></div>
+      </div>
+      <div class="battery__container-body">
+        <h2 class="battery__level">9%</h2>
+        <p class="battery__status">Low Battery</p>
+      </div>
+    </div> -->
+
+    <script>
+      /**
+       * Me estan pidiendo una aplicación web para mostrar la información de la batería:
+       *  - ¿Que información necesito? (datos que necesito y donde los saco)
+       *      - Porcentaje de la batería (nivel de batería) -> La propiedad level del objeto Battery Manager
+       *      - Si la batería está cargando o no -> La propiedad charging del objeto BatteryManager
+       *
+       *  - ¿Que estados tiene mi aplicación? (como cambia mi aplicación en las diferentes situaciones)
+       *      - Si la batería está cargando:
+       *          * Animación de las celdas
+       *          * El texto tiene que ser "Battery Charging"
+       *          * El icono tiene que ser el del flash
+       *      - Si la bateria está en su ultima celda de nivel
+       *          * El color tiene que ser rojo
+       *          * El texto tiene que poner Low Battery
+       *          * El icono tiene que ser de exclamación (siempre que no esté cargando)
+       *      - Si la bateria está por encima de la ultima celda
+       *          * El texto tiene que poner Battery ok
+       *          * El color de fondo será verde
+       *          * El icono será algun check o no existe.
+       *      - Si no está cargando
+       *          * No hay animación
+       *
+       *  - ¿Como obtengo el objeto Battery Manager?
+       *      - navigator.getBattery --> resolve de la promesa tiene el Battery Manager
+       */
+
+      /**
+       * PROBLEMA 1- Mostrar la información actual de la bateria sin reaccionar cambios de estado
+       *     a. Buscar en el HTML el DOM donde pondré la información
+       *         a.1 - Porcentaje de bateria --> <h2 class="battery__level">
+       *         a.2 - Si esta cargando o no --> <p class="battery__status">
+       *
+       *     b. Poner el valor actual del level de la bateria en el HTML que has buscado
+       *         b.1 - Obtener el valor del level del Battery Manager (BatteryManager.level) (<h2 class="battery__level">)
+       *             b.1.1 - Obtener primero el BatteryManager.
+       *                         navigator.getBattery().then(
+       *                             battery => { /** battery es el battery manager   }, // función de resolve
+       *                             () => {} // función de reject
+       *                         )
+       *             b.1.2 -> Obtengo el level%, es decir, multiplicando por 100 en level.
+       *
+       *         b.2 - Obtener el valor de si está cargando o no y ponerlo en el p (<p class="battery__status">)
+       *             b.2.1 -> Obtener primero el BatteryManager
+       *             b.2.2 -> La propiedad charging dice true si está cargando y false si no lo está
+       *
+       * PROBLEMA 2- Si el nivel de la bateria cambia mostrarlo en el HTML (reaccionar al cambio del nivel)
+       *               2.a - Registrar que quiero reaccionar al cambio de nivel (evento??)
+       *               2.b - Cuando se produzca el evento de cambio de nivel,
+       *                     actualizar el HTML con el nuevo nivel
+       *
+       * PROBLEMA 3- Si el estado de la bateria cambia mostrarlo en el HTML (reaccionar al cambio del estado)
+       *               3.a - Registrar que quiero reaccionar al cambio de estado (evento??)
+       *               3.b - Cuando se produzca el evento de cambio de estado,
+       *                     actualizar el HTML con el nuevo estado
+       *
+       * PROBLEMA 4- Pintar en la pila del header el nivel de bateria adecuado
+       *               4.a - El nivel de la bateria (resuelto en el problema 1)
+       *               4.b - ¿Cuantas celdas muestro en función del nivel de la batería?
+       *                        - ¿Cuando muestro 1 celda? --> Cuando el nivel de batería sea <=20% --> level<0.2
+       *                        - ¿Cuando muestro 2 celda? --> Cuando el nivel de bateria sea >0.2 <=0.4
+       *                        - ¿Cuando muestro 3 celda? --> >0.4 <=0.6
+       *                        - ¿Cuando muestro 4 celda? --> >0.6 <=0.8
+       *                        - ¿Cuando muestro 5 celda? --> >0.8
+       *               4.c - Pintar en el HTML tantas celdas como indique el nivel.
+       *                    4.c.a - Crear un div con clase battery__cell y añadirlo como hijo al battery__body
+       *
+       * PROBLEMA 5- Pintar en la pila del header el nivel de bateria adecuado cuando el nivel cambie
+       *               5.a - Pasos previos === problema
+       *               5.b - limpiar las celdas actuales
+       *               5.c - Hago lo mismo que el problema 4
+       */
+      const NUM_CELLS = 5;
+      const batteryLevelDOM = document.querySelector(".battery__level"); // 1.a.1
+      const batteryStatusDOM = document.querySelector(".battery__status"); // 1.a.2
+      const batteryBodyDOM = document.querySelector(".battery__body"); // 4.c
+      let intervalID
+      function removeBatteryLevelCells(){
+          const cells = document.querySelectorAll('.battery__cell'); // obtenemos un array con TODAS las celdas
+          cells.forEach(c => c.remove()); // recorro la lista de celdas y las borro
+      }
+
+      function printBatteryLevel(batteryLevel) {
+        batteryLevelDOM.textContent = `${batteryLevel * 100}%`; // 1.b.1.2
+        removeBatteryLevelCells(); // 5.b
+        const cellsCount = Math.ceil(batteryLevel * NUM_CELLS); // 4.b
+        /* VERSION SIN MATEMATICAS
+        if(battery.level > 0.2 && battery.level <= 0.4){ // 4.b
+            cellsCount = 2;
+        }else if(battery.level > 0.4 && battery.level <= 0.6){
+            cellsCount = 3;
+        }else if(battery.level > 0.6 && battery.level <= 0.8){
+            cellsCount = 4;
+        }else if(battery.level > 0.8){
+            cellsCount = 5;
+        }
+        */
+        for (let i = 0; i < NUM_CELLS; i++) {
+          // 4.c
+          const div = document.createElement("div");
+          div.classList.add("battery__cell");
+          batteryBodyDOM.appendChild(div);
+        }
+      }
+
+      navigator.getBattery().then((battery) => {
+        // 1.b.1.1 y 1.b.2.1 y 4.a
+        // typeof battery === 'object' (Battery Manager)
+        printBatteryLevel(battery.level); // Problema 1.b.1 y 4
+        batteryStatusDOM.textContent = battery.charging
+          ? "Battery Charging"
+          : "Battery Not Charging"; // 1.b.2.2
+
+        /* 
+           VERSION UTILIZANDO LA PROPIEDAD COMO EVENTO 
+            battery.onlevelchange = (e) => { // 2.a (funcion que se ejecuta cuando cambie el nivel bateria)
+         *    console.log(e);
+         *    batteryLevelDOM.textContent = `${battery.level*100}%`; // 2.b
+         * }
+         */
+
+        battery.addEventListener("levelchange", () => {
+          // 2.a
+          printBatteryLevel(battery.level) // Problema 2 y problema 5
+        });
+
+        battery.addEventListener("chargingchange", () => {
+          // 3.a
+          batteryStatusDOM.textContent = battery.charging
+            ? "Battery Charging"
+            : "Battery Not Charging"; // 3.b
+        });
+      });
+    </script>
+  </body>
+</html>

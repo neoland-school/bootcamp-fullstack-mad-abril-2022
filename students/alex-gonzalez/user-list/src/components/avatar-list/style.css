@@ -1,0 +1,14 @@
+
+.avatar-section__container{
+    padding: 1rem;
+}
+
+.avatar-list__container{
+    list-style: none;
+}
+
+.avatar-list__offline{
+    color: red;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
