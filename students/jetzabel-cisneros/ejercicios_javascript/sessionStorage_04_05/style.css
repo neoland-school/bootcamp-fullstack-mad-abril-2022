@@ -1,0 +1,25 @@
+
+
+.container{
+	width: 40%;
+	text-align: center;
+    background-color: coral;
+  
+  
+}
+input{
+	display: block;
+	margin: 5px auto;
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 80%;
+}
+#enter, #enternew{
+	margin: 10px;
+}
+label{
+	display: block;
+	text-align: left;
+	margin-left: 10%;
+	font-size: 12px;
+}

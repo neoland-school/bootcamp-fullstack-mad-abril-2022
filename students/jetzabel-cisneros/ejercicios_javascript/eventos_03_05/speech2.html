@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styleSR.css">
+
+    <title>Speech Recognition 03 05 22</title>
+</head>
+<body>
+   
+    
+
+
+
+<div class="container">
+
+    <h1>Voice Controlled Notes App</h1>
+	<p class="page-description">Notas de voz</p>
+
+
+	<h3 class="no-browser-support">oohps! Su navegador no es compatible con Web Speech API. Intente abrir esta demostración en Google Chrome.</h3>
+
+	
+	<div class="voice-app"> 
+		<!-- <h3>Add New Note</h3> -->
+		
+		<div class="input-box">
+			<textarea id="note-textarea" placeholder="Aquí aparecera el texto" rows="6"></textarea>
+			
+		</div>         
+		<button id="start-record-btn" title="Start Recording">Grabar</button>
+		<button id="pause-record-btn" title="Pause Recording">Parar grabación</button>
+		
+		<!--
+        <button id="save-note-btn" title="Save Note">Save Note</button> 
+        -->
+		
+		<p id="recording-instructions">Pulsa <strong>Grabar</strong> para empezar.</p>
+        <!--
+		<h3>Here my Notes</h3>
+		<ul id="notes">
+			<li>
+				<p class="no-notes">You don't have any notes.</p>
+			</li>
+		</ul>
+        -->
+
+	</div>
+
+</div>
+
+
+    <script src="speech2.js"></script>
+
+</body>
+</html>
