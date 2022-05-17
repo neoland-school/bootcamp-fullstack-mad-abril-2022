@@ -12,6 +12,8 @@ import EventsExample from './components/events-example';
 import StateExample from './components/state-example';
 import DemoFetch from './components/demo-fetch';
 import DemoUseEffect from './components/demo-use-effect';
+import MultipleStates from './components/multiple-states';
+import MultipleFilters from './components/demo-multiple-filters';
 
 import { user, users } from './data/user';
 
@@ -35,7 +37,12 @@ function App() {
       {/* <EventsExample></EventsExample> */}
       {/* <StateExample></StateExample> */}
       {/* <DemoFetch></DemoFetch> */}
-      <DemoUseEffect></DemoUseEffect>
+      {/* <DemoUseEffect></DemoUseEffect> */}
+      {/* <MultipleStates></MultipleStates> */}
+      {/* <MultipleStates status='Alive'></MultipleStates>
+      <MultipleStates status='Death'></MultipleStates>
+      <MultipleStates status='unknown'></MultipleStates> */}
+      <MultipleFilters></MultipleFilters>
     </React.Fragment>
   );
 }
