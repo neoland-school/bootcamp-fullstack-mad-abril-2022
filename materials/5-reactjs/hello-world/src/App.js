@@ -15,6 +15,7 @@ import DemoUseEffect from './components/demo-use-effect';
 import MultipleStates from './components/multiple-states';
 import MultipleFilters from './components/demo-multiple-filters';
 import DemoInterval from './components/demo-interval';
+import InfinityScrollDemo from './components/demo-infinity-scroll';
 
 import { user, users } from './data/user';
 
@@ -44,8 +45,9 @@ function App() {
       <MultipleStates status='Death'></MultipleStates>
       <MultipleStates status='unknown'></MultipleStates> */}
       {/* <MultipleFilters></MultipleFilters> */}
-      { renderInterval ? <DemoInterval></DemoInterval> : ''}
-      <button onClick={() => updateRenderInterval(false)}>Desmontar Interval</button>
+      {/* { renderInterval ? <DemoInterval></DemoInterval> : ''}
+      <button onClick={() => updateRenderInterval(false)}>Desmontar Interval</button> */}
+      <InfinityScrollDemo></InfinityScrollDemo>
     </React.Fragment>
   );
 }
