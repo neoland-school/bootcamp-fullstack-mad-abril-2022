@@ -1,0 +1,11 @@
+
+
+.todo__container {
+    display: flex;
+    border: 2px dashed violet;
+}
+
+.todo__description {
+    font-size: 2rem;
+    font-weight: bold;
+}

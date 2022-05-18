@@ -1,0 +1,17 @@
+
+.app-header__container{
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.nav__container > .nav__link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-right: 1px solid white;
+    margin-right: 0.5rem;
+}
