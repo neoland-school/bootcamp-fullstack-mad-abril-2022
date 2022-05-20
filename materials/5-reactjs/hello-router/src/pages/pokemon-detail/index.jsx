@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { usePokemonByName } from "../../data/pokemon/pokemon.hooks";
 
 
 
 
 function PokemonDetail(){
     const {name} = useParams(); // params = { name: 'valor en la URL'}
-    const [pokemon, updatePokemon] = useState({});
-
-    useEffect(() => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-        .then(r => r.json())
-        .then(p => updatePokemon(p))
-    }, [name]);
+    const pokemon = usePokemonByName(name);
 
     return (
         <main>

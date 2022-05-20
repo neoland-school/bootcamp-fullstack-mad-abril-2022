@@ -15,3 +15,12 @@
     border-right: 1px solid white;
     margin-right: 0.5rem;
 }
+
+.circle--red{
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
