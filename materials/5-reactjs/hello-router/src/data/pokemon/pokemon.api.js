@@ -23,6 +23,7 @@ export const getPokemons = async offset => {
 
 export const retrievePokemonByName = async name => {
     const r = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    return await r.json();
+    if(!r.ok) throw new Error(r.status);
+    return await r.json(); //JSON.parse(r.body)
 }
 

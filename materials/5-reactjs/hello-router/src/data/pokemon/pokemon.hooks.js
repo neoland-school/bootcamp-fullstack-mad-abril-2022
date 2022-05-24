@@ -37,12 +37,14 @@ export const usePokemons = () => {
 
 export const usePokemonByName = name => {
     const [pokemon, updatePokemon] = useState({});
-
+    const [err, updateError] = useState({});
+    console.log('Se actualiza el hook', err);
     useEffect(() => {
         retrievePokemonByName(name)
         .then(p => updatePokemon(p))
+        .catch(err =>  updateError({code: parseInt(err.message)}));
     }, [name]);
 
-    return pokemon;
+    return {pokemon, err};
 }
 

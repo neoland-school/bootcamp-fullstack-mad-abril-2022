@@ -6,6 +6,7 @@ import Pokemons from './pages/pokemons';
 import PokemonDetail from './pages/pokemon-detail';
 import DemoContext from './pages/demo-context';
 import Counter from './pages/counter';
+import NotFound from './pages/not-found';
 
 import Header from './shared-components/header';
 import Footer from './shared-components/footer';
@@ -30,6 +31,7 @@ function App() {
                 <Route path='/pokemons/:name' element={<PokemonDetail></PokemonDetail>}></Route>
                 <Route path='/context' element={<DemoContext></DemoContext>}></Route>
                 <Route path='/counter' element={<Counter></Counter>}></Route>
+                <Route path='*' element={<NotFound></NotFound>}></Route>
               </Routes>
               <Footer></Footer>
         </BrowserRouter>
