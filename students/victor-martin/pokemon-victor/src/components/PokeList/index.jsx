@@ -7,6 +7,9 @@ function PokeList() {
 
   const [pokemon, uptdatePokemon] = useState([])
   const [pokemonFiltered, updatePokemonFiltered] = useState([])
+  // const [lastName, setLastName] = useState ('')
+  // const [lastTypes, setLastTypes] = useState ('All')
+  // const navigate = useNavigate();
 // console.log(pokemon);
   
 useEffect(()=>{
@@ -53,14 +56,16 @@ return (
   {/* {pokemon.map((v,i) =>
     <PokeCard key={i} v={v} pokemon={pokemon}></PokeCard>)} */}  
 
-    <div className='d-flex-wrap justify-content-center'> 
+    <div className='all-cards'> 
     {
-      pokemon.map((p) => <PokeCard key={p.i} pokemon={p}></PokeCard>)
+      pokemon.map((p) => <PokeCard key={p.i} pokemon={p} ></PokeCard>)
     }
 
     </div>
     
-   <Nav filterByName={filterByName}></Nav>
+   <Nav filterByName={filterByName} 
+   filterByType={filterByType}></Nav>
+
 </>
     
 )

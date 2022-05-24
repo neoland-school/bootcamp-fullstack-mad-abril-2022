@@ -31,9 +31,9 @@ function App() {
 // console.log(caracthers);
   useEffect(()=>{
 
-fetch("https://rickandmortyapi.com/api/character")
+fetch("www.thecocktaildb.com/api/json/v1/1/search.php?f=a")
 .then(res => res.json())
-.then(data=> {
+.then(data => {
   setcaracthers(data.results)
   setcaracthersFiltered(data.results)
   // console.log(caracthers);

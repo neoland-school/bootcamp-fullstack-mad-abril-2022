@@ -1,0 +1,23 @@
+.header__h1 {
+    /* width: 40px; */
+    /* height: 100px;
+    width: 100px; */
+    /* border-radius: 50%; */
+    background-color:black;
+    color: white;
+   
+}
+
+.circle__red1 {
+    display: flex;
+    align-content: center ;
+    /* align-items: center; */
+}
+
+.circle__red {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+
+}

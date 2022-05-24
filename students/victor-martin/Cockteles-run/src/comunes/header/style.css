@@ -1,0 +1,10 @@
+.wrap-header{
+    height:100px;
+    width:100vw;
+    background-color: azure;
+    border:2px solid silver;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 30px;
+}
