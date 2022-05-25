@@ -1,0 +1,17 @@
+
+.country-list__filter {
+    width: 500px;
+    height: 50px;
+    margin: 50px;
+    border: 2px solid #333333;
+    padding: 10px;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+
+.county-list__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

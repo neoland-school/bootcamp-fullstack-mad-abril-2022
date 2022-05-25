@@ -1,0 +1,10 @@
+.filled__container {
+    width: 150px;
+    height: 150px;
+    background-color: #ff0000;
+}
+
+
+.fill-box--active {
+    background-color: #18a421;
+}

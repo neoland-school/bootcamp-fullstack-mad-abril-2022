@@ -1,0 +1,18 @@
+
+.input-text {
+    display: block;
+    margin: 100px 100px 10px 100px;
+    width: 500px;
+    height: 50px;
+    border: 1px solid #000000;
+    font-size: 2rem;
+}
+
+.p-text {
+    display: block;
+    border: none;
+    margin: 10px 100px 100px 100px;
+    width: 500px;
+    height: 50px;
+    font-size: 2rem;
+}

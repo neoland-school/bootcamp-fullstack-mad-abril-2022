@@ -1,0 +1,30 @@
+
+
+.avatar__container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.avatar__image {
+    border-radius: 50%;
+    margin: 20px 0px 20px 15px;
+    cursor: pointer;
+}
+
+.avatar__status {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #008000;
+    align-self: center;
+}
+
+.avatar__container--offline .avatar__image {
+    opacity: 0.4;
+}
+
+.avatar__container--offline .avatar__status{
+    background-color: #ff0000;
+}
+

@@ -1,0 +1,19 @@
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 300px;
+    padding: 30px;
+    background: #2A31CE;
+    background: -moz-linear-gradient(-45deg, #2A31CE 0%, #2376A4 50%, #9834C5 100%);
+    background: -webkit-linear-gradient(-45deg, #2A31CE 0%, #2376A4 50%, #9834C5 100%);
+    background: linear-gradient(135deg, #2A31CE 0%, #2376A4 50%, #9834C5 100%);
+    box-shadow: 5px 5px 10px #333333;
+}
+
+.name__container, .dial-code__container {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:#ffffff;
+}
