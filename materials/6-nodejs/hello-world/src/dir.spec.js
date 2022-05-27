@@ -26,9 +26,11 @@ const addDirToTestFolder = async () => await fs.mkdir(`${FOLDER_PATH}/test_folde
 
 const cleanTest = async () => await fs.rm(FOLDER_PATH, { recursive: true, force: true });
 
-beforeEach(() => createTestFolder()); // antes de cada test preparo el test folder
+beforeEach(async () => {
+    await createTestFolder()
+}); // antes de cada test preparo el test folder
 
-afterEach(() => cleanTest()); // despues de cada test elimino la carpeta de pruebas
+afterEach(async () => await cleanTest()); // despues de cada test elimino la carpeta de pruebas
 
 it('Given an existing directory with child files, it should return its files list',async () => {
     // fase 1
