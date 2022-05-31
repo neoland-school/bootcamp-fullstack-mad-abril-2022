@@ -1,6 +1,6 @@
 import express from 'express'; // paso 1
 
-const app = express(); // paso 2
+export const app = express(); // paso 2
 
 // http://expressjs.com/en/4x/api.html#req.body
 app.use(express.json()) // for parsing application/json
@@ -39,8 +39,27 @@ app.post('/example-post', (req, res) => {
     res.send('Esto es lo que estoy devolviendo en el post'); 
 });
 
-// paso 4: iniciar el servidor
-app.listen(4563, () => {
-    // esta es la función que se ejecuta cuando se inicia el servidor
-    console.log('Server on port 4563');
+/**
+ * Cuando necesitamos una ruta variable, para operar con una elemento
+ * concreto de una lista, utilizamos path params, es decir,
+ * una variable definida en la ruta y que podemos obtener su valor 
+ * en el manejador de la ruta de expressjs
+ */
+app.get('/example-path-params/:id', (req, res) => {
+    console.log(req.params); // esto es para obtener los path params de la petición
+    res.send('Has solicitado información sobre el id: ' + req.params.id);
 });
+
+app.get('/example-path-params-double/:id/other/:name', (req, res) => {
+    console.log(req.params); // esto es para obtener los path params de la petición
+    const {id, name} = req.params; // esto es una deconstrucción del objeto params
+    res.send(`Has solicitado información sobre el id: ${id}
+              Has solicitado información sobre el name: ${name}`);
+});
+// esto sería en una delete
+app.delete('/example-path-params/:id', (req, res) => {
+    console.log(req.params); // esto es para obtener los path params de la petición
+    res.send('Has solicitado borrar sobre el id: ' + req.params.id);
+});
+
+
