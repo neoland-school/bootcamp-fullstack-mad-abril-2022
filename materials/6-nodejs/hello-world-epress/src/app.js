@@ -63,3 +63,18 @@ app.delete('/example-path-params/:id', (req, res) => {
 });
 
 
+app.get('/example-query-string', (req, res) => res.json({queryValues: Object.values(req.query)}));
+
+/**
+ * Entrada { one: 'uno', two: 'dos' } === req.query
+ * Salida: { queryValues: ['uno', 'dos'] }
+ */
+app.get('/example-query-string-for-in', (req, res) => {
+    const values = [];
+    for (const key in req.query) { // el for..in nos ayuda a recorrer un objeto propiedad a propiedad
+        values.push(req.query[key]);
+    }
+    res.json({queryValues: values});
+});
+
+

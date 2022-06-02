@@ -57,3 +57,12 @@ it('When GET on /example-path-params/:id path is called with an id it should ret
         .expect('Has solicitado información sobre el id: 1')
         .end(done);
 });
+
+it('When GET on /example-query-string it should return the list of values in queryValues property', done => {
+    supertest(app)
+        .get('/example-query-string?one=1&two=true&three=hola')
+        .expect(200)
+        .expect('Content-Type', /json/) // expresion regular para verificar que el content-type sea json
+        .expect({queryValues:['1','true','hola']})  // los query values SIEMPRE son string
+        .end(done);
+});
