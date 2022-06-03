@@ -1,4 +1,5 @@
 import express from 'express'; // paso 1
+import {MongoClient} from 'mongodb';
 
 export const app = express(); // paso 2
 
@@ -78,3 +79,41 @@ app.get('/example-query-string-for-in', (req, res) => {
 });
 
 
+const URL = 'mongodb+srv://demo_bootcamp:demo_bootcamp@learning.c7hty.mongodb.net/?retryWrites=true&w=majority';
+const client = new MongoClient(URL);
+
+app.get('/tvs', async (req, res) => {
+    // una vez que tenemos el cliente nuestro objetivo es encontrar la collection
+    try{
+        await client.connect() // paso 1: conectar el cliente (ASINCRONO)
+        const db = client.db('demo'); // paso 2: buscar la BBDD (SINCRONO)
+        const tvsCollection = db.collection('tvs'); // paso 3 buscar la collection (SINCRONO)
+        // Dependiendo de la operación (En este caso un GET)
+        // 1- generar la query
+        const query = { 
+            $and: [
+                { inches: { $exists: true } },
+                { 
+                    $or: [
+                        { price: { $gt: 800 } },
+                        { price: { $lt: 400 } }
+                    ]
+                }
+            ]
+        };
+        // 2- Generar las opciones
+        const options = {
+            projection: { _id:0, description:1, price:1 },
+            sort: { price: -1 } // ordenar por precio de manera descendente (Mayor a menor)
+        }
+
+        // paso4: Ejecutar la operacion en la colección (ASINCRONO)
+        const tvs = await tvsCollection.find(query, options).toArray();
+        res.json(tvs); // para el usuario 
+    }catch(err){
+        console.log(err);
+        res.status(500).send(err.toString());
+    }finally{
+        await client.close(); // siempre hay que cerrar el cliente, vaya bien o mal
+    }
+});
