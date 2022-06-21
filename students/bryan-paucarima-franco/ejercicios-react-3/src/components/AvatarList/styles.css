@@ -1,0 +1,11 @@
+
+.tittle {
+    background-color: #28A845;
+    padding: 5px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.avatar-offline {
+    color: red;
+}

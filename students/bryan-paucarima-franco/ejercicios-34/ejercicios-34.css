@@ -1,0 +1,76 @@
+/* .divs {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+}
+
+.div-card {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+}
+
+.image {
+    width: 200px;
+    height: 350px ;
+    margin-right: 50px;
+}
+
+.name-text{
+    margin-bottom: 15px;
+}
+
+.text-decoration {
+    border: 1px solid gray;
+    color: blue;
+    padding: 5px;
+}
+
+.div-puntuation {
+    margin: 20px 0 15px 0;
+}
+
+.div-price {
+    margin-bottom: 20px;
+}
+
+.text-price {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.text-previous-price {
+    font-size: 20px;
+    margin-right: 13px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.text-discount-price {
+    font-size: 20px;
+    color: green;
+}
+
+.text-list {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.button-add-to-cart {
+    font-size: 15px;
+    color: blue;
+    border: 1px solid blue;
+    padding: 10px;
+}

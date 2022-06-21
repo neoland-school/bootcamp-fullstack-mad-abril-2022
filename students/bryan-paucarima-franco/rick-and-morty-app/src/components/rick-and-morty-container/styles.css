@@ -1,0 +1,9 @@
+.list-chars {
+    display: flex;
+    background-color: gray;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+    
+}

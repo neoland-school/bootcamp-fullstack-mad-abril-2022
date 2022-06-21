@@ -1,0 +1,30 @@
+.container {
+    border: 1px solid black;
+    width: 300px;
+    height: 600px;
+    margin: 30px;
+    border-radius: 20px;
+    background-color: #6c757D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tittle {
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin: 15px;
+}
+
+
+.text {
+    font-size: 1.3rem;
+    border-bottom: 1px solid white;
+    margin: 15px;
+    padding: 10px;
+}
+
+.image {
+    width: 300px;
+}

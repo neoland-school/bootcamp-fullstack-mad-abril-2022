@@ -1,0 +1,17 @@
+.container-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.tittle {
+    font-size: 50px;
+}
+
+.input-filter {
+    width: 432.5px;
+    height: 22px;
+
+}
