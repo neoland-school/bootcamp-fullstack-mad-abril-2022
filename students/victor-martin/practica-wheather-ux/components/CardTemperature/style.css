@@ -1,0 +1,16 @@
+
+.PlantGuide{
+    width: 351px;
+    height: 96px;
+    
+    font-family: 'Recoleta Alt';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 97px;
+    color: #7AA749;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
